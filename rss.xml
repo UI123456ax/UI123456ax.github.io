@@ -29,7 +29,8 @@
             <pubDate>Tue, 30 Jul 2024 09:28:48 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h1&gt;
 &lt;p&gt;连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。通常是 SSL 返回时证书的问题:&lt;br /&gt;
-Android 系统将 CA 证书又分为两种， &lt;code&gt;用户CA证书&lt;/code&gt; 和 &lt;code&gt;系统CA证书&lt;/code&gt; 。顾明思议，用户 CA 证书是由用户自行安装的，系统 CA 证书是由系统内置的，很明显后者更加真实有效。&lt;br /&gt;
+Android 系统将 CA 证书又分为两种， &lt;code&gt;用户CA证书&lt;/code&gt; 和 &lt;code&gt;系统CA证书&lt;/code&gt; 。&lt;br /&gt;
+顾明思议，用户 CA 证书是由用户自行安装的，系统 CA 证书是由系统内置的，很明显后者更加真实有效。&lt;br /&gt;
 而我们要做的无非就是&lt;strong&gt;将证书导入至系统 CA 证书&lt;/strong&gt;当中，或是&lt;strong&gt;绕过系统 CA 证书的检测&lt;/strong&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;系统 CA 证书存储路径:  &lt;code&gt;/system/etc/security/cacerts/&lt;/code&gt;&lt;/p&gt;
@@ -43,6 +44,7 @@ Android 系统将 CA 证书又分为两种， &lt;code&gt;用户CA证书&lt;/cod
 &lt;li&gt;JustTrustMe 模块&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;导入-import&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#导入-import&#34;&gt;#&lt;/a&gt; 导入 Import&lt;/h2&gt;
+&lt;h3 id=&#34;下载工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载工具&#34;&gt;#&lt;/a&gt; 下载工具&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;OpenSSL 下载地址: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zbHByb3dlYi5jb20vcHJvZHVjdHMvV2luMzJPcGVuU1NMLmh0bWw=&#34;&gt;https://slproweb.com/products/Win32OpenSSL.html&lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -96,6 +98,7 @@ adb push xx.0 /system/etc/security/cacerts/xx.0
  如果是模拟器很可能是没有开启 &lt;code&gt;system&lt;/code&gt;  写入，按下图开启即可 &lt;s&gt;被坑过 QwQ&lt;/s&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_01.png&#34; alt=&#34;01&#34; title=&#34;雷电模拟器9&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;绕过-bypass&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过-bypass&#34;&gt;#&lt;/a&gt; 绕过 Bypass&lt;/h2&gt;
+&lt;h3 id=&#34;下载工具-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载工具-2&#34;&gt;#&lt;/a&gt; 下载工具&lt;/h3&gt;
 &lt;p&gt;Magisk (任意即可):&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;原版 (Magisk)：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3RvcGpvaG53dS9NYWdpc2svcmVsZWFzZXM=&#34;&gt;https://github.com/topjohnwu/Magisk/releases&lt;/span&gt;&lt;/li&gt;
@@ -142,19 +145,18 @@ Xposed (任意即可):&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/10/0_100/11_Burp%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</guid>
             <title>BurpSuite使用指南</title>
-            <link>https://ui123456ax.github.io/2024/07/10/0_100/11_Burp%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+            <link>https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</link>
             <category term="笔记" scheme="https://ui123456ax.github.io/tags/%E7%AC%94%E8%AE%B0/" />
             <category term="配置" scheme="https://ui123456ax.github.io/tags/%E9%85%8D%E7%BD%AE/" />
             <pubDate>Wed, 10 Jul 2024 14:58:50 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;更新中～&lt;/p&gt;
-&lt;h1 id=&#34;基本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本&#34;&gt;#&lt;/a&gt; 基本&lt;/h1&gt;
-&lt;p&gt;下载请自行上网搜索&lt;/p&gt;
-&lt;h2 id=&#34;配置问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置问题&#34;&gt;#&lt;/a&gt; 配置问题&lt;/h2&gt;
+            <description><![CDATA[ &lt;p&gt;更新中～&lt;br /&gt;
+ 下载请自行上网搜索&lt;/p&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
 &lt;p&gt;打开系统的设置页面，并在代理中手动开启并设置代理服务器&lt;br /&gt;
 一般代理 ip 服务器为 &lt;code&gt;127.0.0.1&lt;/code&gt; ，端口号为 &lt;code&gt;8080&lt;/code&gt;  || 根据实际设置而定&lt;/p&gt;
-&lt;h3 id=&#34;edge浏览器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#edge浏览器&#34;&gt;#&lt;/a&gt; Edge 浏览器&lt;/h3&gt;
+&lt;h2 id=&#34;edge浏览器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#edge浏览器&#34;&gt;#&lt;/a&gt; Edge 浏览器&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;点击右上角的设置，并找到 Tools 中的 Proxy 项目&lt;br /&gt;
@@ -178,12 +180,12 @@ Xposed (任意即可):&lt;/p&gt;
  &lt;code&gt;--test-type --ignore-certificate-errors&lt;/code&gt; &lt;br /&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_05.png&#34; alt=&#34;05&#34; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h3 id=&#34;抓包数据中文乱码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓包数据中文乱码&#34;&gt;#&lt;/a&gt; 抓包数据中文乱码&lt;/h3&gt;
+&lt;h2 id=&#34;抓包数据中文乱码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓包数据中文乱码&#34;&gt;#&lt;/a&gt; 抓包数据中文乱码&lt;/h2&gt;
 &lt;p&gt;在设置中搜索 &lt;code&gt;User interface&lt;/code&gt;  下滑更改 字体显示为 &lt;code&gt;宋体13pt&lt;/code&gt;  字符集显示为 &lt;code&gt;UTF-8&lt;/code&gt; &lt;br /&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_06.png&#34; alt=&#34;06&#34; /&gt;&lt;br /&gt;
  别忘了重启程序 w&lt;/p&gt;
-&lt;h3 id=&#34;抓包app&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓包app&#34;&gt;#&lt;/a&gt; 抓包 App&lt;/h3&gt;
-&lt;h4 id=&#34;模拟器手机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模拟器手机&#34;&gt;#&lt;/a&gt; 模拟器 (手机)&lt;/h4&gt;
+&lt;h2 id=&#34;抓包app&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓包app&#34;&gt;#&lt;/a&gt; 抓包 App&lt;/h2&gt;
+&lt;h3 id=&#34;模拟器手机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模拟器手机&#34;&gt;#&lt;/a&gt; 模拟器 (手机)&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;在 windows 运行 cmd 中输入 &lt;code&gt;ipconfig&lt;/code&gt;  查看本地 ipv4 地址，在 Burp 设置里添加以本地 ip 的代理监听器&lt;/li&gt;
 &lt;/ol&gt;
@@ -208,7 +210,7 @@ Xposed (任意即可):&lt;/p&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_10.png&#34; alt=&#34;10&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;补充&lt;/strong&gt;：连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。请看 --&amp;gt; &lt;a href=&#34;#&#34;&gt;Android 抓包工具无法正常上网&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;本地抓包apk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地抓包apk&#34;&gt;#&lt;/a&gt; 本地抓包 Apk&lt;/h4&gt;
+&lt;h3 id=&#34;本地抓包apk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地抓包apk&#34;&gt;#&lt;/a&gt; 本地抓包 Apk&lt;/h3&gt;
 &lt;p&gt;主要流程：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;配置 Android 子系统 --&amp;gt; 本地安装 Apk 程序 --&amp;gt; 打开抓包工具 --&amp;gt; 即可抓取数据&lt;/li&gt;
@@ -275,8 +277,11 @@ A: IOS 政策不允许&lt;/p&gt;
             <description><![CDATA[ &lt;p&gt;&lt;s&gt;和同学在校内游玩的小游戏&lt;/s&gt;&lt;/p&gt;
 &lt;h3 id=&#34;操作说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作说明&#34;&gt;#&lt;/a&gt; 操作说明&lt;/h3&gt;
 &lt;p&gt;RPG 可自由操作时两指齐按（右鍵）打开功能表存档，部分需定点存档&lt;br /&gt;
- IOS 音频已修正，但仍有部分游戏可能并无声音&lt;/p&gt;
+ IOS 音频已修正，但仍有部分游戏可能并无声音 &lt;a href=&#34;https://ui123456ax.github.io/2024/05/10/0_100/09-RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/&#34;&gt;修复 RPGMV 在 IOS 上无法运行 ogg 文件&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;无科学环境可能造成卡顿、画面加载不全等影响&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;游戏于  &lt;code&gt;github page&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h3 id=&#34;游戏列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏列表&#34;&gt;#&lt;/a&gt; 游戏列表：&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;s&gt;夏日狂想曲&lt;/s&gt; 无法稳定，过于卡顿&lt;/li&gt;
