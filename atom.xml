@@ -118,13 +118,13 @@
 &lt;/blockquote&gt;
 &lt;h4 id=&#34;手动输入cf节点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#手动输入cf节点&#34;&gt;#&lt;/a&gt; 手动输入 CF 节点&lt;/h4&gt;
 &lt;p&gt;在 V2rayN 中添加 &lt;code&gt;VLESS&lt;/code&gt;  服务器，并按如图所设置&lt;br /&gt;
-&lt;img data-src=&#34;&#34; alt=&#34;13&#34; /&gt;&lt;br /&gt;
+&lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_13.png&#34; alt=&#34;13&#34; /&gt;&lt;br /&gt;
  设置完毕即可正常打开网页。这里是属于配置节点，可以正常科学上网了&lt;/p&gt;
 &lt;h3 id=&#34;其他代理工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#其他代理工具&#34;&gt;#&lt;/a&gt; 其他代理工具&lt;/h3&gt;
 &lt;p&gt;在部署的 Workes 中可以看到，支持 Clash-meta、Sing-box 等链接导入&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;导入时需保持科学环境，否则可能导致导入失败&lt;br /&gt;
-&lt;img data-src=&#34;&#34; alt=&#34;14&#34; /&gt;&lt;/p&gt;
+&lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_14.png&#34; alt=&#34;14&#34; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;proxyip-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#proxyip-2&#34;&gt;#&lt;/a&gt; ProxyIP&lt;/h2&gt;
 &lt;p&gt;设置 ProxyIP 的作用，就是保证能与 CloudFlare 的连通。说白了，不设置 ProxyIP 将无法连接与 CloudFlare 相关的网站 (包括使用 CFCDN 的网站)。一般情况默认即可，无需修改&lt;/p&gt;
