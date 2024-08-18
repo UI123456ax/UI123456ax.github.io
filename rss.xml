@@ -68,10 +68,10 @@
 &lt;p&gt;如果优选 IP 与 Ipv6 都不行，请继续往下看&lt;/p&gt;
 &lt;h1 id=&#34;cloudflare-workes&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cloudflare-workes&#34;&gt;#&lt;/a&gt; CloudFlare Workes&lt;/h1&gt;
 &lt;p&gt;每天免费 10w 个请求，可以绑定自己的域名，可以访问外网，可以反代理外网的接口&lt;br /&gt;
-这里选择的是 &lt;code&gt;yonggekkk&lt;/code&gt;  大佬的脚本&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt; Cloudflare_vless_trojan&lt;/span&gt;&lt;/p&gt;
+这里选择的是 &lt;code&gt;yonggekkk&lt;/code&gt;  的脚本&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt; Cloudflare_vless_trojan&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;原项目&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ppemlmbi9lZGdldHVubmVs&#34;&gt; edgetunnel&lt;/span&gt;&lt;br /&gt;
- 改版&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt; EDtunnel&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;原项目&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ppemlmbi9lZGdldHVubmVs&#34;&gt; edgetunnel&lt;/span&gt;、改版&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt; EDtunnel&lt;/span&gt;、Trojan&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NhMTEwdXMvZXBlaXVz&#34;&gt;epeius&lt;/span&gt;&lt;br /&gt;
+ 选择&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt; Cloudflare_vless_trojan&lt;/span&gt; 的理由是将项目的优点都整合到了一起，并且有很多相关的解释对于小白来讲很友好。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;前置条件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前置条件&#34;&gt;#&lt;/a&gt; 前置条件&lt;/h2&gt;
 &lt;ol&gt;
@@ -89,9 +89,8 @@
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_05.png&#34; alt=&#34;05&#34; /&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_06.png&#34; alt=&#34;06&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;添加脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#添加脚本&#34;&gt;#&lt;/a&gt; 添加脚本&lt;/h3&gt;
-&lt;p&gt;在项目仓库中的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbi9ibG9iL21haW4vVmxlc3Nfd29ya2Vyc19wYWdlcy9fd29ya2VyLmpz&#34;&gt; Vless_workers_pages&lt;/span&gt; 文件夹内找到 &lt;code&gt;_worker.js&lt;/code&gt; &lt;br /&gt;
+&lt;p&gt;打开项目仓库中的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbi9ibG9iL21haW4vVmxlc3Nfd29ya2Vyc19wYWdlcy9fd29ya2VyLmpz&#34;&gt; Vless_workers_pages&lt;/span&gt; 文件夹内找到 &lt;code&gt;_worker.js&lt;/code&gt;  将里面的内容 &lt;code&gt;CTRL+A&lt;/code&gt;  复制进刚才创建的 Workers 里&lt;br /&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_07.png&#34; alt=&#34;07&#34; /&gt;&lt;br /&gt;
- 将里面的内容 &lt;code&gt;CTRL+A&lt;/code&gt;  复制进刚才创建 Workers&lt;br /&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_08.png&#34; alt=&#34;08&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h3&gt;
 &lt;h4 id=&#34;userid&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#userid&#34;&gt;#&lt;/a&gt; userID&lt;/h4&gt;
@@ -110,10 +109,10 @@
 &lt;p&gt;如我的 &lt;code&gt;https://v2vpn.ui123456ax.workers.dev/a52c418e-a7d7-4d23-a348-1e055c1cb806&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_10.png&#34; alt=&#34;10&#34; /&gt;&lt;br /&gt;
- 复制链接后，导入至 V2ray 即可正常使用&lt;br /&gt;
- PS: 这里选择可以复制我的链接:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vless://a52c418e-a7d7-4d23-a348-1e055c1cb806@www.visa.com.sg:8880?encryption=none&amp;amp;security=none&amp;amp;type=ws&amp;amp;host=v2vpn.ui123456ax.workers.dev&amp;amp;path=%2F%3Fed%3D2560#v2vpn.ui123456ax.workers.dev
-&lt;/code&gt;&lt;/pre&gt;
+ 复制链接后，导入至 V2ray 即可正常使用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;V2 节点这里就不分享给大家了，每个账户的请求数量是有限 10w 次的&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_11.png&#34; alt=&#34;11&#34; /&gt;&lt;br /&gt;
 &lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_12.png&#34; alt=&#34;12&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;无法打开workers&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#无法打开workers&#34;&gt;#&lt;/a&gt; 无法打开 Workers&lt;/h3&gt;
@@ -132,8 +131,28 @@
 &lt;p&gt;导入时需保持科学环境，否则可能导致导入失败&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_14.png&#34; alt=&#34;14&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tls&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#tls&#34;&gt;#&lt;/a&gt; TLS&lt;/h2&gt;
+&lt;p&gt;未添加域名使用 TLS 加密，可以在代理工具内设置里启用分片 (Fragment)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没有的话，请更换你的代理工具 (v2rayN)，或更新你的代理工具&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;延迟 (ms) 默认显示是 &lt;code&gt;-1&lt;/code&gt;  但可以使用 (速度由 Address 决定)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要显示为非 &lt;code&gt;-1&lt;/code&gt;  则需要使用域名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;地址address&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#地址address&#34;&gt;#&lt;/a&gt; 地址 (Address)&lt;/h2&gt;
+&lt;p&gt;请注意你的服务器地址选项 这将会影响你是否可以上网 以及上网的速度 (下文优选 IP 有提)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;填入 IP 或 使用了 CloudFlare 加速的域名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;默认使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;www.visa.com.hk
+www.visa.com.sg
+ip.sb
+...
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;proxyip-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#proxyip-2&#34;&gt;#&lt;/a&gt; ProxyIP&lt;/h2&gt;
-&lt;p&gt;设置 ProxyIP 的作用，就是保证能与 CloudFlare 的连通。说白了，不设置 ProxyIP 将无法连接与 CloudFlare 相关的网站 (包括使用 CFCDN 的网站)。一般情况默认即可，无需修改&lt;/p&gt;
+&lt;p&gt;设置 ProxyIP 的作用，就是保证能与 CloudFlare 的连通。说白了，不设置 ProxyIP 将无法连接与 CloudFlare 相关的网站 (包括使用了 CFCDN 的网站)，不影响上网速度。一般情况默认即可 (非空)，无需修改。&lt;/p&gt;
 &lt;h2 id=&#34;优选ip域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优选ip域名&#34;&gt;#&lt;/a&gt; 优选 IP (域名)&lt;/h2&gt;
 &lt;p&gt;不管你是使用哪个项目的代码搭建 CloudFlareV2ray 渠道，都应该要注意地址 (address)，这将影响全局上网的速度。&lt;/p&gt;
 &lt;ol&gt;
@@ -154,6 +173,33 @@
 &lt;blockquote&gt;
 &lt;p&gt;IP 会随意变动&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;h3 id=&#34;androidios&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#androidios&#34;&gt;#&lt;/a&gt; Android&amp;amp;&amp;amp;IOS&lt;/h3&gt;
+&lt;p&gt;Android 使用程序 &lt;code&gt;termux&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装依赖&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pkg upgrade&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;IOS 使用程序 &lt;code&gt;ish&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装依赖&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;apk &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; openssh &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 优选域名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-sSL&lt;/span&gt; https://gitlab.com/rwkgyg/CFwarp/raw/main/point/CFcdnym.sh &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; CFcdnym.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x CFcdnym.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; CFcdnym.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 优选 IP&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-sSL&lt;/span&gt; https://gitlab.com/rwkgyg/CFwarp/raw/main/point/cfip.sh &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; cfip.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x cfip.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; cfip.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;抓取反代ip&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓取反代ip&#34;&gt;#&lt;/a&gt; 抓取反代 IP&lt;/h3&gt;
+&lt;p&gt;FOFA  &lt;code&gt;server==&amp;quot;cloudfare&amp;quot; &amp;amp;&amp;amp; port==&amp;quot;端口&amp;quot; &amp;amp;&amp;amp; country==&amp;quot;国家&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;CloudFlare 支持的 13 个端口号&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;HTTP端口(7个)&lt;/summary&gt;&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;80&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8080&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;8880&lt;/li&gt;
+&lt;li&gt;2052&lt;/li&gt;
+&lt;li&gt;2082&lt;/li&gt;
+&lt;li&gt;2086&lt;/li&gt;
+&lt;li&gt;2095&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;HTTPS端口(6个)&lt;/summary&gt;&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;443&lt;/li&gt;
+&lt;li&gt;2053&lt;/li&gt;
+&lt;li&gt;2083&lt;/li&gt;
+&lt;li&gt;2087&lt;/li&gt;
+&lt;li&gt;2096&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8443&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/details&gt;
 &lt;h3 id=&#34;区别&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#区别&#34;&gt;#&lt;/a&gt; 区别&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;域名：优选域名里包含许多优选 IP，并使用其中的一条 IP 作为连接 CloudFlare 的通道&lt;/li&gt;
@@ -164,14 +210,21 @@
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;结语&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结语&#34;&gt;#&lt;/a&gt; 结语&lt;/h1&gt;
 &lt;p&gt;无论是所以 Warp 服务还是自建 Workes，其根 IP 都是 CloudFlare，其速度也相差无几。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;速度的差异主要还是在与 CloudFlare 的连接&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;hr /&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OYnJ1aUpTaFVDRQ==&#34;&gt;https://www.youtube.com/watch?v=NbruiJShUCE&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1GRV9nSnJrMnNTYyZhbXA7dD04MTJz&#34;&gt;https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;amp;t=812s&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OYUxkLW9yd0ZVRQ==&#34;&gt;https://www.youtube.com/watch?v=NaLd-orwFUE&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1GRV9nSnJrMnNTYyZhbXA7dD04MTJz&#34;&gt;https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;amp;t=812s&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj05VjlDUXhtZndvQQ==&#34;&gt;https://www.youtube.com/watch?v=9V9CQxmfwoA&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray93YXJwLXln&#34;&gt;https://github.com/yonggekkk/warp-yg&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt;https://github.com/yonggekkk/Cloudflare_vless_trojan&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj05VjlDUXhtZndvQQ==&#34;&gt;https://www.youtube.com/watch?v=9V9CQxmfwoA&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray93YXJwLXln&#34;&gt;https://github.com/yonggekkk/warp-yg&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt;https://github.com/yonggekkk/Cloudflare_vless_trojan&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ppemlmbi9lZGdldHVubmVs&#34;&gt;https://github.com/zizifn/edgetunnel&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt;https://github.com/3Kmfi6HP/EDtunnel&lt;/span&gt;&lt;/p&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt;https://github.com/3Kmfi6HP/EDtunnel&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NhMTEwdXMvZXBlaXVz&#34;&gt;https://github.com/ca110us/epeius&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1hJVTIvQ2xvdWRmbGFyZVNwZWVkVGVzdA==&#34;&gt;https://github.com/XIU2/CloudflareSpeedTest&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2JhZGFmYW5zL0Nsb3VkZmxhcmUtSVAtU3BlZWRUZXN0&#34;&gt;https://github.com/badafans/Cloudflare-IP-SpeedTest&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
