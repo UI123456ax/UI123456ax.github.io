@@ -207,7 +207,7 @@ ip.sb
 &lt;blockquote&gt;
 &lt;p&gt;速度的差异主要还是在与 CloudFlare 的连接&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&#34;-&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#-&#34;&gt;#&lt;/a&gt; &amp;lt;!--&lt;/h2&gt;
+&lt;hr /&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OYnJ1aUpTaFVDRQ==&#34;&gt;https://www.youtube.com/watch?v=NbruiJShUCE&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1GRV9nSnJrMnNTYyZhbXA7dD04MTJz&#34;&gt;https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;amp;t=812s&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OYUxkLW9yd0ZVRQ==&#34;&gt;https://www.youtube.com/watch?v=NaLd-orwFUE&lt;/span&gt;&lt;br /&gt;
@@ -218,8 +218,7 @@ ip.sb
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt;https://github.com/3Kmfi6HP/EDtunnel&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NhMTEwdXMvZXBlaXVz&#34;&gt;https://github.com/ca110us/epeius&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1hJVTIvQ2xvdWRmbGFyZVNwZWVkVGVzdA==&#34;&gt;https://github.com/XIU2/CloudflareSpeedTest&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2JhZGFmYW5zL0Nsb3VkZmxhcmUtSVAtU3BlZWRUZXN0&#34;&gt;https://github.com/badafans/Cloudflare-IP-SpeedTest&lt;/span&gt;&lt;br /&gt;
---&amp;gt;&lt;/p&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2JhZGFmYW5zL0Nsb3VkZmxhcmUtSVAtU3BlZWRUZXN0&#34;&gt;https://github.com/badafans/Cloudflare-IP-SpeedTest&lt;/span&gt;&lt;/p&gt;
 </content>
         <category term="CloudFlare" scheme="https://ui123456ax.github.io/tags/CloudFlare/" />
         <category term="VPN" scheme="https://ui123456ax.github.io/tags/VPN/" />
