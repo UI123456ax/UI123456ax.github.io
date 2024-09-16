@@ -10,9 +10,9 @@
     </author>
     <updated>2024-09-16T01:52:32.000Z</updated>
     <entry>
-        <id>https://ui123456ax.github.io/2024/09/16/0_100/16-GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</id>
+        <id>https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</id>
         <title>GitHub配置多账号git上传</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/09/16/0_100/16-GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/"/>
+        <link rel="alternate" href="https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;记录一次关于 Github 多账号 git 的配置&lt;br /&gt;
 将仓库内容上传 &lt;code&gt;AccountA&lt;/code&gt;  的同时上传到我的另一个账号 &lt;code&gt;AccountB&lt;/code&gt;&lt;/p&gt;
