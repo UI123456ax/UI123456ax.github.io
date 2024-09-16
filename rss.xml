@@ -10,12 +10,89 @@
         </author>
         <description>星月夜 ブログ</description>
         <language>zh-CN</language>
-        <pubDate>Tue, 13 Aug 2024 20:08:26 +0800</pubDate>
-        <lastBuildDate>Tue, 13 Aug 2024 20:08:26 +0800</lastBuildDate>
+        <pubDate>Mon, 16 Sep 2024 09:52:32 +0800</pubDate>
+        <lastBuildDate>Mon, 16 Sep 2024 09:52:32 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/08/13/0_100/15-CloudFlareVPN/</guid>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/09/16/0_100/16-GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</guid>
+            <title>GitHub配置多账号git上传</title>
+            <link>https://ui123456ax.github.io/2024/09/16/0_100/16-GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</link>
+            <category term="配置" scheme="https://ui123456ax.github.io/tags/%E9%85%8D%E7%BD%AE/" />
+            <category term="github" scheme="https://ui123456ax.github.io/tags/github/" />
+            <pubDate>Mon, 16 Sep 2024 09:52:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;记录一次关于 Github 多账号 git 的配置&lt;br /&gt;
+将仓库内容上传 &lt;code&gt;AccountA&lt;/code&gt;  的同时上传到我的另一个账号 &lt;code&gt;AccountB&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流程&#34;&gt;#&lt;/a&gt; 流程&lt;/h1&gt;
+&lt;h2 id=&#34;生成密钥&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生成密钥&#34;&gt;#&lt;/a&gt; 生成密钥&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;生成新的 SSH 密钥对（假设新密钥对的名称为 &lt;code&gt;id_rsa_b&lt;/code&gt; ）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh-keygen &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; ed25519 &lt;span class=&#34;token parameter variable&#34;&gt;-C&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;your_email@example.com&#34;&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; ~/.ssh/id_rsa_b&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;将新生成的公钥添加到 GitHub 账号 B (AccountB) 的 SSH 密钥列表中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;打开密钥文件 (C:/Users/your_name/.ssh)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; ~/.ssh/id_rsa_b.pub&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;将里面的内容全部复制&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;登录到 GitHub 账号 B，进入 &lt;code&gt;“Settings” -&amp;gt; “SSH and GPG keys” -&amp;gt; “New SSH key”&lt;/code&gt; ，将公钥粘贴进去并保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置本地git以使用新的ssh密钥对&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置本地git以使用新的ssh密钥对&#34;&gt;#&lt;/a&gt; 配置本地 Git 以使用新的 SSH 密钥对&lt;/h2&gt;
+&lt;p&gt;在本地创建一个配置文件（例如 config），在其中添加多个账号的 SSH 配置信息。每个账号的配置信息应该以 Host 开头，后面跟着对应的域名和密钥路径&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建 &lt;code&gt;config&lt;/code&gt;  配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;touch&lt;/span&gt; ~/.ssh/config&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;无需后缀&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;code&gt;config&lt;/code&gt;  文件内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;# Account A
+Host github.com-AccountA
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_a
+
+# Account B
+Host github.com-AccountB
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Account-B&lt;/code&gt;  为你要切换时使用的账号名称&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;尝试添加git仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#尝试添加git仓库&#34;&gt;#&lt;/a&gt; 尝试添加 git 仓库&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Switch to account A&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote set-url origin git@github.com-AccountA:usernameA/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Switch to account B&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote set-url origin git@github.com-AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;AccountB&lt;/code&gt;  替换为你实际要切换到的账号名&lt;br /&gt;
+ &lt;code&gt;usernameB&lt;/code&gt;  替换为该账号下的用户名&lt;br /&gt;
+ &lt;code&gt;repo&lt;/code&gt;  替换为你要切换到的仓库名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最后验证远程仓库是否已成功添加&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;显示所有已添加的远程仓库及其对应的 URL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;遇到的问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#遇到的问题&#34;&gt;#&lt;/a&gt; 遇到的问题&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;error: remote origin already exists&lt;/code&gt; &lt;br /&gt;
+ 这个错误表示远程仓库 &amp;quot;origin&amp;quot; 已经存在。可能原因有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有成功配置 SSH 到 GitHub 账号上&lt;/li&gt;
+&lt;li&gt;已经添加过该仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;重新配置。&lt;strong&gt;请确保每一步骤准确，文件配置恰当&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;删除并重新添加远程仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote remove origin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; origin git@github.com-AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</guid>
             <title>使用CloudFlare作为VPN</title>
-            <link>https://ui123456ax.github.io/2024/08/13/0_100/15-CloudFlareVPN/</link>
+            <link>https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</link>
             <category term="CloudFlare" scheme="https://ui123456ax.github.io/tags/CloudFlare/" />
             <category term="VPN" scheme="https://ui123456ax.github.io/tags/VPN/" />
             <pubDate>Tue, 13 Aug 2024 20:08:26 +0800</pubDate>
@@ -70,7 +147,7 @@
 &lt;p&gt;每天免费 10w 个请求，可以绑定自己的域名，可以访问外网，可以反代理外网的接口&lt;br /&gt;
 这里选择的是 &lt;code&gt;yonggekkk&lt;/code&gt;  的脚本&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt; Cloudflare_vless_trojan&lt;/span&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;原项目&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ppemlmbi9lZGdldHVubmVs&#34;&gt; edgetunnel&lt;/span&gt;、改版&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt; EDtunnel&lt;/span&gt;、Trojan&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NhMTEwdXMvZXBlaXVz&#34;&gt;epeius&lt;/span&gt;&lt;br /&gt;
+&lt;p&gt;原项目&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ppemlmbi9lZGdldHVubmVs&#34;&gt; edgetunnel&lt;/span&gt;、&lt;s&gt;改版&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt; EDtunnel&lt;/span&gt;&lt;/s&gt;、Trojan&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NhMTEwdXMvZXBlaXVz&#34;&gt;epeius&lt;/span&gt;&lt;br /&gt;
  选择&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt; Cloudflare_vless_trojan&lt;/span&gt; 的理由是将项目的优点都整合到了一起，并且有很多相关的解释对于小白来讲很友好。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;前置条件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前置条件&#34;&gt;#&lt;/a&gt; 前置条件&lt;/h2&gt;
@@ -80,7 +157,8 @@
 &lt;li&gt;域名 (可选)&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h2 id=&#34;使用脚本&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用脚本&#34;&gt;#&lt;/a&gt; 使用脚本&lt;/h2&gt;
-&lt;p&gt;下面将以最简单的方式使用此脚本 (无域名操作)，更多扩展操作可看原项目&lt;/p&gt;
+&lt;p&gt;下文以无域名操作&lt;br /&gt;
+下面将以最简单的方式使用此脚本 (无域名操作)，更多扩展操作可看原项目&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;有无域名的区别 --&amp;gt; 有无 Tls&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -108,7 +186,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;如我的 &lt;code&gt;https://v2vpn.ui123456ax.workers.dev/a52c418e-a7d7-4d23-a348-1e055c1cb806&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_10.png&#34; alt=&#34;10&#34; /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_10.png&#34; alt=&#34;10&#34; title=&#34;默认关闭TLS&#34; /&gt;&lt;br /&gt;
  复制链接后，导入至 V2ray 即可正常使用。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;V2 节点这里就不分享给大家了，每个账户的请求数量是有限 10w 次的&lt;/p&gt;
@@ -140,6 +218,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;需要显示为非 &lt;code&gt;-1&lt;/code&gt;  则需要使用域名&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;如果是 &lt;code&gt;其他项目里的脚本&lt;/code&gt; 默认是开启 TLS，可手动关闭节点 TLS&lt;/p&gt;
 &lt;h2 id=&#34;地址address&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#地址address&#34;&gt;#&lt;/a&gt; 地址 (Address)&lt;/h2&gt;
 &lt;p&gt;请注意你的服务器地址选项 这将会影响你是否可以上网 以及上网的速度 (下文优选 IP 有提)&lt;/p&gt;
 &lt;blockquote&gt;
@@ -153,6 +232,12 @@ ip.sb
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;proxyip-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#proxyip-2&#34;&gt;#&lt;/a&gt; ProxyIP&lt;/h2&gt;
 &lt;p&gt;设置 ProxyIP 的作用，就是保证能与 CloudFlare 的连通。说白了，不设置 ProxyIP 将无法连接与 CloudFlare 相关的网站 (包括使用了 CFCDN 的网站)，不影响上网速度。一般情况默认即可 (非空)，无需修改。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cdn-all.xn--b6gac.eu.org
+cdn.xn--b6gac.eu.org
+cdn-b100.xn--b6gac.eu.org
+edgetunnel.anycast.eu.org
+cdn.anycast.eu.org
+&lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;优选ip域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优选ip域名&#34;&gt;#&lt;/a&gt; 优选 IP (域名)&lt;/h2&gt;
 &lt;p&gt;不管你是使用哪个项目的代码搭建 CloudFlareV2ray 渠道，都应该要注意地址 (address)，这将影响全局上网的速度。&lt;/p&gt;
 &lt;ol&gt;
@@ -177,13 +262,14 @@ ip.sb
 &lt;p&gt;Android 使用程序 &lt;code&gt;termux&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装依赖&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pkg upgrade&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pkg &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# apt update&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# apt install curl&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;IOS 使用程序 &lt;code&gt;ish&lt;/code&gt;&lt;/p&gt;
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装依赖&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;apk &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; openssh &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 优选域名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-sSL&lt;/span&gt; https://gitlab.com/rwkgyg/CFwarp/raw/main/point/CFcdnym.sh &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; CFcdnym.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x CFcdnym.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; CFcdnym.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 优选 IP&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-sSL&lt;/span&gt; https://gitlab.com/rwkgyg/CFwarp/raw/main/point/cfip.sh &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; cfip.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x cfip.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; cfip.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;抓取反代ip&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓取反代ip&#34;&gt;#&lt;/a&gt; 抓取反代 IP&lt;/h3&gt;
-&lt;p&gt;FOFA  &lt;code&gt;server==&amp;quot;cloudfare&amp;quot; &amp;amp;&amp;amp; port==&amp;quot;端口&amp;quot; &amp;amp;&amp;amp; country==&amp;quot;国家&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;可利用网络空间检索抓取有 CF 加速的网站&lt;br /&gt;
+ FOFA  &lt;code&gt;server==&amp;quot;cloudflare&amp;quot; &amp;amp;&amp;amp; port==&amp;quot;端口&amp;quot; &amp;amp;&amp;amp; country==&amp;quot;国家&amp;quot;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;CloudFlare 支持的 13 个端口号&lt;/p&gt;
 &lt;details&gt;&lt;summary&gt;HTTP端口(7个)&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
 &lt;li&gt;80&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;8080&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;8880&lt;/li&gt;
+&lt;li&gt;8080&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8880&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;2052&lt;/li&gt;
 &lt;li&gt;2082&lt;/li&gt;
 &lt;li&gt;2086&lt;/li&gt;
@@ -214,14 +300,16 @@ ip.sb
 &lt;p&gt;速度的差异主要还是在与 CloudFlare 的连接&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr /&gt;
-&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OYnJ1aUpTaFVDRQ==&#34;&gt;https://www.youtube.com/watch?v=NbruiJShUCE&lt;/span&gt;&lt;br /&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1vakdvanRGOHNXOCZhbXA7dD0xNDcxcw==&#34;&gt;https://www.youtube.com/watch?v=ojGojtF8sW8&amp;amp;t=1471s&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OYnJ1aUpTaFVDRQ==&#34;&gt;https://www.youtube.com/watch?v=NbruiJShUCE&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1GRV9nSnJrMnNTYyZhbXA7dD04MTJz&#34;&gt;https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;amp;t=812s&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1OYUxkLW9yd0ZVRQ==&#34;&gt;https://www.youtube.com/watch?v=NaLd-orwFUE&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj05VjlDUXhtZndvQQ==&#34;&gt;https://www.youtube.com/watch?v=9V9CQxmfwoA&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray93YXJwLXln&#34;&gt;https://github.com/yonggekkk/warp-yg&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3lvbmdnZWtray9DbG91ZGZsYXJlX3ZsZXNzX3Ryb2phbg==&#34;&gt;https://github.com/yonggekkk/Cloudflare_vless_trojan&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3ppemlmbi9lZGdldHVubmVs&#34;&gt;https://github.com/zizifn/edgetunnel&lt;/span&gt;&lt;br /&gt;
-&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt;https://github.com/3Kmfi6HP/EDtunnel&lt;/span&gt;&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tLzNLbWZpNkhQL0VEdHVubmVs&#34;&gt;https://github.com/3Kmfi6HP/EDtunnel&lt;/span&gt; 已删库&lt;br /&gt;
+&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0VEdHVubmVsLXJldi9FRHR1bm5lbC1yZXY=&#34;&gt; https://github.com/EDtunnel-rev/EDtunnel-rev&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2NhMTEwdXMvZXBlaXVz&#34;&gt;https://github.com/ca110us/epeius&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL1hJVTIvQ2xvdWRmbGFyZVNwZWVkVGVzdA==&#34;&gt;https://github.com/XIU2/CloudflareSpeedTest&lt;/span&gt;&lt;br /&gt;
 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2JhZGFmYW5zL0Nsb3VkZmxhcmUtSVAtU3BlZWRUZXN0&#34;&gt;https://github.com/badafans/Cloudflare-IP-SpeedTest&lt;/span&gt;&lt;/p&gt;
