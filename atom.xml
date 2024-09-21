@@ -604,15 +604,16 @@ A: IOS 政策不允许&lt;/p&gt;
  IOS 音频已修正，但仍有部分游戏可能并无声音 &lt;a href=&#34;https://ui123456ax.github.io/2024/05/10/0_100/09-RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/&#34;&gt;修复 RPGMV 在 IOS 上无法运行 ogg 文件&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;无科学环境可能造成卡顿、画面加载不全等影响&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;游戏于  &lt;code&gt;github page&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;游戏于  &lt;code&gt;github page&lt;/code&gt; , 如有需要可从&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3UteW9haS8=&#34;&gt; git 仓库&lt;/span&gt;自行 Clone 本地&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;游戏列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏列表&#34;&gt;#&lt;/a&gt; 游戏列表：&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;s&gt;夏日狂想曲&lt;/s&gt; 无法稳定，过于卡顿&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9jaGRjLw==&#34;&gt;彼女と痴漢と満員電車&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy94enhyZGJ3L3d3dw==&#34;&gt;寻找夏日的宝物&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9jc2p5&#34;&gt;触手监狱&lt;/span&gt;&lt;/s&gt; 可能无法加载 Data/_Translation.json 文件&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy94enhyZGJ3L3d3dw==&#34;&gt;寻找夏日的宝物&lt;/span&gt; 生肉&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9kcmt4cS93d3c=&#34;&gt;冬日狂想曲&lt;/span&gt;&lt;/li&gt;
-&lt;li&gt;&lt;s&gt;无力天使&lt;/s&gt; 待定，研究翻译&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy93bHRzL3d3dw==&#34;&gt;无力天使&lt;/span&gt; 待定，研究翻译中&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;・・・・待定&lt;/p&gt;
 </content>
@@ -912,6 +913,8 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1&lt;/p&gt;
 ---
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;可以在命令行运行 &lt;code&gt;hexo hidden:list&lt;/code&gt;  来获取当前所有的已隐藏文章列表&lt;/p&gt;
+&lt;h1 id=&#34;评论系统&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#评论系统&#34;&gt;#&lt;/a&gt; 评论系统&lt;/h1&gt;
+&lt;p&gt;暂无&lt;/p&gt;
 &lt;h1 id=&#34;这里是用来测试hexotheme&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#这里是用来测试hexotheme&#34;&gt;#&lt;/a&gt; 这里是用来测试 Hexo&amp;amp;Theme&lt;/h1&gt;
 &lt;details&gt;&lt;summary&gt;**点击折叠**&lt;/summary&gt;&lt;div&gt;
 &lt;p&gt;这是被隐藏的内容&lt;/p&gt;
