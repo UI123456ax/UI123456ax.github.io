@@ -102,12 +102,12 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/68.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/44.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/49.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/62.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/9.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/23.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/39.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/37.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/53.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/52.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/13.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/66.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,50 +151,67 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="博客"><a class="anchor" href="#博客">#</a> 博客</h1>
-<p>2023-06-21 19:08:52 本博客基于 Hexo 正式创建，并使用主题<span class="exturl" data-url="aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy8="> Shoka</span></p>
+    <h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p>2023-06-21 19:08:52 本博客基于Hexo正式创建，并使用主题<span class="exturl" data-url="aHR0cHM6Ly9zaG9rYS5sb3N0eXUubWUvY29tcHV0ZXItc2NpZW5jZS9ub3RlL3RoZW1lLXNob2thLWRvYy8=">Shoka</span></p>
 <blockquote>
 <p>记录自己</p>
 </blockquote>
-<h1 id="hexo"><a class="anchor" href="#hexo">#</a> Hexo</h1>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo</span><br><span class="line"><span class="comment"># npx hexo &lt;command&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="github配置"><a class="anchor" href="#github配置">#</a> Github 配置</h2>
-<h3 id="配置身份密钥"><a class="anchor" href="#配置身份密钥">#</a> 配置身份密钥</h3>
-<p>登录 git 账号</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;user_name&quot;</span> <span class="comment"># 填入 GitHub 用户名</span></span><br><span class="line">git config --global user.email <span class="string">&quot;user_email&quot;</span> <span class="comment"># 填入 GitHub 注册的邮箱</span></span><br></pre></td></tr></table></figure></p>
-<p>获取 SSH KEY</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认即可</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;user.email&quot;</span></span><br></pre></td></tr></table></figure></p>
-<p><code>C:\Users\username\.ssh\id_rsa.pub</code>  公钥内容复制至 Gtihub<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2tleXM=">SSH and GPG keys</span></p>
-<p>检测公钥设置是否成功</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line"><span class="comment"># Hi username! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="配置hexo"><a class="anchor" href="#配置hexo">#</a> 配置 Hexo</h3>
-<p>安装 git 插件</p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></p>
-<p><code>&lt;root&gt;\_config.yml</code></p>
-<p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:username/username.github.io.git</span> <span class="comment"># git仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>如果关于推送失败时，将 <code>&lt;root&gt;\.deploy_git</code>  文件夹删除即可</p>
-</blockquote>
-<h2 id="基础指令"><a class="anchor" href="#基础指令">#</a> 基础指令</h2>
-<p>初始化 <code>hexo init</code> <br />
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成 public文件夹</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># 删除 public文件夹</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="comment"># 开启本地服务器 http://localhost:4000/</span></span><br><span class="line">hexo s</span><br><span class="line"><span class="comment"># 推送至 Github</span></span><br><span class="line">hexo d</span><br><span class="line"><span class="comment"># 创建文章</span></span><br><span class="line">hexo n <span class="string">&#x27;&lt;title&gt;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁用加载插件和脚本</span></span><br><span class="line">hexo --safe</span><br><span class="line"><span class="comment"># 将消息详细记录到终端和 debug.log 文件</span></span><br><span class="line">hexo --debug</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>一键三连上传 <code>hexo c &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
-</blockquote>
-<h1 id="插件"><a class="anchor" href="#插件">#</a> 插件</h1>
-<h2 id="隐藏文章"><a class="anchor" href="#隐藏文章">#</a> 隐藏文章</h2>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-hide-posts --save</span><br></pre></td></tr></table></figure></p>
-<p>在想要隐藏的文章里添加 hidden 标记</p>
-<p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">hidden: true</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure></p>
-<p>可以在命令行运行 <code>hexo hidden:list</code>  来获取当前所有的已隐藏文章列表</p>
-<h1 id="评论系统"><a class="anchor" href="#评论系统">#</a> 评论系统</h1>
-<p>暂无</p>
-<h1 id="这里是用来测试hexotheme"><a class="anchor" href="#这里是用来测试hexotheme">#</a> 这里是用来测试 Hexo&amp;Theme</h1>
-<details><summary>**点击折叠**</summary><div>
-<p>这是被隐藏的内容</p>
-</div></details>
-<p>&lt;!-- 模糊模糊模糊模糊模糊模糊 {.bulr}  --&gt;</p>
+<h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br><span class="line">npm install hexo</span><br><span class="line"><span class="comment"># npx hexo &lt;command&gt;</span></span><br></pre></td></tr></table></figure>
 
+<h2 id="Github配置"><a href="#Github配置" class="headerlink" title="Github配置"></a>Github配置</h2><h3 id="配置身份密钥"><a href="#配置身份密钥" class="headerlink" title="配置身份密钥"></a>配置身份密钥</h3><p>登录git账号</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;user_name&quot;</span> <span class="comment"># 填入 GitHub 用户名</span></span><br><span class="line">git config --global user.email <span class="string">&quot;user_email&quot;</span> <span class="comment"># 填入 GitHub 注册的邮箱</span></span><br></pre></td></tr></table></figure>
+
+<p>获取 SSH KEY</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认即可</span></span><br><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;user.email&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>C:\Users\username\.ssh\id_rsa.pub</code>公钥内容复制至Gtihub<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2tleXM=">SSH and GPG keys</span></p>
+<p>检测公钥设置是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line"><span class="comment"># Hi username! You&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="配置Hexo"><a href="#配置Hexo" class="headerlink" title="配置Hexo"></a>配置Hexo</h3><p>安装git插件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p><code>&lt;root&gt;\_config.yml</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">git@github.com:username/username.github.io.git</span> <span class="comment"># git仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>如果关于推送失败时，将<code>&lt;root&gt;\.deploy_git</code>文件夹删除即可</p>
+</blockquote>
+<h2 id="基础指令"><a href="#基础指令" class="headerlink" title="基础指令"></a>基础指令</h2><p>初始化<code>hexo init</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 生成 public文件夹</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="comment"># 删除 public文件夹</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="comment"># 开启本地服务器 http://localhost:4000/</span></span><br><span class="line">hexo s</span><br><span class="line"><span class="comment"># 推送至 Github</span></span><br><span class="line">hexo d</span><br><span class="line"><span class="comment"># 创建文章</span></span><br><span class="line">hexo n <span class="string">&#x27;&lt;title&gt;&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 禁用加载插件和脚本</span></span><br><span class="line">hexo --safe</span><br><span class="line"><span class="comment"># 将消息详细记录到终端和 debug.log 文件</span></span><br><span class="line">hexo --debug</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>一键三连上传<code>hexo c &amp;&amp; hexo g &amp;&amp; hexo d</code></p>
+</blockquote>
+<h1 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h1><p>目前安装的~</p>
+<h2 id="主题需要"><a href="#主题需要" class="headerlink" title="主题需要"></a>主题需要</h2><h3 id="Markdown渲染"><a href="#Markdown渲染" class="headerlink" title="Markdown渲染"></a>Markdown渲染</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先删除已安装的Markdown渲染插件</span></span><br><span class="line">npm un hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
+<p>hexo-renderer-multi-markdown-it</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-renderer-multi-markdown-it --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="css加载器"><a href="#css加载器" class="headerlink" title="css加载器"></a>css加载器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-autoprefixer --save</span><br></pre></td></tr></table></figure>
+<p>_config.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">autoprefixer:</span></span><br><span class="line">  <span class="attr">exclude:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">&#x27;*.min.css&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="搜索功能"><a href="#搜索功能" class="headerlink" title="搜索功能"></a>搜索功能</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-algoliasearch --save</span><br></pre></td></tr></table></figure>
+<p>_config.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">algolia:</span></span><br><span class="line">  <span class="attr">appId:</span> <span class="comment">#Your appId</span></span><br><span class="line">  <span class="attr">apiKey:</span> <span class="comment">#Your apiKey</span></span><br><span class="line">  <span class="attr">adminApiKey:</span> <span class="comment">#Your adminApiKey</span></span><br><span class="line">  <span class="attr">chunkSize:</span> <span class="number">5000</span></span><br><span class="line">  <span class="attr">indexName:</span> <span class="comment">#&quot;shoka&quot;</span></span><br><span class="line">  <span class="attr">fields:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">title</span> <span class="comment">#必须配置</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">path</span> <span class="comment">#必须配置</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">categories</span> <span class="comment">#推荐配置</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">content:strip:truncate,0,2000</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">gallery</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">photos</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">tags</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="文章统计"><a href="#文章统计" class="headerlink" title="文章统计"></a>文章统计</h3><p>字数、阅读时间</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-symbols-count-time</span><br></pre></td></tr></table></figure>
+
+<h3 id="Feed"><a href="#Feed" class="headerlink" title="Feed"></a>Feed</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-feed --save-dev</span><br></pre></td></tr></table></figure>
+<p>_config.yml</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">keywords:</span> <span class="comment">#站点关键词，用 “,” 分隔</span></span><br><span class="line"></span><br><span class="line"><span class="attr">feed:</span></span><br><span class="line">    <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">    <span class="attr">order_by:</span> <span class="string">&quot;-date&quot;</span></span><br><span class="line">    <span class="attr">tag_dir:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">category_dir:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">rss:</span></span><br><span class="line">        <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">template:</span> <span class="string">&quot;themes/shoka/layout/_alternate/rss.ejs&quot;</span></span><br><span class="line">        <span class="attr">output:</span> <span class="string">&quot;rss.xml&quot;</span></span><br><span class="line">    <span class="attr">atom:</span></span><br><span class="line">        <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">template:</span> <span class="string">&quot;themes/shoka/layout/_alternate/atom.ejs&quot;</span></span><br><span class="line">        <span class="attr">output:</span> <span class="string">&quot;atom.xml&quot;</span></span><br><span class="line">    <span class="attr">jsonFeed:</span></span><br><span class="line">        <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">        <span class="attr">template:</span> <span class="string">&quot;themes/shoka/layout/_alternate/json.ejs&quot;</span></span><br><span class="line">        <span class="attr">output:</span> <span class="string">&quot;feed.json&quot;</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="功能类-非必须"><a href="#功能类-非必须" class="headerlink" title="功能类(非必须)"></a>功能类(非必须)</h2><h3 id="隐藏文章"><a href="#隐藏文章" class="headerlink" title="隐藏文章"></a>隐藏文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-hide-posts --save</span><br></pre></td></tr></table></figure>
+<p>_config.yml配置</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo-hide-posts</span></span><br><span class="line"><span class="attr">hide_posts:</span></span><br><span class="line">  <span class="comment"># 可以改成其他你喜欢的名字</span></span><br><span class="line">  <span class="attr">filter:</span> <span class="string">hidden</span></span><br><span class="line">  <span class="comment"># 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见</span></span><br><span class="line">  <span class="comment"># 常见的位置有：index, tag, category, archive, sitemap, feed, etc.</span></span><br><span class="line">  <span class="comment"># 留空则默认全部隐藏</span></span><br><span class="line">  <span class="attr">public_generators:</span> []</span><br><span class="line">  <span class="comment"># 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录</span></span><br><span class="line">  <span class="attr">noindex:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>在想要隐藏的文章里添加hidden标记</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">hidden: true</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>可以在命令行运行<code>hexo hidden:list</code>来获取当前所有的已隐藏文章列表</p>
+</blockquote>
+<h1 id="评论系统"><a href="#评论系统" class="headerlink" title="评论系统"></a>评论系统</h1><p>暂无</p>
+<h1 id="这里是用来测试Hexo-Theme"><a href="#这里是用来测试Hexo-Theme" class="headerlink" title="这里是用来测试Hexo&amp;Theme"></a>这里是用来测试Hexo&amp;Theme</h1><p>+++ <strong>点击折叠</strong><br>这是被隐藏的内容<br>+++</p>
+<!-- 模糊模糊模糊模糊模糊模糊{.bulr}  -->
       <div class="tags">
           <a href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag"><i class="ic i-tag"></i> 笔记</a>
           <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"><i class="ic i-tag"></i> 博客</a>
@@ -209,7 +226,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-09-21 22:17:58" itemprop="dateModified" datetime="2024-09-21T22:17:58+08:00">2024-09-21</time>
+    <time title="修改时间：2025-03-08 14:57:58" itemprop="dateModified" datetime="2025-03-08T14:57:58+08:00">2025-03-08</time>
   </span>
 </div>
 
@@ -264,7 +281,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
     <div class="item left">
       
 
-  <a href="/2023/06/21/0_100/00_MarkDown/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;16.jpg" title="MarkDown语法">
+  <a href="/2023/06/21/0_100/00_MarkDown/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;39.jpg" title="MarkDown语法">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>MarkDown语法</h3>
@@ -274,7 +291,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
     <div class="item right">
       
 
-  <a href="/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;69.jpg" title="关于Shoka图床修复">
+  <a href="/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;76.jpg" title="关于Shoka图床修复">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>关于Shoka图床修复</h3>
@@ -296,7 +313,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text"> 博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexo"><span class="toc-number">2.</span> <span class="toc-text"> Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#github%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.</span> <span class="toc-text"> Github 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BA%AB%E4%BB%BD%E5%AF%86%E9%92%A5"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 配置身份密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEhexo"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 配置 Hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4"><span class="toc-number">2.2.</span> <span class="toc-text"> 基础指令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text"> 插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E6%96%87%E7%AB%A0"><span class="toc-number">3.1.</span> <span class="toc-text"> 隐藏文章</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.</span> <span class="toc-text"> 评论系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%98%AF%E7%94%A8%E6%9D%A5%E6%B5%8B%E8%AF%95hexotheme"><span class="toc-number">5.</span> <span class="toc-text"> 这里是用来测试 Hexo&amp;Theme</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%9A%E5%AE%A2"><span class="toc-number">1.</span> <span class="toc-text">博客</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hexo"><span class="toc-number">2.</span> <span class="toc-text">Hexo</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Github%E9%85%8D%E7%BD%AE"><span class="toc-number">2.1.</span> <span class="toc-text">Github配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BA%AB%E4%BB%BD%E5%AF%86%E9%92%A5"><span class="toc-number">2.1.1.</span> <span class="toc-text">配置身份密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AEHexo"><span class="toc-number">2.1.2.</span> <span class="toc-text">配置Hexo</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E6%8C%87%E4%BB%A4"><span class="toc-number">2.2.</span> <span class="toc-text">基础指令</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8F%92%E4%BB%B6"><span class="toc-number">3.</span> <span class="toc-text">插件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E9%9C%80%E8%A6%81"><span class="toc-number">3.1.</span> <span class="toc-text">主题需要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Markdown%E6%B8%B2%E6%9F%93"><span class="toc-number">3.1.1.</span> <span class="toc-text">Markdown渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#css%E5%8A%A0%E8%BD%BD%E5%99%A8"><span class="toc-number">3.1.2.</span> <span class="toc-text">css加载器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD"><span class="toc-number">3.1.3.</span> <span class="toc-text">搜索功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1"><span class="toc-number">3.1.4.</span> <span class="toc-text">文章统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Feed"><span class="toc-number">3.1.5.</span> <span class="toc-text">Feed</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E7%B1%BB-%E9%9D%9E%E5%BF%85%E9%A1%BB"><span class="toc-number">3.2.</span> <span class="toc-text">功能类(非必须)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%90%E8%97%8F%E6%96%87%E7%AB%A0"><span class="toc-number">3.2.1.</span> <span class="toc-text">隐藏文章</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F"><span class="toc-number">4.</span> <span class="toc-text">评论系统</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%BF%99%E9%87%8C%E6%98%AF%E7%94%A8%E6%9D%A5%E6%B5%8B%E8%AF%95Hexo-Theme"><span class="toc-number">5.</span> <span class="toc-text">这里是用来测试Hexo&amp;Theme</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
       </div>
@@ -311,13 +328,13 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">16</span>
+        <span class="count">14</span>
         <span class="name">文章</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">15</span>
+        <span class="count">14</span>
         <span class="name">标签</span>
       </a>
     </div>
@@ -399,7 +416,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/" title="使用CloudFlare给GithubPage加速">使用CloudFlare给GithubPage加速</a></span>
+    <span><a href="/2024/07/10/0_100/11_BurpSuite/" title="BurpSuite使用指南">BurpSuite使用指南</a></span>
   </li>
 
       
@@ -408,7 +425,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/" title="Hexo美化 添加Live2d（看板娘）">Hexo美化 添加Live2d（看板娘）</a></span>
+    <span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/" title="使用CloudFlare给GithubPage加速">使用CloudFlare给GithubPage加速</a></span>
   </li>
 
       
@@ -426,15 +443,6 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/21/0_100/01_Hexo/" title="关于Hexo">关于Hexo</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
     <span><a href="/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/" title="ADB-命令">ADB-命令</a></span>
   </li>
 
@@ -444,7 +452,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/05/08/0_100/08_erogames/" title="TESX-EROGAMES">TESX-EROGAMES</a></span>
+    <span><a href="/2024/08/13/0_100/15_CloudFlareVPN/" title="使用CloudFlare作为VPN">使用CloudFlare作为VPN</a></span>
   </li>
 
       
@@ -453,16 +461,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="关于Github Actions使用Python自动化时报错的解决方法">关于Github Actions使用Python自动化时报错的解决方法</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/12/14/0_100/18_Github-Models-ClaudeDev/" title="18">18</a></span>
+    <span><a href="/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/" title="修复RPGMV在IOS上无法运行ogg文件">修复RPGMV在IOS上无法运行ogg文件</a></span>
   </li>
 
       
@@ -480,7 +479,25 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="关于Github Actions使用Python自动化时报错的解决方法">关于Github Actions使用Python自动化时报错的解决方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/" title="Android抓包工具无法正常上网">Android抓包工具无法正常上网</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/" title="GitHub配置多账号git上传">GitHub配置多账号git上传</a></span>
   </li>
 
   </ul>

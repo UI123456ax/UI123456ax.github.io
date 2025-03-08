@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ui123456ax.github.io</id>
+    <title>ほしづきよ • Posts by &#34;娱乐&#34; tag</title>
+    <link href="https://ui123456ax.github.io" />
+    <updated>2024-05-07T16:07:51.000Z</updated>
+    <category term="笔记" />
+    <category term="博客" />
+    <category term="Shoka" />
+    <category term="Github" />
+    <category term="Python" />
+    <category term="报错" />
+    <category term="配置" />
+    <category term="Comic" />
+    <category term="娱乐" />
+    <category term="Android" />
+    <category term="github" />
+    <category term="CloudFlare" />
+    <category term="VPN" />
+    <category term="cloudflare" />
+    <entry>
+        <id>https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/</id>
+        <title>TESX-EROGAMES</title>
+        <link rel="alternate" href="https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/"/>
+        <content type="html">&lt;p&gt;&lt;s&gt;和同学在校内游玩的小游戏&lt;/s&gt;&lt;/p&gt;
+&lt;h3 id=&#34;操作说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作说明&#34;&gt;#&lt;/a&gt; 操作说明&lt;/h3&gt;
+&lt;p&gt;RPG 可自由操作时两指齐按（右鍵）打开功能表存档，部分需定点存档&lt;br /&gt;
+ IOS 音频已修正，但仍有部分游戏可能并无声音 &lt;a href=&#34;https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/&#34;&gt;修复 RPGMV 在 IOS 上无法运行 ogg 文件&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;无科学环境可能造成卡顿、画面加载不全等影响&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;游戏于  &lt;code&gt;github page&lt;/code&gt; , 如有需要可从&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3UteW9haS8=&#34;&gt; git 仓库&lt;/span&gt;自行 Clone 本地&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;游戏列表&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#游戏列表&#34;&gt;#&lt;/a&gt; 游戏列表：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy94cmt4cS93d3cv&#34;&gt;夏日狂想曲&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9kcmt4cS93d3c=&#34;&gt;冬日狂想曲&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9jaGRjLw==&#34;&gt;彼女と痴漢と満員電車&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9jc2p5&#34;&gt;触手监狱&lt;/span&gt;&lt;/s&gt; 可能无法加载 Data/_Translation.json 文件&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy94enhyZGJ3L3d3dw==&#34;&gt;寻找夏日的宝物&lt;/span&gt; 生肉&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy93bHRzL3d3dw==&#34;&gt;无力天使&lt;/span&gt; 生肉&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9tZnNuY2x4Lw==&#34;&gt;魔法少女苍蓝星&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lcm9nYW1lcy51cy5rZy9QcmF5R2FtZS8=&#34;&gt;PrayGame&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;・・・・待定&lt;/p&gt;
+</content>
+        <category term="娱乐" />
+        <updated>2024-05-07T16:07:51.000Z</updated>
+    </entry>
+</feed>
