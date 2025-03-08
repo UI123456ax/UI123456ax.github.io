@@ -71,6 +71,21 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2024-07-30T09:28:48+08:00">2024-07-30</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
 </div>
 
 
@@ -102,12 +117,12 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/4.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/22.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/9.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/21.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/39.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/15.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/75.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/28.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/79.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/87.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/82.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/37.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,15 +166,15 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="问题"><a class="anchor" href="#问题">#</a> 问题</h1>
-<p>连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。通常是 SSL 返回时证书的问题:<br />
-Android 系统将 CA 证书又分为两种， <code>用户CA证书</code> 和 <code>系统CA证书</code> 。<br />
-顾明思议，用户 CA 证书是由用户自行安装的，系统 CA 证书是由系统内置的，很明显后者更加真实有效。<br />
+    <h1 id="问题"><a class="markdownIt-Anchor" href="#问题">#</a> 问题</h1>
+<p>连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。通常是 SSL 返回时证书的问题:<br>
+Android 系统将 CA 证书又分为两种， <code>用户CA证书</code> 和 <code>系统CA证书</code> 。<br>
+顾明思议，用户 CA 证书是由用户自行安装的，系统 CA 证书是由系统内置的，很明显后者更加真实有效。<br>
 而我们要做的无非就是<strong>将证书导入至系统 CA 证书</strong>当中，或是<strong>绕过系统 CA 证书的检测</strong></p>
 <blockquote>
 <p>系统 CA 证书存储路径:  <code>/system/etc/security/cacerts/</code></p>
 </blockquote>
-<h1 id="解决"><a class="anchor" href="#解决">#</a> 解决</h1>
+<h1 id="解决"><a class="markdownIt-Anchor" href="#解决">#</a> 解决</h1>
 <p>所需工具</p>
 <ul>
 <li>OpneSSL</li>
@@ -167,8 +182,8 @@ Android 系统将 CA 证书又分为两种， <code>用户CA证书</code> 和 <c
 <li>Xposed</li>
 <li>JustTrustMe 模块</li>
 </ul>
-<h2 id="导入-import"><a class="anchor" href="#导入-import">#</a> 导入 Import</h2>
-<h3 id="下载工具"><a class="anchor" href="#下载工具">#</a> 下载工具</h3>
+<h2 id="导入-import"><a class="markdownIt-Anchor" href="#导入-import">#</a> 导入 Import</h2>
+<h3 id="下载工具"><a class="markdownIt-Anchor" href="#下载工具">#</a> 下载工具</h3>
 <ul>
 <li>OpenSSL 下载地址: <span class="exturl" data-url="aHR0cHM6Ly9zbHByb3dlYi5jb20vcHJvZHVjdHMvV2luMzJPcGVuU1NMLmh0bWw=">https://slproweb.com/products/Win32OpenSSL.html</span></li>
 </ul>
@@ -182,36 +197,44 @@ Android 系统将 CA 证书又分为两种， <code>用户CA证书</code> 和 <c
 <p>本文使用版本 <code>R35.0.0</code>  下载最新版亦可</p>
 </blockquote>
 <p>如有需要可自行配置系统环境变量 <code>Path</code></p>
-<h3 id="转换证书"><a class="anchor" href="#转换证书">#</a> 转换证书</h3>
+<h3 id="转换证书"><a class="markdownIt-Anchor" href="#转换证书">#</a> 转换证书</h3>
 <p>使用 <code>openssl</code>  将证书转为 <code>xx.0</code>  证书文件</p>
 <ol>
-<li>
-<p>获取证书文件的哈希值<br />
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cer证书文件</span></span><br><span class="line">openssl x509 -inform DER -subject_hash_old -<span class="keyword">in</span> xxxx.cer</span><br><span class="line"><span class="comment"># pem证书文件</span></span><br><span class="line">openssl x509 -inform PEM -subject_hash_old -<span class="keyword">in</span> xxxx.pem</span><br></pre></td></tr></table></figure><br />
-<img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_01.png" alt="00" /></p>
-</li>
-<li>
-<p>生成 <code>.0</code>  证书文件<br />
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cer证书文件</span></span><br><span class="line">openssl x509 -inform DER -text -<span class="keyword">in</span> xxxx.cer &gt; 哈希值.0</span><br><span class="line"><span class="comment"># pem证书文件</span></span><br><span class="line">openssl x509 -inform PEM -text -<span class="keyword">in</span> xxxx.pem &gt; 哈希值.0</span><br></pre></td></tr></table></figure></p>
-</li>
+<li>获取证书文件的哈希值</li>
 </ol>
-<h3 id="导入证书"><a class="anchor" href="#导入证书">#</a> 导入证书</h3>
+<pre><code class="highlight bash"><span class="comment"># cer证书文件</span>
+openssl x509 -inform DER -subject_hash_old -<span class="keyword">in</span> xxxx.cer
+<span class="comment"># pem证书文件</span>
+openssl x509 -inform PEM -subject_hash_old -<span class="keyword">in</span> xxxx.pem</code></pre>
+<p><img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_01.png" alt="00"></p>
+<ol>
+<li>生成 <code>.0</code>  证书文件</li>
+</ol>
+<pre><code class="highlight bash"><span class="comment"># cer证书文件</span>
+openssl x509 -inform DER -text -<span class="keyword">in</span> xxxx.cer &gt; 哈希值.0
+<span class="comment"># pem证书文件</span>
+openssl x509 -inform PEM -text -<span class="keyword">in</span> xxxx.pem &gt; 哈希值.0</code></pre>
+<h3 id="导入证书"><a class="markdownIt-Anchor" href="#导入证书">#</a> 导入证书</h3>
 <p>两种方法，任意即可</p>
 <ol>
 <li>
-<p>复制文件<br />
+<p>复制文件<br>
  Root 设备后，使用 MT 管理器 或 其他文件管理器 将下载的证书 <code>xx.0</code>  复制至系统 <code>/system/etc/security/cacerts/</code>  目录</p>
 </li>
 <li>
-<p>ADB 导入<br />
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adb root</span><br><span class="line">adb shell avbctl disable-verification</span><br><span class="line">adb remount</span><br><span class="line"><span class="comment"># adb push 本地文件路径 Android文件路径</span></span><br><span class="line">adb push xx.0 /system/etc/security/cacerts/xx.0</span><br></pre></td></tr></table></figure></p>
+<p>ADB 导入</p>
 </li>
 </ol>
-<p>注意！一般 Root 之后便会开启 <code>system</code>  读写，但也有例外:<br />
- 如果是模拟器很可能是没有开启 <code>system</code>  写入，按下图开启即可 <s>被坑过 QwQ</s><br />
-<img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_01.png" alt="01" title="雷电模拟器9" /></p>
-<h2 id="绕过-bypass"><a class="anchor" href="#绕过-bypass">#</a> 绕过 Bypass</h2>
-<h3 id="下载工具-2"><a class="anchor" href="#下载工具-2">#</a> 下载工具</h3>
+<pre><code class="highlight bash">adb root
+adb shell avbctl disable-verification
+adb remount
+<span class="comment"># adb push 本地文件路径 Android文件路径</span>
+adb push xx.0 /system/etc/security/cacerts/xx.0</code></pre>
+<p>注意！一般 Root 之后便会开启 <code>system</code>  读写，但也有例外:<br>
+ 如果是模拟器很可能是没有开启 <code>system</code>  写入，按下图开启即可 <s>被坑过 QwQ</s><br>
+<img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_01.png" alt="01" title="雷电模拟器9"></p>
+<h2 id="绕过-bypass"><a class="markdownIt-Anchor" href="#绕过-bypass">#</a> 绕过 Bypass</h2>
+<h3 id="下载工具-2"><a class="markdownIt-Anchor" href="#下载工具-2">#</a> 下载工具</h3>
 <p>Magisk (任意即可):</p>
 <ul>
 <li>原版 (Magisk)：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3RvcGpvaG53dS9NYWdpc2svcmVsZWFzZXM=">https://github.com/topjohnwu/Magisk/releases</span></li>
@@ -220,7 +243,7 @@ Android 系统将 CA 证书又分为两种， <code>用户CA证书</code> 和 <c
 <blockquote>
 <p><code>Kitsune Magisk</code> <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1J1YWtpL2FydGljbGUvZGV0YWlscy8xMzU1ODA3NzI="> 下载教程</span></p>
 </blockquote>
-<p>JustTrustMe 模块下载地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Z1emlvbjI0L0p1c3RUcnVzdE1lL3JlbGVhc2VzLw==">https://github.com/Fuzion24/JustTrustMe/releases/</span><br />
+<p>JustTrustMe 模块下载地址: <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL0Z1emlvbjI0L0p1c3RUcnVzdE1lL3JlbGVhc2VzLw==">https://github.com/Fuzion24/JustTrustMe/releases/</span><br>
 Xposed (任意即可):</p>
 <ul>
 <li>VirtualXposed 下载地址: <span class="exturl" data-url="aHR0cHM6Ly92aXJ0dWFseHBvc2VkLmNvbS9kb3dubG9hZC8=">https://virtualxposed.com/download/</span></li>
@@ -230,13 +253,13 @@ Xposed (任意即可):</p>
 <blockquote>
 <p>本文以 <code>LSPosed + KitsuneMagisk</code>  介绍</p>
 </blockquote>
-<h3 id="原理"><a class="anchor" href="#原理">#</a> 原理</h3>
+<h3 id="原理"><a class="markdownIt-Anchor" href="#原理">#</a> 原理</h3>
 <p>利用 Xposed + JustTrustMe 模块，绕过 SSL 证书检测</p>
-<h3 id="lsposed安装"><a class="anchor" href="#lsposed安装">#</a> LSPosed 安装</h3>
+<h3 id="lsposed安装"><a class="markdownIt-Anchor" href="#lsposed安装">#</a> LSPosed 安装</h3>
 <ol>
 <li>
-<p>在 <code>Magisk</code>  设置中将 <code>Zygisk</code>  设项打开，将设备重启即可<br />
-<img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_02.png" alt="02" title="Kitsune Magisk" /></p>
+<p>在 <code>Magisk</code>  设置中将 <code>Zygisk</code>  设项打开，将设备重启即可<br>
+<img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_02.png" alt="02" title="Kitsune Magisk"></p>
 </li>
 <li>
 <p>进入模块，选择从本地安装，选择 <code>LSPosed-v1.8.4-6609-zygisk-release.zip</code>  文件进行安装</p>
@@ -251,11 +274,11 @@ Xposed (任意即可):</p>
 <blockquote>
 <p><code>LSPosed.apk</code>  这个我也没从 Github 上找到，不过在另一个网页上找到 <span class="exturl" data-url="aHR0cHM6Ly93d3cuZG93bmt1YWkuY29tL2FuZHJvaWQvMTc1MDI1Lmh0bWw=">下载地址</span></p>
 </blockquote>
-<p><img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_03.png" alt="03" /></p>
-<h3 id="使用justtrustme模块"><a class="anchor" href="#使用justtrustme模块">#</a> 使用 JustTrustMe 模块</h3>
-<p>完成 LSPosed 配置后，安装 <code>TrustMeAlready.apk</code> 。在 LSPosed 模块上点击 <code>JustTrustMe</code> ，选择需要抓包的 App (小黑盒)，重新设备启动即可。<br />
-<img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_04.png" alt="04" /></p>
-<hr />
+<p><img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_03.png" alt="03"></p>
+<h3 id="使用justtrustme模块"><a class="markdownIt-Anchor" href="#使用justtrustme模块">#</a> 使用 JustTrustMe 模块</h3>
+<p>完成 LSPosed 配置后，安装 <code>TrustMeAlready.apk</code> 。在 LSPosed 模块上点击 <code>JustTrustMe</code> ，选择需要抓包的 App (小黑盒)，重新设备启动即可。<br>
+<img data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/13_/13_04.png" alt="04"></p>
+<hr>
 <p>此时便可愉快地抓包啦</p>
 
       <div class="tags">
@@ -282,29 +305,6 @@ Xposed (任意即可):</p>
       <span class="leancloud-visitors-count"></span>
       <span class="text">次</span>
   </span>
-</div>
-
-      
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="UI123456ax 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="UI123456ax 支付宝">
-        <p>支付宝</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="UI123456ax 贝宝">
-        <p>贝宝</p>
-      </div>
-  </div>
 </div>
 
       
@@ -335,7 +335,7 @@ Xposed (任意即可):</p>
     <div class="item left">
       
 
-  <a href="/2024/07/10/0_100/11_BurpSuite/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;21.jpg" title="BurpSuite使用指南">
+  <a href="/2024/07/10/0_100/11_BurpSuite/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;80.jpg" title="BurpSuite使用指南">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>BurpSuite使用指南</h3>
@@ -345,7 +345,7 @@ Xposed (任意即可):</p>
     <div class="item right">
       
 
-  <a href="/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;29.jpg" title="ADB-命令">
+  <a href="/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;68.jpg" title="ADB-命令">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>ADB-命令</h3>
@@ -470,7 +470,25 @@ Xposed (任意即可):</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/" title="GitHub配置多账号git上传">GitHub配置多账号git上传</a></span>
+    <span><a href="/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="关于Github Actions使用Python自动化时报错的解决方法">关于Github Actions使用Python自动化时报错的解决方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/03/16/0_100/07_U03/" title="ERO Comic">ERO Comic</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/05/08/0_100/08_erogames/" title="TESX-EROGAMES">TESX-EROGAMES</a></span>
   </li>
 
       
@@ -488,16 +506,7 @@ Xposed (任意即可):</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/" title="Hexo美化 添加Live2d（看板娘）">Hexo美化 添加Live2d（看板娘）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/" title="修复RPGMV在IOS上无法运行ogg文件">修复RPGMV在IOS上无法运行ogg文件</a></span>
+    <span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/" title="使用CloudFlare给GithubPage加速">使用CloudFlare给GithubPage加速</a></span>
   </li>
 
       
@@ -515,34 +524,7 @@ Xposed (任意即可):</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/" title="Android抓包工具无法正常上网">Android抓包工具无法正常上网</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/06/21/0_100/01_Hexo/" title="关于Hexo">关于Hexo</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/08/13/0_100/15_CloudFlareVPN/" title="使用CloudFlare作为VPN">使用CloudFlare作为VPN</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="关于Github Actions使用Python自动化时报错的解决方法">关于Github Actions使用Python自动化时报错的解决方法</a></span>
+    <span><a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/" title="Hexo美化 添加Live2d（看板娘）">Hexo美化 添加Live2d（看板娘）</a></span>
   </li>
 
       
@@ -552,6 +534,24 @@ Xposed (任意即可):</p>
 </div>
 
     <span><a href="/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/" title="ADB-命令">ADB-命令</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/" title="关于Shoka图床修复">关于Shoka图床修复</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/06/21/0_100/01_Hexo/" title="关于Hexo">关于Hexo</a></span>
   </li>
 
   </ul>
@@ -571,6 +571,18 @@ Xposed (任意即可):</p>
       <i class="ic i-sakura rotate"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">UI123456ax @ Yuqi Note</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">26k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

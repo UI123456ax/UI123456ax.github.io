@@ -71,6 +71,21 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2023-08-12T23:05:45+08:00">2023-08-12</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>553</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
 </div>
 
 
@@ -102,12 +117,12 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/68.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/92.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/13.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/19.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/3.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/16.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/40.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/79.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/38.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/89.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/91.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/9.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,27 +166,28 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="前言"><a class="anchor" href="#前言">#</a> 前言</h1>
-<p>打算用 Python 写一个微信刷步放在 Github-Actions 每日自动刷步的 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1VJMTIzNDU2YXgvcnVuX3plcHA=">微信刷步项目</span><br />
+    <h1 id="前言"><a class="markdownIt-Anchor" href="#前言">#</a> 前言</h1>
+<p>打算用 Python 写一个微信刷步放在 Github-Actions 每日自动刷步的 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1VJMTIzNDU2YXgvcnVuX3plcHA=">微信刷步项目</span><br>
 遇到了一些问题，本来都打算要放弃了呃 啊 (ノ｀Д) ノ，下面看看有没有和我一样问题</p>
-<h1 id="报错类型"><a class="anchor" href="#报错类型">#</a> 报错类型</h1>
-<p>报错 <code>Error: Version 3.9.1 with arch x64 not found</code> ，如图：<br />
-<img data-src="https://img.cdn.loliloli.net/images/2023/09/01/tR54.png" alt="tR54.png" /><br />
+<h1 id="报错类型"><a class="markdownIt-Anchor" href="#报错类型">#</a> 报错类型</h1>
+<p>报错 <code>Error: Version 3.9.1 with arch x64 not found</code> ，如图：<br>
+<img data-src="https://img.cdn.loliloli.net/images/2023/09/01/tR54.png" alt="tR54.png"><br>
  搜索一番，最后在贴吧找到<strong>解决方法</strong>： <code>https://tieba.baidu.com/p/8172024054</code></p>
-<h2 id="原因"><a class="anchor" href="#原因">#</a> 原因</h2>
+<h2 id="原因"><a class="markdownIt-Anchor" href="#原因">#</a> 原因</h2>
 <p>可能就是因为大部分人的 Runner 统一是 ubuntu-latest 导致的。</p>
 <blockquote>
-<p>Github 的 ubuntu-latest 标签会随机分发到 Ubuntu 22.04 LTS<br />
+<p>Github 的 ubuntu-latest 标签会随机分发到 Ubuntu 22.04 LTS<br>
 Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
 </blockquote>
-<p>简单的说就是 Python v3.9.1 在 GitHub 不支持 Ubuntu 22.04 LTS<br />
+<p>简单的说就是 Python v3.9.1 在 GitHub 不支持 Ubuntu 22.04 LTS<br>
  所以才会报错 <code>Error: Version 3.9.1 with arch x64 not found</code></p>
-<h2 id="解决方法"><a class="anchor" href="#解决方法">#</a> 解决方法</h2>
-<p>有两个解决方法<br />
- 1. 把 runner 换成支持 3.9.1 的 Ubuntu20.04 :<br />
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">runs-on: ubuntu-20.04 LST</span><br></pre></td></tr></table></figure><br />
-2. 将 .yml 里的  <code>python-version: '版本'</code>  换成  <code>3.9.12</code>  :<br />
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">with:</span><br><span class="line">  python-version: <span class="string">&#x27;3.9.12&#x27;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="解决方法"><a class="markdownIt-Anchor" href="#解决方法">#</a> 解决方法</h2>
+<p>有两个解决方法<br>
+ 1. 把 runner 换成支持 3.9.1 的 Ubuntu20.04 :</p>
+<pre><code class="highlight bash">runs-on: ubuntu-20.04 LST</code></pre>
+<p>2. 将 .yml 里的  <code>python-version: '版本'</code>  换成  <code>3.9.12</code>  :</p>
+<pre><code class="highlight bash">with:
+  python-version: <span class="string">&#x27;3.9.12&#x27;</span></code></pre>
 <ul>
 <li>比起第一种解决方法，我比较推荐第二种方法</li>
 </ul>
@@ -204,29 +220,6 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
 </div>
 
       
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="UI123456ax 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="UI123456ax 支付宝">
-        <p>支付宝</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="UI123456ax 贝宝">
-        <p>贝宝</p>
-      </div>
-  </div>
-</div>
-
-      
 
 <div id="copyright">
 <ul>
@@ -254,7 +247,7 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
     <div class="item left">
       
 
-  <a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;1.jpg" title="Hexo美化 添加Live2d（看板娘）">
+  <a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;19.jpg" title="Hexo美化 添加Live2d（看板娘）">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>Hexo美化 添加Live2d（看板娘）</h3>
@@ -264,7 +257,7 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
     <div class="item right">
       
 
-  <a href="/2024/03/16/0_100/07_U03/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;15.jpg" title="ERO Comic">
+  <a href="/2024/03/16/0_100/07_U03/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;84.jpg" title="ERO Comic">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>ERO Comic</h3>
@@ -389,7 +382,7 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="关于Github Actions使用Python自动化时报错的解决方法">关于Github Actions使用Python自动化时报错的解决方法</a></span>
+    <span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/" title="使用CloudFlare给GithubPage加速">使用CloudFlare给GithubPage加速</a></span>
   </li>
 
       
@@ -398,7 +391,7 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/" title="使用CloudFlare给GithubPage加速">使用CloudFlare给GithubPage加速</a></span>
+    <span><a href="/2024/07/10/0_100/11_BurpSuite/" title="BurpSuite使用指南">BurpSuite使用指南</a></span>
   </li>
 
       
@@ -416,6 +409,15 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2024/05/08/0_100/08_erogames/" title="TESX-EROGAMES">TESX-EROGAMES</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2024/03/16/0_100/07_U03/" title="ERO Comic">ERO Comic</a></span>
   </li>
 
@@ -425,7 +427,16 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/" title="GitHub配置多账号git上传">GitHub配置多账号git上传</a></span>
+    <span><a href="/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="关于Github Actions使用Python自动化时报错的解决方法">关于Github Actions使用Python自动化时报错的解决方法</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/" title="修复RPGMV在IOS上无法运行ogg文件">修复RPGMV在IOS上无法运行ogg文件</a></span>
   </li>
 
       
@@ -452,25 +463,7 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/" title="修复RPGMV在IOS上无法运行ogg文件">修复RPGMV在IOS上无法运行ogg文件</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/07/10/0_100/11_BurpSuite/" title="BurpSuite使用指南">BurpSuite使用指南</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/" title="关于Shoka图床修复">关于Shoka图床修复</a></span>
+    <span><a href="/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/" title="GitHub配置多账号git上传">GitHub配置多账号git上传</a></span>
   </li>
 
   </ul>
@@ -490,6 +483,18 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1</p>
       <i class="ic i-sakura rotate"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">UI123456ax @ Yuqi Note</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">26k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

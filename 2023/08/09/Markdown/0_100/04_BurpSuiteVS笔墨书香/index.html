@@ -33,7 +33,7 @@
 
   <title>
 使用Burp完成广东省活动任务 |
-Yuqi Note = ほしづきよ = 始于两千年</title>
+Yuqi Note = ほしづきよ = 始于两千年</title><meta name="robots" content="noindex">
 <meta name="generator" content="Hexo 7.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
   <div id="loading">
@@ -71,6 +71,21 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2023-08-09T16:06:12+08:00">2023-08-09</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
 </div>
 
 
@@ -102,12 +117,12 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/13.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/68.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/32.jpg"></li>
           <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/35.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/37.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/94.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/28.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/24.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/17.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/79.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/82.jpg"></li>
         </ul>
       </div>
     </header>
@@ -151,40 +166,72 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <h1 id="前言"><a class="anchor" href="#前言">#</a> 前言</h1>
-<p>转眼间暑假就已经过去一半了，但作业是一点没动（懒）<br />
-在闲的中途看到<strong>某某经典阅读</strong>，呃... 想起了！不就是语文老师布置暑假作业嘛</p>
+    <h1 id="前言"><a class="markdownIt-Anchor" href="#前言">#</a> 前言</h1>
+<p>转眼间暑假就已经过去一半了，但作业是一点没动（懒）<br>
+在闲的中途看到<strong>某某经典阅读</strong>，呃… 想起了！不就是语文老师布置暑假作业嘛</p>
 <details><summary>有个大胆的想法就在我脑中出现了 嘿嘿</summary><div>
-<p><code>利用BurpScript改包POST请求</code> <br />
+<p><code>利用BurpScript改包POST请求</code> <br>
 本来是不报有希望，但凡事都得尝试一下懂吧</p>
 </div></details>
-<h1 id="开始"><a class="anchor" href="#开始">#</a> 开始</h1>
+<h1 id="开始"><a class="markdownIt-Anchor" href="#开始">#</a> 开始</h1>
 <p>目标：<strong>广东省活动榜一</strong></p>
-<h2 id="使用burp抓包数据"><a class="anchor" href="#使用burp抓包数据">#</a> 使用 Burp 抓包数据</h2>
-<p>因为是关卡制的，随便点开一关开始抓包<br />
-<img data-src="Blog_img%5C05_%5C05_01.png" alt="" /></p>
-<p>从这里不难看出 result_items 对应的是正确率<br />
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">POST /api/student/mission/v2/question/end HTTP/1.1</span><br><span class="line">Host: api.xxxxx.com</span><br><span class="line">Connection: close</span><br><span class="line">Content-Length: 231</span><br><span class="line">referer: https://xxxxx/wx5dd5632a942cb333/41/page-frame.html</span><br><span class="line">xweb_xhr: 1</span><br><span class="line">user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF XWEB/8287</span><br><span class="line">token: xxxxx</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Accept: */*</span><br><span class="line">Sec-Fetch-Site: cross-site</span><br><span class="line">Sec-Fetch-Mode: cors</span><br><span class="line">Sec-Fetch-Dest: empty</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept-Language: zh-CN,zh</span><br><span class="line"></span><br><span class="line">mission_id=4258343&amp;chapter_id=10044&amp;t_record_id=547609783&amp;question_items=%5B305187%2C305188%2C305184%2C305191%2C305181%5D&amp;time_items=%5B0.852%2C0.516%2C0.52%2C0.573%2C0.577%5D&amp;result_items=%5Bfalse%2Cfalse%2Cfalse%2Ctrue%2Cfalse%5D</span><br></pre></td></tr></table></figure><br />
- 把 False 全部改成 True，直接通关</p>
-<h2 id="post攻击"><a class="anchor" href="#post攻击">#</a> POST 攻击</h2>
-<p>Ps: 后面我又抓了几个数据包发现 <code>chapter_id=xxx</code>  这个值，指的是关卡<br />
-比如 <code>chapter_id=10044</code>  是第一关，那么 <code>chapter_id=10045</code>  就是第二关<br />
-用 Repeater 看看是怎么个事<br />
-<img data-src="Blog_img%5C05_%5C05_02.png" alt="" /></p>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="string">&quot;message&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;code&quot;</span>: 200, <span class="string">&quot;data&quot;</span>: &#123;<span class="string">&quot;this_score&quot;</span>: 0, <span class="string">&quot;last_score&quot;</span>: 0, <span class="string">&quot;flower&quot;</span>: <span class="literal">true</span>, <span class="string">&quot;result&quot;</span>: 1, <span class="string">&quot;first&quot;</span>: <span class="literal">true</span>&#125;&#125;</span><br></pre></td></tr></table></figure><br />
- 发送给 Intruder，类型选择<strong> Sniper</strong><br />
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">POST /api/student/mission/v2/question/end HTTP/1.1</span><br><span class="line">Host: api.xxxxx.com</span><br><span class="line">Connection: close</span><br><span class="line">Content-Length: 396</span><br><span class="line">referer: https://xxxxx/wx5dd5632a942cb333/41/page-frame.html</span><br><span class="line">xweb_xhr: 1</span><br><span class="line">user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF XWEB/8287</span><br><span class="line">token: xxxxx</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Accept: */*</span><br><span class="line">Sec-Fetch-Site: cross-site</span><br><span class="line">Sec-Fetch-Mode: cors</span><br><span class="line">Sec-Fetch-Dest: empty</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br><span class="line">Accept-Language: zh-CN,zh</span><br><span class="line"></span><br><span class="line">mission_id=4258343&amp;chapter_id=§10045§&amp;t_record_id=547640816&amp;question_items=%5B305210%2C305233%2C305227%2C305212%2C305219%2C305214%2C305225%2C305209%2C305218%2C305236%2C305231%2C305202%5D&amp;time_items=%5B0.712%2C0.578%2C0.631%2C0.575%2C0.586%2C0.581%2C0.555%2C0.636%2C1.264%2C3.754%2C4.854%2C0.702%5D&amp;result_items=%5Btrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%5D</span><br></pre></td></tr></table></figure><br />
- 如下设置，HTTP 请求使用单线程<br />
-<img data-src="%5CBlog_img/05_/05_03.png" alt="" /><br />
-速度很快，不到一会就过了十几关<br />
-挂机 Loading....<br />
-<img data-src="%5CBlog_img/05_/05_04.png" alt="" /></p>
-<h1 id="最终成果"><a class="anchor" href="#最终成果">#</a> 最终成果</h1>
-<p>如下图：<br />
-也是完美成为八年级英雄了 哈哈<br />
-<img data-src="%5CBlog_img/05_/05_05.png" alt="" /><br />
-<strong>仅供参考！！</strong></p>
+<h2 id="使用burp抓包数据"><a class="markdownIt-Anchor" href="#使用burp抓包数据">#</a> 使用 Burp 抓包数据</h2>
+<p>因为是关卡制的，随便点开一关开始抓包<br>
+<img data-src="Blog_img%5C05_%5C05_01.png" alt=""></p>
+<p>从这里不难看出 result_items 对应的是正确率</p>
+<pre><code class="highlight bash">POST /api/student/mission/v2/question/end HTTP/1.1
+Host: api.xxxxx.com
+Connection: close
+Content-Length: 231
+referer: https://xxxxx/wx5dd5632a942cb333/41/page-frame.html
+xweb_xhr: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF XWEB/8287
+token: xxxxx
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh
 
+mission_id=4258343&amp;chapter_id=10044&amp;t_record_id=547609783&amp;question_items=%5B305187%2C305188%2C305184%2C305191%2C305181%5D&amp;time_items=%5B0.852%2C0.516%2C0.52%2C0.573%2C0.577%5D&amp;result_items=%5Bfalse%2Cfalse%2Cfalse%2Ctrue%2Cfalse%5D</code></pre>
+<p>把 False 全部改成 True，直接通关</p>
+<h2 id="post攻击"><a class="markdownIt-Anchor" href="#post攻击">#</a> POST 攻击</h2>
+<p>Ps: 后面我又抓了几个数据包发现 <code>chapter_id=xxx</code>  这个值，指的是关卡<br>
+比如 <code>chapter_id=10044</code>  是第一关，那么 <code>chapter_id=10045</code>  就是第二关<br>
+用 Repeater 看看是怎么个事<br>
+<img data-src="Blog_img%5C05_%5C05_02.png" alt=""></p>
+<pre><code class="highlight bash">&#123;<span class="string">&quot;message&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="string">&quot;code&quot;</span>: 200, <span class="string">&quot;data&quot;</span>: &#123;<span class="string">&quot;this_score&quot;</span>: 0, <span class="string">&quot;last_score&quot;</span>: 0, <span class="string">&quot;flower&quot;</span>: <span class="literal">true</span>, <span class="string">&quot;result&quot;</span>: 1, <span class="string">&quot;first&quot;</span>: <span class="literal">true</span>&#125;&#125;</code></pre>
+<p>发送给 Intruder，类型选择<strong> Sniper</strong></p>
+<pre><code class="highlight bash">POST /api/student/mission/v2/question/end HTTP/1.1
+Host: api.xxxxx.com
+Connection: close
+Content-Length: 396
+referer: https://xxxxx/wx5dd5632a942cb333/41/page-frame.html
+xweb_xhr: 1
+user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 MicroMessenger/7.0.20.1781(0x6700143B) NetType/WIFI MiniProgramEnv/Windows WindowsWechat/WMPF XWEB/8287
+token: xxxxx
+Content-Type: application/x-www-form-urlencoded
+Accept: */*
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh
+
+mission_id=4258343&amp;chapter_id=§10045§&amp;t_record_id=547640816&amp;question_items=%5B305210%2C305233%2C305227%2C305212%2C305219%2C305214%2C305225%2C305209%2C305218%2C305236%2C305231%2C305202%5D&amp;time_items=%5B0.712%2C0.578%2C0.631%2C0.575%2C0.586%2C0.581%2C0.555%2C0.636%2C1.264%2C3.754%2C4.854%2C0.702%5D&amp;result_items=%5Btrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%2Ctrue%5D</code></pre>
+<p>如下设置，HTTP 请求使用单线程<br>
+<img data-src="%5CBlog_img/05_/05_03.png" alt=""><br>
+速度很快，不到一会就过了十几关<br>
+挂机 Loading…<br>
+<img data-src="%5CBlog_img/05_/05_04.png" alt=""></p>
+<h1 id="最终成果"><a class="markdownIt-Anchor" href="#最终成果">#</a> 最终成果</h1>
+<p>如下图：<br>
+也是完美成为八年级英雄了 哈哈<br>
+<img data-src="%5CBlog_img/05_/05_05.png" alt=""><br>
+<strong>仅供参考！！</strong></p>
+<!-- flag of hidden posts -->
       <div class="tags">
           <a href="/tags/BurpSuite/" rel="tag"><i class="ic i-tag"></i> BurpSuite</a>
       </div>
@@ -208,29 +255,6 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       <span class="leancloud-visitors-count"></span>
       <span class="text">次</span>
   </span>
-</div>
-
-      
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="UI123456ax 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="UI123456ax 支付宝">
-        <p>支付宝</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="UI123456ax 贝宝">
-        <p>贝宝</p>
-      </div>
-  </div>
 </div>
 
       
@@ -378,6 +402,15 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
+    <span><a href="/2024/07/10/0_100/11_BurpSuite/" title="BurpSuite使用指南">BurpSuite使用指南</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
     <span><a href="/2023/06/21/0_100/01_Hexo/" title="关于Hexo">关于Hexo</a></span>
   </li>
 
@@ -387,7 +420,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/21/0_100/00_MarkDown/" title="MarkDown语法">MarkDown语法</a></span>
+    <span><a href="/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/" title="Android抓包工具无法正常上网">Android抓包工具无法正常上网</a></span>
   </li>
 
       
@@ -396,25 +429,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/" title="使用CloudFlare给GithubPage加速">使用CloudFlare给GithubPage加速</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/03/16/0_100/07_U03/" title="ERO Comic">ERO Comic</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/" title="修复RPGMV在IOS上无法运行ogg文件">修复RPGMV在IOS上无法运行ogg文件</a></span>
+    <span><a href="/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/" title="关于Shoka图床修复">关于Shoka图床修复</a></span>
   </li>
 
       
@@ -441,7 +456,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/07/10/0_100/11_BurpSuite/" title="BurpSuite使用指南">BurpSuite使用指南</a></span>
+    <span><a href="/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" title="关于Github Actions使用Python自动化时报错的解决方法">关于Github Actions使用Python自动化时报错的解决方法</a></span>
   </li>
 
       
@@ -450,7 +465,7 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/" title="关于Shoka图床修复">关于Shoka图床修复</a></span>
+    <span><a href="/2023/06/21/0_100/00_MarkDown/" title="MarkDown语法">MarkDown语法</a></span>
   </li>
 
       
@@ -459,7 +474,16 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/" title="Android抓包工具无法正常上网">Android抓包工具无法正常上网</a></span>
+    <span><a href="/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/" title="修复RPGMV在IOS上无法运行ogg文件">修复RPGMV在IOS上无法运行ogg文件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/03/16/0_100/07_U03/" title="ERO Comic">ERO Comic</a></span>
   </li>
 
   </ul>
@@ -479,6 +503,18 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       <i class="ic i-sakura rotate"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">UI123456ax @ Yuqi Note</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">26k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

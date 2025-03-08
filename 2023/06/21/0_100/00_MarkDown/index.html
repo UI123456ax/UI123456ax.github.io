@@ -71,6 +71,21 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
     <span class="text">发表于</span>
     <time itemprop="dateCreated datePublished" datetime="2023-06-21T19:08:52+08:00">2023-06-21</time>
   </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>4.5k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>4 分钟</span>
+  </span>
 </div>
 
 
@@ -102,12 +117,12 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/88.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/7.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/66.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/8.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/42.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/82.jpg"></li>
+          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/78.jpg"></li>
           <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/51.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/37.png"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/71.jpg"></li>
-          <li class="item" data-background-image="https://images.neonnoir.us.kg/ACG-img/img/64.jpg"></li>
         </ul>
       </div>
     </header>
@@ -155,73 +170,105 @@ Yuqi Note = ほしづきよ = 始于两千年</title>
 <blockquote>
 <p>均可使用 html 标签替代</p>
 </blockquote>
-<h1 id="markdown基本语法"><a class="anchor" href="#markdown基本语法">#</a> Markdown 基本语法</h1>
-<h2 id="分级语法"><a class="anchor" href="#分级语法">#</a> 分级语法</h2>
-<p><code>#</code> 的数量代表了标题的级别<br />
-与 HTML 语法的 &lt;h&gt; 标签一致<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># 一级标题</span></span><br><span class="line"><span class="section">## 二级标题</span></span><br><span class="line"><span class="section">### 三级标题</span></span><br><span class="line"><span class="section">#### 四级标题</span></span><br><span class="line"><span class="section">##### 五级标题</span></span><br><span class="line"><span class="section">###### 六级标题  &lt;!--最多6级标题--&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="可选语法"><a class="anchor" href="#可选语法">#</a> 可选语法</h3>
-<p>可在文本下方添加任意数量的 == 号来标识一级标题，或者 -- 号来标识二级标题<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 可理解为: # leve 1 --&gt;</span><br><span class="line">leve 1</span><br><span class="line">====== </span><br><span class="line">&lt;!-- 可理解为: ## leve 2 --&gt;</span><br><span class="line"><span class="section">leve 2</span></span><br><span class="line"><span class="section">------</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="markdown基本语法"><a class="markdownIt-Anchor" href="#markdown基本语法">#</a> Markdown 基本语法</h1>
+<h2 id="分级语法"><a class="markdownIt-Anchor" href="#分级语法">#</a> 分级语法</h2>
+<p><code>#</code> 的数量代表了标题的级别<br>
+与 HTML 语法的 &lt;h&gt; 标签一致</p>
+<pre><code class="highlight Markdown"><span class="section"># 一级标题</span>
+<span class="section">## 二级标题</span>
+<span class="section">### 三级标题</span>
+<span class="section">#### 四级标题</span>
+<span class="section">##### 五级标题</span>
+<span class="section">###### 六级标题  &lt;!--最多6级标题--&gt;</span></code></pre>
+<h3 id="可选语法"><a class="markdownIt-Anchor" href="#可选语法">#</a> 可选语法</h3>
+<p>可在文本下方添加任意数量的 == 号来标识一级标题，或者 – 号来标识二级标题</p>
+<pre><code class="highlight Markdown">&lt;!-- 可理解为: # leve 1 --&gt;
+leve 1
+====== 
+&lt;!-- 可理解为: ## leve 2 --&gt;
+<span class="section">leve 2</span>
+<span class="section">------</span></code></pre>
 <blockquote>
 <p>需要注意 # 与文字有一个空格的间隙</p>
 </blockquote>
-<hr />
-<h2 id="段落语法"><a class="anchor" href="#段落语法">#</a> 段落语法</h2>
-<p>和通常的打字一样，如果在同行打字换行的就使用 <code>&lt;br&gt;</code>  标签<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello<span class="emphasis">_World<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span>你好世界</span></span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
-Hello_World&lt;br&gt; 你好世界</p>
-<h3 id="强调语法"><a class="anchor" href="#强调语法">#</a> 强调语法</h3>
-<h4 id="粗体bold"><a class="anchor" href="#粗体bold">#</a> <strong>粗体（Bold）</strong></h4>
-<p>加粗文本，在短语的前后各添加两个星号 (*) 或下划线 ( _ )<br />
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**Hello**</span> <span class="strong">__World__</span></span><br><span class="line">&lt;!-- HTML中则是<span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span> --&gt;</span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
+<hr>
+<h2 id="段落语法"><a class="markdownIt-Anchor" href="#段落语法">#</a> 段落语法</h2>
+<p>和通常的打字一样，如果在同行打字换行的就使用 <code>&lt;br&gt;</code>  标签</p>
+<pre><code class="highlight Markdown">Hello<span class="emphasis">_World<span class="language-xml"><span class="tag">&lt;<span class="name">br</span>&gt;</span></span>你好世界</span></code></pre>
+<p>效果如下：<br>
+Hello_World<br>你好世界</p>
+<h3 id="强调语法"><a class="markdownIt-Anchor" href="#强调语法">#</a> 强调语法</h3>
+<h4 id="粗体bold"><a class="markdownIt-Anchor" href="#粗体bold">#</a> <strong>粗体（Bold）</strong></h4>
+<p>加粗文本，在短语的前后各添加两个星号 (*) 或下划线 ( _ )</p>
+<pre><code class="highlight Markdown"><span class="strong">**Hello**</span> <span class="strong">__World__</span>
+&lt;!-- HTML中则是<span class="language-xml"><span class="tag">&lt;<span class="name">strong</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span> --&gt;</code></pre>
+<p>效果如下：<br>
 <strong>Hello</strong> <strong>World</strong></p>
 <blockquote>
 <p>一般只推荐使用 * 号的方法</p>
 </blockquote>
-<h4 id="斜体italic"><a class="anchor" href="#斜体italic">#</a> <em>斜体（Italic）</em></h4>
-<p>斜体显示文本，在短语的前后各添加一个星号 (*) 或下划线 ( _ )<br />
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">*Hello*</span> <span class="emphasis">_World_</span></span><br><span class="line">&lt;!-- HTML中则是<span class="language-xml"><span class="tag">&lt;<span class="name">em</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span> --&gt;</span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
+<h4 id="斜体italic"><a class="markdownIt-Anchor" href="#斜体italic">#</a> <em>斜体（Italic）</em></h4>
+<p>斜体显示文本，在短语的前后各添加一个星号 (*) 或下划线 ( _ )</p>
+<pre><code class="highlight Markdown"><span class="emphasis">*Hello*</span> <span class="emphasis">_World_</span>
+&lt;!-- HTML中则是<span class="language-xml"><span class="tag">&lt;<span class="name">em</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">em</span>&gt;</span></span> --&gt;</code></pre>
+<p>效果如下：<br>
 <em>Hello</em> <em>World</em></p>
 <blockquote>
 <p>一般只推荐使用 * 号的方法</p>
 </blockquote>
-<h4 id="删除线"><a class="anchor" href="#删除线">#</a> <s>删除线</s></h4>
-<p>若要删除单词，请在单词前后使用两个波浪号～～<br />
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~世界是平坦的。~~ 我们现在知道世界是圆的。</span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
+<h4 id="删除线"><a class="markdownIt-Anchor" href="#删除线">#</a> <s>删除线</s></h4>
+<p>若要删除单词，请在单词前后使用两个波浪号～～</p>
+<pre><code class="highlight Markdown">~~世界是平坦的。~~ 我们现在知道世界是圆的。</code></pre>
+<p>效果如下：<br>
 <s>世界是平坦的。</s> 我们现在知道世界是圆的。</p>
-<hr />
-<h3 id="引用语法"><a class="anchor" href="#引用语法">#</a> 引用语法</h3>
-<p>要创建块引用，请在段落前添加一个 &gt; 符号<br />
-多个段落块引用就在下面多加一个 &gt; 符号<br />
- &gt; 之间可以嵌套块引用只需要多加一个 &gt; 号<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; Hello World</span></span><br><span class="line"><span class="quote">&gt; I love you!</span></span><br><span class="line">&gt;&gt; Good job</span><br></pre></td></tr></table></figure><br />
- 实现效果如下：</p>
+<hr>
+<h3 id="引用语法"><a class="markdownIt-Anchor" href="#引用语法">#</a> 引用语法</h3>
+<p>要创建块引用，请在段落前添加一个 &gt; 符号<br>
+多个段落块引用就在下面多加一个 &gt; 符号<br>
+ &gt; 之间可以嵌套块引用只需要多加一个 &gt; 号</p>
+<pre><code class="highlight Markdown"><span class="quote">&gt; Hello World</span>
+<span class="quote">&gt; I love you!</span>
+&gt;&gt; Good job</code></pre>
+<p>实现效果如下：</p>
 <blockquote>
-<p>Hello World<br />
+<p>Hello World<br>
 I love you!</p>
 <blockquote>
 <p>Good job</p>
 </blockquote>
 </blockquote>
 <p>同时 &gt; 之间可以使用些不同的语法比如在里面添加 <code>列表</code></p>
-<h3 id="列表语法"><a class="anchor" href="#列表语法">#</a> 列表语法</h3>
-<h4 id="有序列表"><a class="anchor" href="#有序列表">#</a> 有序列表</h4>
-<p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> one</span><br><span class="line"><span class="bullet">2.</span> two</span><br><span class="line"><span class="bullet">3.</span> three</span><br><span class="line">...</span><br><span class="line">&lt;!-- 在HTML中则是</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>one<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>two<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>three<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span> --&gt;</span><br></pre></td></tr></table></figure><br />
- 效果如下：</p>
+<h3 id="列表语法"><a class="markdownIt-Anchor" href="#列表语法">#</a> 列表语法</h3>
+<h4 id="有序列表"><a class="markdownIt-Anchor" href="#有序列表">#</a> 有序列表</h4>
+<pre><code class="highlight Markdown"><span class="bullet">1.</span> one
+<span class="bullet">2.</span> two
+<span class="bullet">3.</span> three
+...
+&lt;!-- 在HTML中则是
+<span class="language-xml"><span class="tag">&lt;<span class="name">ol</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>one<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>two<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>three<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;/<span class="name">ol</span>&gt;</span></span> --&gt;</code></pre>
+<p>效果如下：</p>
 <ol>
 <li>one</li>
 <li>two</li>
 <li>three</li>
 </ol>
-<h4 id="无序列表"><a class="anchor" href="#无序列表">#</a> 无序列表</h4>
-<p>要创建无序列表，需要在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+)<br />
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 1</span><br><span class="line"><span class="bullet">-</span> 2</span><br><span class="line"><span class="bullet">-</span> 3</span><br><span class="line">...</span><br><span class="line">&lt;!-- 在HTML中则是</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>one<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>two<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>three<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span> --&gt;</span><br></pre></td></tr></table></figure><br />
- 效果如下：</p>
+<h4 id="无序列表"><a class="markdownIt-Anchor" href="#无序列表">#</a> 无序列表</h4>
+<p>要创建无序列表，需要在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+)</p>
+<pre><code class="highlight Markdown"><span class="bullet">-</span> 1
+<span class="bullet">-</span> 2
+<span class="bullet">-</span> 3
+...
+&lt;!-- 在HTML中则是
+<span class="language-xml"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>one<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>two<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;<span class="name">li</span>&gt;</span></span>three<span class="language-xml"><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span>
+<span class="language-xml"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span> --&gt;</code></pre>
+<p>效果如下：</p>
 <ul>
 <li>1</li>
 <li>2</li>
@@ -230,129 +277,170 @@ I love you!</p>
 <blockquote>
 <p>请注意：一般只使用 破折号 (-) 方法</p>
 </blockquote>
-<hr />
-<h4 id="任务列表语法"><a class="anchor" href="#任务列表语法">#</a> 任务列表语法</h4>
-<p>在任务列表项之前添加破折号 - 和方括号 []，并在 [] 前面加上空格<br />
-要选择一个复选框，请在方括号 [x] 之间添加 x<br />
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> [ ] 任务一 未做任务 <span class="code">`- + (空格) + [ ]`</span></span><br><span class="line"><span class="bullet">-</span> [x] 任务二 已做任务 <span class="code">`- + (空格) + [x]`</span></span><br></pre></td></tr></table></figure><br />
- 效果如下：</p>
+<hr>
+<h4 id="任务列表语法"><a class="markdownIt-Anchor" href="#任务列表语法">#</a> 任务列表语法</h4>
+<p>在任务列表项之前添加破折号 - 和方括号 []，并在 [] 前面加上空格<br>
+要选择一个复选框，请在方括号 [x] 之间添加 x</p>
+<pre><code class="highlight Markdown"><span class="bullet">-</span> [ ] 任务一 未做任务 <span class="code">`- + (空格) + [ ]`</span>
+<span class="bullet">-</span> [x] 任务二 已做任务 <span class="code">`- + (空格) + [x]`</span></code></pre>
+<p>效果如下：</p>
 <ul class="task-list">
-<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true" /><label for="cbx_0"> 任务一 未做任务</label></li>
-<li class="task-list-item"><input type="checkbox" id="cbx_1" checked="true" disabled="true" /><label for="cbx_1"> 任务二 已做任务</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_0" disabled="true"><label for="cbx_0"> 任务一 未做任务</label></li>
+<li class="task-list-item"><input type="checkbox" id="cbx_1" checked="true" disabled="true"><label for="cbx_1"> 任务二 已做任务</label></li>
 </ul>
-<h3 id="idname" id="链接语法"><a class="anchor" href="#链接语法">#</a> 链接语法</h3>
-<h4 id="文字链接"><a class="anchor" href="#文字链接">#</a> 文字链接</h4>
+<h3 id="idname" id="链接语法"><a class="markdownIt-Anchor" href="#链接语法">#</a> 链接语法</h3>
+<h4 id="文字链接"><a class="markdownIt-Anchor" href="#文字链接">#</a> 文字链接</h4>
 <p>超链接 Markdown 语法代码： <code>[超链接显示名](超链接地址 &quot;超链接title&quot;)</code></p>
 <blockquote>
-<p>链接 title 为可选项，也就是说可写可不写<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Markdown官方语法</span>](<span class="link">https://markdown.com.cn</span>)</span><br><span class="line">&lt;!-- 对应的HTML代码：<span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;超链接地址&quot;</span> <span class="attr">title</span>=<span class="string">&quot;超链接title&quot;</span>&gt;</span></span>超链接显示名<span class="language-xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span> --&gt;</span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
-<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZG93bi5jb20uY24=">Markdown 官方语法</span></p>
+<p>链接 title 为可选项，也就是说可写可不写</p>
 </blockquote>
-<h5 id="title"><a class="anchor" href="#title">#</a> Title</h5>
-<p>链接 title 是<strong>当鼠标悬停在链接上时会出现的文字</strong>，这个 title 是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">UI的Github仓库</span>](<span class="link">https://github.com/ui123456ax/ &quot;Hello! 很高兴能认识你&quot;</span>)</span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
+<pre><code class="highlight Markdown">[<span class="string">Markdown官方语法</span>](<span class="link">https://markdown.com.cn</span>)
+&lt;!-- 对应的HTML代码：<span class="language-xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;超链接地址&quot;</span> <span class="attr">title</span>=<span class="string">&quot;超链接title&quot;</span>&gt;</span></span>超链接显示名<span class="language-xml"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span> --&gt;</code></pre>
+<p>效果如下：<br>
+<span class="exturl" data-url="aHR0cHM6Ly9tYXJrZG93bi5jb20uY24=">Markdown 官方语法</span></p>
+<h5 id="title"><a class="markdownIt-Anchor" href="#title">#</a> Title</h5>
+<p>链接 title 是<strong>当鼠标悬停在链接上时会出现的文字</strong>，这个 title 是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔</p>
+<pre><code class="highlight Markdown">[<span class="string">UI的Github仓库</span>](<span class="link">https://github.com/ui123456ax/ &quot;Hello! 很高兴能认识你&quot;</span>)</code></pre>
+<p>效果如下：<br>
 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3VpMTIzNDU2YXgv">UI 的 Github 仓库</span></p>
-<h5 id="网址和email地址"><a class="anchor" href="#网址和email地址">#</a> 网址和 Email 地址</h5>
-<p>使用尖括号可以很方便地把 URL 或者 email 地址变成可点击的链接<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml">&lt;https://github.com/ui123456ax/&gt;</span></span><br><span class="line"><span class="language-xml">&lt;ui123456ax@gmail.com&gt;</span></span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
-<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3VpMTIzNDU2YXgv">https://github.com/ui123456ax/</span><br />
+<h5 id="网址和email地址"><a class="markdownIt-Anchor" href="#网址和email地址">#</a> 网址和 Email 地址</h5>
+<p>使用尖括号可以很方便地把 URL 或者 email 地址变成可点击的链接</p>
+<pre><code class="highlight Markdown"><span class="language-xml">&lt;https://github.com/ui123456ax/&gt;</span>
+<span class="language-xml">&lt;ui123456ax@gmail.com&gt;</span></code></pre>
+<p>效果如下：<br>
+<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3VpMTIzNDU2YXgv">https://github.com/ui123456ax/</span><br>
 <span class="exturl" data-url="bWFpbHRvOnVpMTIzNDU2YXhAZ21haWwuY29t">ui123456ax@gmail.com</span></p>
-<h5 id="带格式化的链接"><a class="anchor" href="#带格式化的链接">#</a> 带格式化的链接</h5>
-<p>带 <code>强调</code> 链接<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">粗体链接 <span class="strong">**[<span class="string">我的博客</span>](<span class="link">https://ui123456ax.github.io</span>)**</span></span><br><span class="line">斜体链接 <span class="emphasis">*[<span class="string">Markdown</span>](<span class="link">https://www.markdownguide.org</span>)*</span></span><br><span class="line">代码块链接 [<span class="string">`code`</span>](<span class="link">#code</span>)</span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
-粗体 <strong><a href="https://ui123456ax.github.io">我的博客</a></strong><br />
-斜体 <em><span class="exturl" data-url="aHR0cHM6Ly93d3cubWFya2Rvd25ndWlkZS5vcmc=">Markdown</span></em><br />
+<h5 id="带格式化的链接"><a class="markdownIt-Anchor" href="#带格式化的链接">#</a> 带格式化的链接</h5>
+<p>带 <code>强调</code> 链接</p>
+<pre><code class="highlight Markdown">粗体链接 <span class="strong">**[<span class="string">我的博客</span>](<span class="link">https://ui123456ax.github.io</span>)**</span>
+斜体链接 <span class="emphasis">*[<span class="string">Markdown</span>](<span class="link">https://www.markdownguide.org</span>)*</span>
+代码块链接 [<span class="string">`code`</span>](<span class="link">#code</span>)</code></pre>
+<p>效果如下：<br>
+粗体 <strong><a href="https://ui123456ax.github.io">我的博客</a></strong><br>
+斜体 <em><span class="exturl" data-url="aHR0cHM6Ly93d3cubWFya2Rvd25ndWlkZS5vcmc=">Markdown</span></em><br>
  代码块 <a href="#code"> <code>code</code> </a></p>
-<h5 id="锚点链接"><a class="anchor" href="#锚点链接">#</a> 锚点链接</h5>
+<h5 id="锚点链接"><a class="markdownIt-Anchor" href="#锚点链接">#</a> 锚点链接</h5>
 <p>主要为跳转到文章指定 id 的标签处</p>
 <ol>
 <li id="id">设锚点：标题</li>
-<li>跳锚点: [文段] (#id)<br />
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">### 链接语法&#123;#idname&#125;</span><br><span class="line"></span><br><span class="line">... 省略</span><br><span class="line"></span><br><span class="line">[回到文字链接处](#idname)</span><br></pre></td></tr></table></figure><br />
-[回到文字链接处] (#idname)</li>
+<li>跳锚点: [文段] (#id)</li>
 </ol>
+<pre><code class="highlight plaintext">### 链接语法&#123;#idname&#125;
+
+... 省略
+
+[回到文字链接处](#idname)</code></pre>
+<p>[回到文字链接处] (#idname)</p>
 <blockquote>
 <p>以上均可带 Title</p>
 </blockquote>
-<h4 id="图片链接"><a class="anchor" href="#图片链接">#</a> 图片链接</h4>
-<p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本<br />
+<h4 id="图片链接"><a class="markdownIt-Anchor" href="#图片链接">#</a> 图片链接</h4>
+<p>要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本<br>
 插入图片 Markdown 语法代码： <code>![图片alt](图片链接 &quot;图片title&quot;)</code></p>
 <blockquote>
 <ol>
 <li><strong>图片 alt</strong> 可以不用写直接空白即可</li>
-<li><strong>图片 title</strong> 可写可不写<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">gx0x.jpg</span>](<span class="link">https://img.cdn.loliloli.net/images/2023/09/01/gx0x.jpg</span>)</span><br><span class="line">&lt;!-- 对应的HTML代码：<span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;图片链接&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;图片alt&quot;</span> <span class="attr">title</span>=<span class="string">&quot;图片title&quot;</span>&gt;</span></span> --&gt;</span><br></pre></td></tr></table></figure><br />
- 效果图：<br />
-<img data-src="https://img.cdn.loliloli.net/images/2023/09/01/gx0x.jpg" alt="gx0x.jpg" /></li>
+<li><strong>图片 title</strong> 可写可不写</li>
 </ol>
 </blockquote>
-<h5 id="链接图片"><a class="anchor" href="#链接图片">#</a> 链接图片</h5>
-<p>给图片增加链接，将图像的 Markdown 括在方括号中，然后将链接添加在圆括号中<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">![gNCH.gif</span>](<span class="link">https://img.cdn.loliloli.net/images/2023/09/01/gNCH.gif &quot;小孤独~&quot;</span>)](<span class="link">https://baike.baidu.com/item/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%EF%BC%81/56105018</span>)</span><br></pre></td></tr></table></figure></p>
+<pre><code class="highlight Markdown">![<span class="string">gx0x.jpg</span>](<span class="link">https://img.cdn.loliloli.net/images/2023/09/01/gx0x.jpg</span>)
+&lt;!-- 对应的HTML代码：<span class="language-xml"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;图片链接&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;图片alt&quot;</span> <span class="attr">title</span>=<span class="string">&quot;图片title&quot;</span>&gt;</span></span> --&gt;</code></pre>
+<p>效果图：<br>
+<img data-src="https://img.cdn.loliloli.net/images/2023/09/01/gx0x.jpg" alt="gx0x.jpg"></p>
+<h5 id="链接图片"><a class="markdownIt-Anchor" href="#链接图片">#</a> 链接图片</h5>
+<p>给图片增加链接，将图像的 Markdown 括在方括号中，然后将链接添加在圆括号中</p>
+<pre><code class="highlight Markdown">[<span class="string">![gNCH.gif</span>](<span class="link">https://img.cdn.loliloli.net/images/2023/09/01/gNCH.gif &quot;小孤独~&quot;</span>)](<span class="link">https://baike.baidu.com/item/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%EF%BC%81/56105018</span>)</code></pre>
 <blockquote>
 <p>请注意 [ ] 的位置！</p>
 </blockquote>
-<p>效果图（点击转跳百度百科）：<br />
-<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%EF%BC%81/56105018"><img data-src="https://img.cdn.loliloli.net/images/2023/09/01/gNCH.gif" alt="gNCH.gif" title="小孤独~" /></a></p>
-<h2 id="代码语法"><a class="anchor" href="#代码语法">#</a> 代码语法</h2>
-<h3 id="表示代码"><a class="anchor" href="#表示代码">#</a> 表示代码</h3>
-<p>要将单词或短语表示为代码，请将其包裹在反引号 (  <code>) 中 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">`你好世界`</span></span><br><span class="line">&lt;!-- 在HTML中则是<span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> --&gt;</span><br></pre></td></tr></table></figure> 效果如下：</code> 你好世界 `</p>
+<p>效果图（点击转跳百度百科）：<br>
+<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%EF%BC%81/56105018"><img data-src="https://img.cdn.loliloli.net/images/2023/09/01/gNCH.gif" alt="gNCH.gif" title="小孤独~"></a></p>
+<h2 id="代码语法"><a class="markdownIt-Anchor" href="#代码语法">#</a> 代码语法</h2>
+<h3 id="表示代码"><a class="markdownIt-Anchor" href="#表示代码">#</a> 表示代码</h3>
+<p>要将单词或短语表示为代码，请将其包裹在反引号 (`) 中</p>
+<pre><code class="highlight Markdown"><span class="code">`你好世界`</span>
+&lt;!-- 在HTML中则是<span class="language-xml"><span class="tag">&lt;<span class="name">code</span>&gt;</span></span><span class="language-xml"><span class="tag">&lt;/<span class="name">code</span>&gt;</span></span> --&gt;</code></pre>
+<p>效果如下：<br>
+ <code>你好世界</code></p>
 <blockquote>
-<p>需要转义 (即在代码块显示 ` 符号)<br />
+<p>需要转义 (即在代码块显示 ` 符号)<br>
  请你输入两个反引号 (``)</p>
 </blockquote>
-<hr />
-<h3 id="围栏代码块"><a class="anchor" href="#围栏代码块">#</a> 围栏代码块</h3>
-<p>根据 Markdown 处理器的不同，在代码块之前和之后的行上使用三个反引号 (```) 或三个波浪号 (~~~)<br />
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```JavaScirpt</span></span><br><span class="line"><span class="code">i = &#x27;我爱你，世界&#x27;</span></span><br><span class="line"><span class="code">console,log(i)</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">i = &#x27;我爱你，世界&#x27;</span><br><span class="line">console,log(i)</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="围栏代码块"><a class="markdownIt-Anchor" href="#围栏代码块">#</a> 围栏代码块</h3>
+<p>根据 Markdown 处理器的不同，在代码块之前和之后的行上使用三个反引号 (```) 或三个波浪号 (~~~)</p>
+<pre><code class="highlight Markdown"><span class="code">```JavaScirpt</span>
+<span class="code">i = &#x27;我爱你，世界&#x27;</span>
+<span class="code">console,log(i)</span>
+<span class="code">```</span></code></pre>
+<p>效果如下：</p>
+<pre><code class="highlight JavaScirpt">i = &#x27;我爱你，世界&#x27;
+console,log(i)</code></pre>
 <blockquote>
-<p>要添加语法突出显示，在代码块之前的反引号旁边指定一种语言<br />
+<p>要添加语法突出显示，在代码块之前的反引号旁边指定一种语言<br>
 比如上面的 &quot;JavaScirpt&quot;</p>
 <blockquote>
 <p>如果需要转义代码则在前后多加一个反引号 (````) 或波浪号 (~~~~)</p>
 </blockquote>
 </blockquote>
-<h2 id="分隔线语法"><a class="anchor" href="#分隔线语法">#</a> 分隔线语法</h2>
-<p>要创建分隔线，需要在单独一行上使用三个或多个星号 (***)、破折号 (---) 或下划线 (___) ，并且不能包含其他内容<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong">&lt;!-- 至少是3个  --&gt;</span></span><br><span class="line"><span class="strong">&lt;!-- 与html的<span class="language-xml"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span>标签一致 --&gt;</span></span><br></pre></td></tr></table></figure><br />
- 效果如下：</p>
-<hr />
+<h2 id="分隔线语法"><a class="markdownIt-Anchor" href="#分隔线语法">#</a> 分隔线语法</h2>
+<p>要创建分隔线，需要在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容</p>
+<pre><code class="highlight Markdown"><span class="strong">***</span>
+<span class="strong">&lt;!-- 至少是3个  --&gt;</span>
+<span class="strong">&lt;!-- 与html的<span class="language-xml"><span class="tag">&lt;<span class="name">hr</span>&gt;</span></span>标签一致 --&gt;</span></code></pre>
+<p>效果如下：</p>
+<hr>
 <blockquote>
-<p>推荐使用破折号 (---) 或 HTML 的 &lt; hr &gt; 标签，能很明显的突出</p>
+<p>推荐使用破折号 (—) 或 HTML 的 &lt; hr &gt; 标签，能很明显的突出</p>
 </blockquote>
-<h1 id="内嵌-html-标签"><a class="anchor" href="#内嵌-html-标签">#</a> 内嵌 HTML 标签</h1>
-<p>正如我开头所说的 Markdown 可以直接使用 HTML 的标签<br />
+<h1 id="内嵌-html-标签"><a class="markdownIt-Anchor" href="#内嵌-html-标签">#</a> 内嵌 HTML 标签</h1>
+<p>正如我开头所说的 Markdown 可以直接使用 HTML 的标签<br>
 甚至可以使用部分 CSS 自由装饰你的文本</p>
 <blockquote>
 <p>对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。</p>
 </blockquote>
-<p>你可以把 <code>.html</code>  的文件后缀名改成 <code>.md</code>  完全可以正常打开，并且装饰的 CSS 也会自动使用<br />
+<p>你可以把 <code>.html</code>  的文件后缀名改成 <code>.md</code>  完全可以正常打开，并且装饰的 CSS 也会自动使用<br>
 不过请注意，Markdown 是支持<strong>大部分</strong>的 HTML 标签，以及<strong>部分</strong>的 CSS</p>
 <blockquote>
 <p>在 HTML 块级标签内不能使用 Markdown 语法。例如  <code>&lt;p&gt;italic and **bold**&lt;/p&gt;</code>  将不起作用</p>
 </blockquote>
-<h1 id="markdown扩展语法"><a class="anchor" href="#markdown扩展语法">#</a> Markdown 扩展语法</h1>
-<h2 id="表格"><a class="anchor" href="#表格">#</a> 表格</h2>
-<p>要添加表，请使用三个或多个连字符（---）创建每列的标题，并使用管道（|）分隔每列</p>
+<h1 id="markdown扩展语法"><a class="markdownIt-Anchor" href="#markdown扩展语法">#</a> Markdown 扩展语法</h1>
+<h2 id="表格"><a class="markdownIt-Anchor" href="#表格">#</a> 表格</h2>
+<p>要添加表，请使用三个或多个连字符（—）创建每列的标题，并使用管道（|）分隔每列</p>
 <blockquote>
-<p>可以选择在表的任一端添加管道<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 标题 One    | 标题 Two    |</span><br><span class="line">| ----------- | ----------- |</span><br><span class="line">| Hello?      | Yes?        |</span><br><span class="line">| 你好     | 是的        |</span><br><span class="line">&lt;!-- 单元格宽度可以变化 --&gt;</span><br></pre></td></tr></table></figure><br />
- 呈现的输出如下所示：<br />
-| 标题 One    | 标题 Two    |<br />
-| ----------- | ----------- |<br />
-| Hello?      | Yes?        |<br />
-| 你好     | 是的       |</p>
+<p>可以选择在表的任一端添加管道</p>
 </blockquote>
-<h3 id="对齐"><a class="anchor" href="#对齐">#</a> 对齐</h3>
-<p>您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 标题 One    | 标题 Two    | 标题 Three    |</span><br><span class="line">| :---        |    :----:   |          ---: |</span><br><span class="line">| Left        | Title       | Right         |</span><br><span class="line">| left        | Text        | right         |</span><br></pre></td></tr></table></figure><br />
- 呈现的输出如下所示：</p>
+<pre><code class="highlight Markdown">| 标题 One    | 标题 Two    |
+| ----------- | ----------- |
+| Hello?      | Yes?        |
+| 你好     | 是的        |
+&lt;!-- 单元格宽度可以变化 --&gt;</code></pre>
+<p>呈现的输出如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>标题 One</th>
+<th>标题 Two</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hello?</td>
+<td>Yes?</td>
+</tr>
+<tr>
+<td>你好</td>
+<td>是的</td>
+</tr>
+</tbody>
+</table>
+<h3 id="对齐"><a class="markdownIt-Anchor" href="#对齐">#</a> 对齐</h3>
+<p>您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心</p>
+<pre><code class="highlight Markdown">| 标题 One    | 标题 Two    | 标题 Three    |
+| :---        |    :----:   |          ---: |
+| Left        | Title       | Right         |
+| left        | Text        | right         |</code></pre>
+<p>呈现的输出如下所示：</p>
 <table>
 <thead>
 <tr>
@@ -374,36 +462,43 @@ I love you!</p>
 </tr>
 </tbody>
 </table>
-<h3 id="格式化表格中的文字"><a class="anchor" href="#格式化表格中的文字">#</a> 格式化表格中的文字</h3>
-<p>可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（`），而不是<strong>代码块</strong>）和强调<br />
+<h3 id="格式化表格中的文字"><a class="markdownIt-Anchor" href="#格式化表格中的文字">#</a> 格式化表格中的文字</h3>
+<p>可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（`），而不是<strong>代码块</strong>）和强调<br>
 不能添加标题，块引用，列表，水平规则，图像或 HTML 标签</p>
-<h2 id="脚注"><a class="anchor" href="#脚注">#</a> 脚注</h2>
-<p>带有脚注的上标数字会出现在添加脚注参考的位置 读者可以<strong>单击链接以跳至页面底部的脚注内容</strong><br />
+<h2 id="脚注"><a class="markdownIt-Anchor" href="#脚注">#</a> 脚注</h2>
+<p>带有脚注的上标数字会出现在添加脚注参考的位置 读者可以<strong>单击链接以跳至页面底部的脚注内容</strong><br>
 创建脚注参考，方括号 <code>[^1]</code>  内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符</p>
 <blockquote>
-<p>脚注使您可以添加注释和参考，而不会使文档正文混乱<br />
-在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本 <code>[^1]: 解释.</code> <br />
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">这是一个脚注[^2]，这是一个更长的脚注[^你好]</span><br><span class="line">&lt;!-- 脚注将出现在文章末尾 --&gt;</span><br><span class="line">[<span class="symbol">^2</span>]:<span class="link">我是一个脚注的</span></span><br><span class="line"></span><br><span class="line">[<span class="symbol">^你好</span>]:<span class="link">我是第二个脚注的脚注</span></span><br><span class="line">欸,<span class="code">`好吧好吧`</span></span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
-这是一个脚注<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，这是一个更长的脚注<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<p>脚注使您可以添加注释和参考，而不会使文档正文混乱<br>
+在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本 <code>[^1]: 解释.</code></p>
 </blockquote>
-<h2 id="使用-emoji-表情"><a class="anchor" href="#使用-emoji-表情">#</a> 使用 Emoji 表情</h2>
-<p>一些 Markdown 应用程序允许您通过键入表情符号短代码来插入表情符号<br />
-这些以冒号开头和结尾，并包含表情符号的名称<br />
- <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">去露营了！ :tent: 很快回来。</span><br><span class="line">[<span class="string">点我查看更多表情</span>](<span class="link">https://gist.github.com/rxaviers/7360908</span>)</span><br><span class="line">真好笑！ :joy:</span><br></pre></td></tr></table></figure><br />
- 效果如下：<br />
-去露营了！ ⛺️ 很快回来。<br />
-<span class="exturl" data-url="aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vcnhhdmllcnMvNzM2MDkwOA==">点我查看更多表情</span><br />
+<pre><code class="highlight Markdown">这是一个脚注[^2]，这是一个更长的脚注[^你好]
+&lt;!-- 脚注将出现在文章末尾 --&gt;
+[<span class="symbol">^2</span>]:<span class="link">我是一个脚注的</span>
+
+[<span class="symbol">^你好</span>]:<span class="link">我是第二个脚注的脚注</span>
+欸,<span class="code">`好吧好吧`</span></code></pre>
+<p>效果如下：<br>
+这是一个脚注<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>，这是一个更长的脚注<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
+<h2 id="使用-emoji-表情"><a class="markdownIt-Anchor" href="#使用-emoji-表情">#</a> 使用 Emoji 表情</h2>
+<p>一些 Markdown 应用程序允许您通过键入表情符号短代码来插入表情符号<br>
+这些以冒号开头和结尾，并包含表情符号的名称</p>
+<pre><code class="highlight Markdown">去露营了！ :tent: 很快回来。
+[<span class="string">点我查看更多表情</span>](<span class="link">https://gist.github.com/rxaviers/7360908</span>)
+真好笑！ :joy:</code></pre>
+<p>效果如下：<br>
+去露营了！ ⛺️ 很快回来。<br>
+<span class="exturl" data-url="aHR0cHM6Ly9naXN0LmdpdGh1Yi5jb20vcnhhdmllcnMvNzM2MDkwOA==">点我查看更多表情</span><br>
 真好笑！ 😂</p>
 <blockquote>
 <p>表情符号会因应用程序而异</p>
 </blockquote>
-<hr class="footnotes-sep" />
+<hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>我是一个脚注的 <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>我是第二个脚注的脚注<br />
+<li id="fn2" class="footnote-item"><p>我是第二个脚注的脚注<br>
 欸， <code>好吧好吧</code> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
@@ -432,29 +527,6 @@ I love you!</p>
       <span class="leancloud-visitors-count"></span>
       <span class="text">次</span>
   </span>
-</div>
-
-      
-<div class="reward">
-  <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
-  <div id="qr">
-      
-      <div>
-        <img data-src="/images/wechatpay.png" alt="UI123456ax 微信支付">
-        <p>微信支付</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/alipay.png" alt="UI123456ax 支付宝">
-        <p>支付宝</p>
-      </div>
-      
-      <div>
-        <img data-src="/images/paypal.png" alt="UI123456ax 贝宝">
-        <p>贝宝</p>
-      </div>
-  </div>
 </div>
 
       
@@ -487,7 +559,7 @@ I love you!</p>
     <div class="item right">
       
 
-  <a href="/2023/06/21/0_100/01_Hexo/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;17.jpg" title="关于Hexo">
+  <a href="/2023/06/21/0_100/01_Hexo/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;images.neonnoir.us.kg&#x2F;ACG-img&#x2F;img&#x2F;56.jpg" title="关于Hexo">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> </span>
   <h3>关于Hexo</h3>
@@ -610,7 +682,16 @@ I love you!</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/" title="GitHub配置多账号git上传">GitHub配置多账号git上传</a></span>
+    <span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/" title="使用CloudFlare给GithubPage加速">使用CloudFlare给GithubPage加速</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/" title="Android抓包工具无法正常上网">Android抓包工具无法正常上网</a></span>
   </li>
 
       
@@ -628,7 +709,7 @@ I love you!</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/" title="Hexo美化 添加Live2d（看板娘）">Hexo美化 添加Live2d（看板娘）</a></span>
+    <span><a href="/2024/08/13/0_100/15_CloudFlareVPN/" title="使用CloudFlare作为VPN">使用CloudFlare作为VPN</a></span>
   </li>
 
       
@@ -646,7 +727,16 @@ I love you!</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2023/06/21/0_100/00_MarkDown/" title="MarkDown语法">MarkDown语法</a></span>
+    <span><a href="/2024/05/08/0_100/08_erogames/" title="TESX-EROGAMES">TESX-EROGAMES</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+</div>
+
+    <span><a href="/2023/06/21/0_100/01_Hexo/" title="关于Hexo">关于Hexo</a></span>
   </li>
 
       
@@ -673,25 +763,7 @@ I love you!</p>
 <div class="breadcrumb">
 </div>
 
-    <span><a href="/2024/08/13/0_100/15_CloudFlareVPN/" title="使用CloudFlare作为VPN">使用CloudFlare作为VPN</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/" title="Android抓包工具无法正常上网">Android抓包工具无法正常上网</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/06/21/0_100/01_Hexo/" title="关于Hexo">关于Hexo</a></span>
+    <span><a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/" title="Hexo美化 添加Live2d（看板娘）">Hexo美化 添加Live2d（看板娘）</a></span>
   </li>
 
   </ul>
@@ -711,6 +783,18 @@ I love you!</p>
       <i class="ic i-sakura rotate"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">UI123456ax @ Yuqi Note</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">26k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">24 分钟</span>
   </div>
   <div class="powered-by">
     基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
