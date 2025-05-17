@@ -1,0 +1,598 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ui123456ax.github.io</id>
+    <title>ほしづきよ • Posts by &#34;笔记&#34; tag</title>
+    <link href="https://ui123456ax.github.io" />
+    <updated>2024-08-02T08:36:09.000Z</updated>
+    <category term="博客" />
+    <category term="笔记" />
+    <category term="Github" />
+    <category term="Python" />
+    <category term="报错" />
+    <category term="Shoka" />
+    <category term="Comic" />
+    <category term="配置" />
+    <category term="娱乐" />
+    <category term="Android" />
+    <category term="CloudFlare" />
+    <category term="VPN" />
+    <category term="github" />
+    <category term="cloudflare" />
+    <entry>
+        <id>https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</id>
+        <title>ADB-命令</title>
+        <link rel="alternate" href="https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/"/>
+        <content type="html">&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;p&gt;AndroidDebugBridge 下载地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-windows.zip&#34;&gt;Windows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://developer.android.com/studio&#34;&gt;Mac&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://dl.google.com/android/repository/platform-tools-latest-linux.zip&#34;&gt;Linux&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如有需要，请自行配置系统环境 Patch 变量&lt;/p&gt;
+&lt;h1 id=&#34;连接设备&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#连接设备&#34;&gt;#&lt;/a&gt; 连接设备&lt;/h1&gt;
+&lt;p&gt;选定设备后再进行操作&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb deviecs&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# xxx:5555 device&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb &lt;span class=&#34;token parameter variable&#34;&gt;-s&lt;/span&gt; xxx:5555 &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;command&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 使用参数指定设备&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb connect xxx:5555 &lt;span class=&#34;token comment&#34;&gt;# 连接设备 连接后不再需要 -s 指定目标&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb disconnect xxx:5555 &lt;span class=&#34;token comment&#34;&gt;# 断开连接&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#命令&#34;&gt;#&lt;/a&gt; 命令&lt;/h1&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb start-server &lt;span class=&#34;token comment&#34;&gt;# 开启 adb 服务&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb kill-serveradb &lt;span class=&#34;token comment&#34;&gt;# 结束 adb 服务&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token function&#34;&gt;ps&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 查看进程&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;文件管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件管理&#34;&gt;#&lt;/a&gt; 文件管理&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb pull 设备文件路径 本地文件路径&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb push 本地文件路径 设备文件路径&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;文件操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文件操作&#34;&gt;#&lt;/a&gt; 文件操作&lt;/h3&gt;
+&lt;p&gt;这里和 Linux 基本相同了&lt;/p&gt;
+&lt;h4 id=&#34;查看文件夹&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看文件夹&#34;&gt;#&lt;/a&gt; 查看文件夹&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token builtin class-name&#34;&gt;pwd&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 输出当前目录路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; 设备文件夹路径 &lt;span class=&#34;token comment&#34;&gt;# 列出目录下的文件和文件夹&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 加参&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-a&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 列出隐藏文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-s&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 列出文件大小&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;打开文件夹&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打开文件夹&#34;&gt;#&lt;/a&gt; 打开文件夹&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; 设备文件夹路径&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;删除文件夹&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#删除文件夹&#34;&gt;#&lt;/a&gt; 删除文件 (夹)&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; 设备文件路径&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 加参&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 强制删除文件，系统不提示&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-r&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 强制删除指定目录中的所有文件和子目录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-i&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 交互式删除，删除前提示&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;创建文件夹&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建文件夹&#34;&gt;#&lt;/a&gt; 创建文件夹&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; 设备文件夹路径&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 加参&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-m&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 赋予读写权限&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;操控文件位置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#操控文件位置&#34;&gt;#&lt;/a&gt; 操控文件位置&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; 源文件路径 目标路径 &lt;span class=&#34;token comment&#34;&gt;# 复制&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; 源文件路径 目标路径 &lt;span class=&#34;token comment&#34;&gt;# 移动&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;设备信息&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设备信息&#34;&gt;#&lt;/a&gt; 设备信息&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell getprop ro.product.model &lt;span class=&#34;token comment&#34;&gt;# 获取 设备型号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell getprop ro.build.version.release &lt;span class=&#34;token comment&#34;&gt;# 获取 Android 系统版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb get-serialno &lt;span class=&#34;token comment&#34;&gt;# 获取 序列号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell wm size &lt;span class=&#34;token comment&#34;&gt;# 获取 屏幕分辨率&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;app管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#app管理&#34;&gt;#&lt;/a&gt; APP 管理&lt;/h2&gt;
+&lt;p&gt;查看 App&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell pm list packages &lt;span class=&#34;token comment&#34;&gt;# 查看设备已有的程序列表&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# packge:com.xxx.xxx&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 加参&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pm list package &lt;span class=&#34;token parameter variable&#34;&gt;-s&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 列出系统应用&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pm list package &lt;span class=&#34;token parameter variable&#34;&gt;-3&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 列出第三方的应用&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;安装 App&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; 本地文件路径/xx.apk&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-r&lt;/span&gt; 本地文件路径/xx.apk &lt;span class=&#34;token comment&#34;&gt;# 覆盖安装 App&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;卸载 App&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb uninstall com.xxx.xxx&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb uninstall &lt;span class=&#34;token parameter variable&#34;&gt;-k&lt;/span&gt; com.xxx.xxx &lt;span class=&#34;token comment&#34;&gt;# 保留数据和缓存目录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;设备操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设备操作&#34;&gt;#&lt;/a&gt; 设备操作&lt;/h2&gt;
+&lt;h3 id=&#34;系统相关&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#系统相关&#34;&gt;#&lt;/a&gt; 系统相关&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb &lt;span class=&#34;token function&#34;&gt;reboot&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 重启&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb &lt;span class=&#34;token function&#34;&gt;reboot&lt;/span&gt; recovery &lt;span class=&#34;token comment&#34;&gt;# Recovery 模式&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb &lt;span class=&#34;token function&#34;&gt;reboot&lt;/span&gt; bootloader &lt;span class=&#34;token comment&#34;&gt;# Fastboot 模式&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb root &lt;span class=&#34;token comment&#34;&gt;# 获取 root 权限&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb remount &lt;span class=&#34;token comment&#34;&gt;# 重新挂载系统分区&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell &lt;span class=&#34;token comment&#34;&gt;# 进入 shell 模式&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;基础操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础操作&#34;&gt;#&lt;/a&gt; 基础操作&lt;/h3&gt;
+&lt;h4 id=&#34;截图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#截图&#34;&gt;#&lt;/a&gt; 截图&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell screencap &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; 设备文件路径.png&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;录屏&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#录屏&#34;&gt;#&lt;/a&gt; 录屏&lt;/h4&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell screenrecord 设备文件路径.mp4&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Ctrl-C 停止录屏&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;wifi&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#wifi&#34;&gt;#&lt;/a&gt; WIFI&lt;/h4&gt;
+&lt;p&gt;设备需获取 &lt;code&gt;root&lt;/code&gt;  权限&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell svc wifi &lt;span class=&#34;token builtin class-name&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 开启&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell svc wifi disable &lt;span class=&#34;token comment&#34;&gt;# 关闭&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;模拟按键&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#模拟按键&#34;&gt;#&lt;/a&gt; 模拟按键&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;adb shell input&lt;/code&gt; &lt;br&gt;
+&lt;s&gt; 目前用不到，以后再写&lt;/s&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;参考文章：&lt;br&gt;
+&lt;a href=&#34;https://blog.csdn.net/lb245557472/article/details/84068519&#34;&gt;https://blog.csdn.net/lb245557472/article/details/84068519&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://cloud.tencent.com/developer/article/2342099&#34;&gt;https://cloud.tencent.com/developer/article/2342099&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.cnblogs.com/wutou/p/17930583.html&#34;&gt;https://www.cnblogs.com/wutou/p/17930583.html&lt;/a&gt;&lt;/p&gt;
+</content>
+        <category term="笔记" />
+        <updated>2024-08-02T08:36:09.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</id>
+        <title>BurpSuite使用指南</title>
+        <link rel="alternate" href="https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/"/>
+        <content type="html">&lt;p&gt;更新中～&lt;br&gt;
+ 下载请自行上网搜索&lt;/p&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;p&gt;打开系统的设置页面，并在代理中手动开启并设置代理服务器&lt;br&gt;
+一般代理 ip 服务器为 &lt;code&gt;127.0.0.1&lt;/code&gt; ，端口号为 &lt;code&gt;8080&lt;/code&gt;  || 根据实际设置而定&lt;/p&gt;
+&lt;h2 id=&#34;edge浏览器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#edge浏览器&#34;&gt;#&lt;/a&gt; Edge 浏览器&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;点击右上角的设置，并找到 Tools 中的 Proxy 项目&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_01.png&#34; alt=&#34;01&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并在代理监听器中选择任意项导出 CA 证书，如下图&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_02.png&#34; alt=&#34;02&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_03.png&#34; alt=&#34;03&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到 Edge 浏览器，并打开设置，将证书导入&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因本人用 Edge，其他浏览器请自行搜索&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_04.png&#34; alt=&#34;04&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;并在 Edge 的快捷方式中添加如下&lt;br&gt;
+ &lt;code&gt;--test-type --ignore-certificate-errors&lt;/code&gt; &lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_05.png&#34; alt=&#34;05&#34;&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;抓包数据中文乱码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#抓包数据中文乱码&#34;&gt;#&lt;/a&gt; 抓包数据中文乱码&lt;/h2&gt;
+&lt;p&gt;在设置中搜索 &lt;code&gt;User interface&lt;/code&gt;  下滑更改 字体显示为 &lt;code&gt;宋体13pt&lt;/code&gt;  字符集显示为 &lt;code&gt;UTF-8&lt;/code&gt; &lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_06.png&#34; alt=&#34;06&#34;&gt;&lt;br&gt;
+ 别忘了重启程序 w&lt;/p&gt;
+&lt;h2 id=&#34;抓包app&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#抓包app&#34;&gt;#&lt;/a&gt; 抓包 App&lt;/h2&gt;
+&lt;h3 id=&#34;模拟器手机&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#模拟器手机&#34;&gt;#&lt;/a&gt; 模拟器 (手机)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在 windows 运行 cmd 中输入 &lt;code&gt;ipconfig&lt;/code&gt;  查看本地 ipv4 地址，在 Burp 设置里添加以本地 ip 的代理监听器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的本地 IP &lt;code&gt;192.168.0.113&lt;/code&gt; ，端口号随意填 &lt;code&gt;8080&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_07.png&#34; alt=&#34;07&#34;&gt;&lt;br&gt;
+2. 打开模拟器 (手机)，输入本地 ip &lt;code&gt;192.168.0.113&lt;/code&gt; ，以及端口号 &lt;code&gt;8080&lt;/code&gt; &lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_08.png&#34; alt=&#34;08&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意 此时还未能抓包，需要安装证书&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在模拟器的浏览器内输入 &lt;code&gt;http://burp/&lt;/code&gt; ，下载 CA 证书 &lt;code&gt;cacert.der&lt;/code&gt; ，并在文件管理器中将其改为 &lt;code&gt;cacert.cer&lt;/code&gt;  然后在设置内搜索 &lt;code&gt;从SD卡安装&lt;/code&gt; 安装证书&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_09.png&#34; alt=&#34;09&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用雷电 9 等模拟器安装证书时无法安装，请看下方解决方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在 bp 中导出当前监听器的证书 &lt;code&gt;s.cer&lt;/code&gt; ，然后并把该文件拖拽至模拟器程序上，此时默认安装即可&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/11_/11_10.png&#34; alt=&#34;10&#34;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;补充&lt;/strong&gt;：连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。请看–&amp;gt; &lt;a href=&#34;https://neonnoir.us.kg/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/&#34;&gt;Android 抓包工具无法正常上网&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;本地抓包apk&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#本地抓包apk&#34;&gt;#&lt;/a&gt; 本地抓包 Apk&lt;/h3&gt;
+&lt;p&gt;主要流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置 Android 子系统–&amp;gt; 本地安装 Apk 程序–&amp;gt; 打开抓包工具–&amp;gt; 即可抓取数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于 win 安装 Apk 程序可以看下面的文章配置，写的很详细，非常不错&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/m0_56076343/article/details/122334759&#34;&gt;Win11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/read/cv28566256/&#34;&gt;Win10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装完 apk 后，正常抓包即可 &lt;s&gt;这里就不再复述了&lt;/s&gt;&lt;/p&gt;
+&lt;h1 id=&#34;使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h1&gt;
+&lt;p&gt;&lt;s&gt;暂时搁置，以后再写&lt;/s&gt;&lt;/p&gt;
+&lt;h1 id=&#34;扩展&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#扩展&#34;&gt;#&lt;/a&gt; 扩展&lt;/h1&gt;
+&lt;p&gt;扩展的获取方法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;BApp Store&lt;br&gt;
+BurpSuite 扩展页面上的 &lt;code&gt;BAppStore&lt;/code&gt; 。虽有丰富的扩展，但同时没点英文程度还是有点困难的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;浏览器 / Github 上搜索&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;s&gt;编写程序&lt;/s&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;turbo-intruder&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#turbo-intruder&#34;&gt;#&lt;/a&gt; Turbo Intruder&lt;/h2&gt;
+&lt;p&gt;&lt;s&gt;暂时搁置，以后再写&lt;/s&gt;&lt;/p&gt;
+</content>
+        <category term="笔记" />
+        <category term="配置" />
+        <updated>2024-07-10T06:58:50.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/</id>
+        <title>关于Hexo</title>
+        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/"/>
+        <content type="html">&lt;h1 id=&#34;博客&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#博客&#34;&gt;#&lt;/a&gt; 博客&lt;/h1&gt;
+&lt;p&gt;2023-06-21 19:08:52 本博客基于 Hexo 正式创建，并使用主题&lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt; Shoka&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2025-03-07 01:04:26 更改主题并使用&lt;a href=&#34;https://hexo.docs.shokax.top/&#34;&gt; ShokaX&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;记录自己&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hexo&#34;&gt;#&lt;/a&gt; Hexo&lt;/h1&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt; hexo-cli&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# npx hexo &amp;lt;command&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;github配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#github配置&#34;&gt;#&lt;/a&gt; Github 配置&lt;/h2&gt;
+&lt;h3 id=&#34;配置身份密钥&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置身份密钥&#34;&gt;#&lt;/a&gt; 配置身份密钥&lt;/h3&gt;
+&lt;p&gt;登录 git 账号&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; user.name &lt;span class=&#34;token string&#34;&gt;&#34;user_name&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 填入 GitHub 用户名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config &lt;span class=&#34;token parameter variable&#34;&gt;--global&lt;/span&gt; user.email &lt;span class=&#34;token string&#34;&gt;&#34;user_email&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 填入 GitHub 注册的邮箱&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;获取 SSH KEY&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 默认即可&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh-keygen &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; rsa &lt;span class=&#34;token parameter variable&#34;&gt;-C&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;user.email&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;C:\Users\username\.ssh\id_rsa.pub&lt;/code&gt;  公钥内容复制至 Gtihub&lt;a href=&#34;https://github.com/settings/keys&#34;&gt;SSH and GPG keys&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;检测公钥设置是否成功&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ssh&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-T&lt;/span&gt; git@github.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;配置hexo&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置hexo&#34;&gt;#&lt;/a&gt; 配置 Hexo&lt;/h3&gt;
+&lt;p&gt;安装 git 插件&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-deployer-git &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;&amp;lt;root&amp;gt;\_config.yml&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;deploy&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;git&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;repository&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; git@github.com&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;username/username.github.io.git &lt;span class=&#34;token comment&#34;&gt;# git 仓库地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;branch&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; master&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;如果关于推送失败时，将 &lt;code&gt;&amp;lt;root&amp;gt;\.deploy_git&lt;/code&gt;  文件夹删除即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;基础指令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#基础指令&#34;&gt;#&lt;/a&gt; 基础指令&lt;/h2&gt;
+&lt;p&gt;初始化 &lt;code&gt;hexo init&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 生成 public 文件夹&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo g&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 删除 public 文件夹&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo clean&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 开启本地服务器 http://localhost:4000/&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 推送至 Github&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo d&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 创建文章&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo n &lt;span class=&#34;token string&#34;&gt;&#39;&amp;lt;title&gt;&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 禁用加载插件和脚本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo &lt;span class=&#34;token parameter variable&#34;&gt;--safe&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 将消息详细记录到终端和 debug.log 文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;hexo &lt;span class=&#34;token parameter variable&#34;&gt;--debug&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;一键三连上传 &lt;code&gt;hexo c &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo d&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;插件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#插件&#34;&gt;#&lt;/a&gt; 插件&lt;/h1&gt;
+&lt;p&gt;目前安装的～&lt;/p&gt;
+&lt;h2 id=&#34;主题需要&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主题需要&#34;&gt;#&lt;/a&gt; 主题需要&lt;/h2&gt;
+&lt;h3 id=&#34;markdown渲染&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#markdown渲染&#34;&gt;#&lt;/a&gt; Markdown 渲染&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 先删除已安装的 Markdown 渲染插件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; un hexo-renderer-marked &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;hexo-renderer-multi-next-markdown-it&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; i hexo-renderer-multi-next-markdown-it &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;css加载器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css加载器&#34;&gt;#&lt;/a&gt; css 加载器&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-autoprefixer &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;_config.yml&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;autoprefixer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;exclude&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;*.min.css&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;搜索功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#搜索功能&#34;&gt;#&lt;/a&gt; 搜索功能&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-algoliasearch &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;_config.yml&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;algolia&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;appId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#Your appId&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;apiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#Your apiKey&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;adminApiKey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#Your adminApiKey&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;chunkSize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;5000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;indexName&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#&#34;shoka&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;fields&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; title &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; path &lt;span class=&#34;token comment&#34;&gt;#必须配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; categories &lt;span class=&#34;token comment&#34;&gt;#推荐配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; content&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;strip&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;truncate&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;2000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; gallery&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; photos&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; tags&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;文章统计&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文章统计&#34;&gt;#&lt;/a&gt; 文章统计&lt;/h3&gt;
+&lt;p&gt;字数、阅读时间&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-symbols-count-time&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;feed&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#feed&#34;&gt;#&lt;/a&gt; Feed&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-feed --save-dev&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;_config.yml&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;keywords&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;#站点关键词，用 “,” 分隔&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;feed&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;limit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;20&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;order_by&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;-date&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;tag_dir&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;category_dir&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;rss&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;themes/shoka/layout/_alternate/rss.ejs&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;rss.xml&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;atom&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;themes/shoka/layout/_alternate/atom.ejs&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;atom.xml&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;jsonFeed&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;template&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;themes/shoka/layout/_alternate/json.ejs&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;output&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;feed.json&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;功能类非必须&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#功能类非必须&#34;&gt;#&lt;/a&gt; 功能类 (非必须)&lt;/h2&gt;
+&lt;h3 id=&#34;隐藏文章&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#隐藏文章&#34;&gt;#&lt;/a&gt; 隐藏文章&lt;/h3&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-hide-posts &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;_config.yml 配置&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# hexo-hide-posts&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;hide_posts&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 可以改成其他你喜欢的名字&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;filter&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; hidden&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 指定你想要传递隐藏文章的位置，比如让所有隐藏文章在存档页面可见&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 常见的位置有：index, tag, category, archive, sitemap, feed, etc.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 留空则默认全部隐藏&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;public_generators&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# 为隐藏的文章添加 noindex meta 标签，阻止搜索引擎收录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;noindex&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在想要隐藏的文章里添加 hidden 标记&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;hidden: true
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以在命令行运行 &lt;code&gt;hexo hidden:list&lt;/code&gt;  来获取当前所有的已隐藏文章列表&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;评论系统&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#评论系统&#34;&gt;#&lt;/a&gt; 评论系统&lt;/h1&gt;
+&lt;p&gt;&lt;s&gt;Valine(LeanCloud)&lt;/s&gt;&lt;br&gt;
+Twikoo&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; hexo-next-twikoo@1.0.3&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;这里是用来测试hexotheme&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#这里是用来测试hexotheme&#34;&gt;#&lt;/a&gt; 这里是用来测试 Hexo&amp;amp;Theme&lt;/h1&gt;
+&lt;details&gt;&lt;summary&gt;**点击折叠**&lt;/summary&gt;&lt;div&gt;
+&lt;p&gt;这是被隐藏的内容&lt;/p&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;!-- 模糊模糊模糊模糊模糊模糊{.bulr}  --&gt;</content>
+        <category term="博客" />
+        <category term="笔记" />
+        <updated>2023-06-21T14:03:51.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ui123456ax.github.io/2023/06/21/0_100/00_MarkDown/</id>
+        <title>MarkDown语法</title>
+        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/21/0_100/00_MarkDown/"/>
+        <content type="html">&lt;p&gt;更多可阅读&lt;a href=&#34;https://markdown.com.cn/basic-syntax/&#34;&gt; Markdown 官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;均可使用 html 标签替代&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;markdown基本语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#markdown基本语法&#34;&gt;#&lt;/a&gt; Markdown 基本语法&lt;/h1&gt;
+&lt;h2 id=&#34;分级语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分级语法&#34;&gt;#&lt;/a&gt; 分级语法&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;#&lt;/code&gt; 的数量代表了标题的级别&lt;br&gt;
+与 HTML 语法的 &amp;lt;h&amp;gt; 标签一致&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;# 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题
+###### 六级标题  &amp;lt;!--最多6级标题--&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;可选语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可选语法&#34;&gt;#&lt;/a&gt; 可选语法&lt;/h3&gt;
+&lt;p&gt;可在文本下方添加任意数量的 == 号来标识一级标题，或者 – 号来标识二级标题&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;&amp;lt;!-- 可理解为: # leve 1 --&amp;gt;
+leve 1
+====== 
+&amp;lt;!-- 可理解为: ## leve 2 --&amp;gt;
+leve 2
+------
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要注意 # 与文字有一个空格的间隙&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;段落语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#段落语法&#34;&gt;#&lt;/a&gt; 段落语法&lt;/h2&gt;
+&lt;p&gt;和通常的打字一样，如果在同行打字换行的就使用 &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt;  标签&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;Hello_World&amp;lt;br&amp;gt;你好世界
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+Hello_World&lt;br&gt;你好世界&lt;/p&gt;
+&lt;h3 id=&#34;强调语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#强调语法&#34;&gt;#&lt;/a&gt; 强调语法&lt;/h3&gt;
+&lt;h4 id=&#34;粗体bold&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#粗体bold&#34;&gt;#&lt;/a&gt; &lt;strong&gt;粗体（Bold）&lt;/strong&gt;&lt;/h4&gt;
+&lt;p&gt;加粗文本，在短语的前后各添加两个星号 (*) 或下划线 ( _ )&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;**Hello** __World__
+&amp;lt;!-- HTML中则是&amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;strong&gt;Hello&lt;/strong&gt; &lt;strong&gt;World&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般只推荐使用 * 号的方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;斜体italic&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#斜体italic&#34;&gt;#&lt;/a&gt; &lt;em&gt;斜体（Italic）&lt;/em&gt;&lt;/h4&gt;
+&lt;p&gt;斜体显示文本，在短语的前后各添加一个星号 (*) 或下划线 ( _ )&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;*Hello* _World_
+&amp;lt;!-- HTML中则是&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;em&gt;Hello&lt;/em&gt; &lt;em&gt;World&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般只推荐使用 * 号的方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;删除线&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#删除线&#34;&gt;#&lt;/a&gt; &lt;s&gt;删除线&lt;/s&gt;&lt;/h4&gt;
+&lt;p&gt;若要删除单词，请在单词前后使用两个波浪号～～&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;~~世界是平坦的。~~ 我们现在知道世界是圆的。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;s&gt;世界是平坦的。&lt;/s&gt; 我们现在知道世界是圆的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;引用语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#引用语法&#34;&gt;#&lt;/a&gt; 引用语法&lt;/h3&gt;
+&lt;p&gt;要创建块引用，请在段落前添加一个 &amp;gt; 符号&lt;br&gt;
+多个段落块引用就在下面多加一个 &amp;gt; 符号&lt;br&gt;
+ &amp;gt; 之间可以嵌套块引用只需要多加一个 &amp;gt; 号&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;&amp;gt; Hello World
+&amp;gt; I love you!
+&amp;gt;&amp;gt; Good job
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;实现效果如下：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hello World&lt;br&gt;
+I love you!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Good job&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;同时 &amp;gt; 之间可以使用些不同的语法比如在里面添加 &lt;code&gt;列表&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;列表语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#列表语法&#34;&gt;#&lt;/a&gt; 列表语法&lt;/h3&gt;
+&lt;h4 id=&#34;有序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#有序列表&#34;&gt;#&lt;/a&gt; 有序列表&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;1. one
+2. two
+3. three
+...
+&amp;lt;!-- 在HTML中则是
+&amp;lt;ol&amp;gt;
+&amp;lt;li&amp;gt;one&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;two&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;three&amp;lt;/li&amp;gt;
+&amp;lt;/ol&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;one&lt;/li&gt;
+&lt;li&gt;two&lt;/li&gt;
+&lt;li&gt;three&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;无序列表&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无序列表&#34;&gt;#&lt;/a&gt; 无序列表&lt;/h4&gt;
+&lt;p&gt;要创建无序列表，需要在每个列表项前面添加破折号 (-)、星号 (*) 或加号 (+)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;- 1
+- 2
+- 3
+...
+&amp;lt;!-- 在HTML中则是
+&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;one&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;two&amp;lt;/li&amp;gt;
+&amp;lt;li&amp;gt;three&amp;lt;/li&amp;gt;
+&amp;lt;/ul&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1&lt;/li&gt;
+&lt;li&gt;2&lt;/li&gt;
+&lt;li&gt;3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请注意：一般只使用 破折号 (-) 方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;任务列表语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#任务列表语法&#34;&gt;#&lt;/a&gt; 任务列表语法&lt;/h4&gt;
+&lt;p&gt;在任务列表项之前添加破折号 - 和方括号 []，并在 [] 前面加上空格&lt;br&gt;
+要选择一个复选框，请在方括号 [x] 之间添加 x&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;- [ ] 任务一 未做任务 `- + (空格) + [ ]`
+- [x] 任务二 已做任务 `- + (空格) + [x]`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;ul class=&#34;task-list&#34;&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_0&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_0&#34;&gt; 任务一 未做任务&lt;/label&gt;&lt;/li&gt;
+&lt;li class=&#34;task-list-item&#34;&gt;&lt;input type=&#34;checkbox&#34; id=&#34;cbx_1&#34; checked=&#34;true&#34; disabled=&#34;true&#34;&gt;&lt;label for=&#34;cbx_1&#34;&gt; 任务二 已做任务&lt;/label&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;idname&#34; id=&#34;链接语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#链接语法&#34;&gt;#&lt;/a&gt; 链接语法&lt;/h3&gt;
+&lt;h4 id=&#34;文字链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#文字链接&#34;&gt;#&lt;/a&gt; 文字链接&lt;/h4&gt;
+&lt;p&gt;超链接 Markdown 语法代码： &lt;code&gt;[超链接显示名](超链接地址 &amp;quot;超链接title&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;链接 title 为可选项，也就是说可写可不写&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;[Markdown官方语法](https://markdown.com.cn)
+&amp;lt;!-- 对应的HTML代码：&amp;lt;a href=&amp;quot;超链接地址&amp;quot; title=&amp;quot;超链接title&amp;quot;&amp;gt;超链接显示名&amp;lt;/a&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;a href=&#34;https://markdown.com.cn&#34;&gt;Markdown 官方语法&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;title&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#title&#34;&gt;#&lt;/a&gt; Title&lt;/h5&gt;
+&lt;p&gt;链接 title 是&lt;strong&gt;当鼠标悬停在链接上时会出现的文字&lt;/strong&gt;，这个 title 是可选的，它放在圆括号中链接地址后面，跟链接地址之间以空格分隔&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;[UI的Github仓库](https://github.com/ui123456ax/ &amp;quot;Hello! 很高兴能认识你&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;a href=&#34;https://github.com/ui123456ax/&#34; title=&#34;Hello! 很高兴能认识你&#34;&gt;UI 的 Github 仓库&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;网址和email地址&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#网址和email地址&#34;&gt;#&lt;/a&gt; 网址和 Email 地址&lt;/h5&gt;
+&lt;p&gt;使用尖括号可以很方便地把 URL 或者 email 地址变成可点击的链接&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;&amp;lt;https://github.com/ui123456ax/&amp;gt;
+&amp;lt;ui123456ax@gmail.com&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+&lt;a href=&#34;https://github.com/ui123456ax/&#34;&gt;https://github.com/ui123456ax/&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;mailto:ui123456ax@gmail.com&#34;&gt;ui123456ax@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;带格式化的链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#带格式化的链接&#34;&gt;#&lt;/a&gt; 带格式化的链接&lt;/h5&gt;
+&lt;p&gt;带 &lt;code&gt;强调&lt;/code&gt; 链接&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;粗体链接 **[我的博客](https://ui123456ax.github.io)**
+斜体链接 *[Markdown](https://www.markdownguide.org)*
+代码块链接 [`code`](#code)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+粗体 &lt;strong&gt;&lt;a href=&#34;https://ui123456ax.github.io&#34;&gt;我的博客&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;
+斜体 &lt;em&gt;&lt;a href=&#34;https://www.markdownguide.org&#34;&gt;Markdown&lt;/a&gt;&lt;/em&gt;&lt;br&gt;
+ 代码块 &lt;a href=&#34;#code&#34;&gt; &lt;code&gt;code&lt;/code&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h5 id=&#34;锚点链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#锚点链接&#34;&gt;#&lt;/a&gt; 锚点链接&lt;/h5&gt;
+&lt;p&gt;主要为跳转到文章指定 id 的标签处&lt;/p&gt;
+&lt;ol&gt;
+&lt;li id=&#34;id&#34;&gt;设锚点：标题&lt;/li&gt;
+&lt;li&gt;跳锚点: [文段] (#id)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;### 链接语法&amp;#123;#idname&amp;#125;
+
+... 省略
+
+[回到文字链接处](#idname)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[回到文字链接处] (#idname)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;以上均可带 Title&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;图片链接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#图片链接&#34;&gt;#&lt;/a&gt; 图片链接&lt;/h4&gt;
+&lt;p&gt;要添加图像，请使用感叹号 (!), 然后在方括号增加替代文本，图片链接放在圆括号里，括号里的链接后可以增加一个可选的图片标题文本&lt;br&gt;
+插入图片 Markdown 语法代码： &lt;code&gt;![图片alt](图片链接 &amp;quot;图片title&amp;quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;图片 alt&lt;/strong&gt; 可以不用写直接空白即可&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;图片 title&lt;/strong&gt; 可写可不写&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;![gx0x.jpg](https://img.cdn.loliloli.net/images/2023/09/01/gx0x.jpg)
+&amp;lt;!-- 对应的HTML代码：&amp;lt;img src=&amp;quot;图片链接&amp;quot; alt=&amp;quot;图片alt&amp;quot; title=&amp;quot;图片title&amp;quot;&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果图：&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://img.cdn.loliloli.net/images/2023/09/01/gx0x.jpg&#34; alt=&#34;gx0x.jpg&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;链接图片&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#链接图片&#34;&gt;#&lt;/a&gt; 链接图片&lt;/h5&gt;
+&lt;p&gt;给图片增加链接，将图像的 Markdown 括在方括号中，然后将链接添加在圆括号中&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;[![gNCH.gif](https://img.cdn.loliloli.net/images/2023/09/01/gNCH.gif &amp;quot;小孤独~&amp;quot;)](https://baike.baidu.com/item/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%EF%BC%81/56105018)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请注意 [ ] 的位置！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;效果图（点击转跳百度百科）：&lt;br&gt;
+&lt;a href=&#34;https://baike.baidu.com/item/%E5%AD%A4%E7%8B%AC%E6%91%87%E6%BB%9A%EF%BC%81/56105018&#34;&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://img.cdn.loliloli.net/images/2023/09/01/gNCH.gif&#34; alt=&#34;gNCH.gif&#34; title=&#34;小孤独~&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;代码语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#代码语法&#34;&gt;#&lt;/a&gt; 代码语法&lt;/h2&gt;
+&lt;h3 id=&#34;表示代码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表示代码&#34;&gt;#&lt;/a&gt; 表示代码&lt;/h3&gt;
+&lt;p&gt;要将单词或短语表示为代码，请将其包裹在反引号 (`) 中&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;`你好世界`
+&amp;lt;!-- 在HTML中则是&amp;lt;code&amp;gt;&amp;lt;/code&amp;gt; --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+ &lt;code&gt;你好世界&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要转义 (即在代码块显示 ` 符号)&lt;br&gt;
+ 请你输入两个反引号 (``)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;围栏代码块&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#围栏代码块&#34;&gt;#&lt;/a&gt; 围栏代码块&lt;/h3&gt;
+&lt;p&gt;根据 Markdown 处理器的不同，在代码块之前和之后的行上使用三个反引号 (```) 或三个波浪号 (~~~)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;```JavaScirpt
+i = &#39;我爱你，世界&#39;
+console,log(i)
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-JavaScirpt&#34;&gt;i = &#39;我爱你，世界&#39;
+console,log(i)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要添加语法突出显示，在代码块之前的反引号旁边指定一种语言&lt;br&gt;
+比如上面的 &amp;quot;JavaScirpt&amp;quot;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果需要转义代码则在前后多加一个反引号 (````) 或波浪号 (~~~~)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;分隔线语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#分隔线语法&#34;&gt;#&lt;/a&gt; 分隔线语法&lt;/h2&gt;
+&lt;p&gt;要创建分隔线，需要在单独一行上使用三个或多个星号 (***)、破折号 (—) 或下划线 (___) ，并且不能包含其他内容&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;***
+&amp;lt;!-- 至少是3个  --&amp;gt;
+&amp;lt;!-- 与html的&amp;lt;hr&amp;gt;标签一致 --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;推荐使用破折号 (—) 或 HTML 的 &amp;lt; hr &amp;gt; 标签，能很明显的突出&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;内嵌-html-标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#内嵌-html-标签&#34;&gt;#&lt;/a&gt; 内嵌 HTML 标签&lt;/h1&gt;
+&lt;p&gt;正如我开头所说的 Markdown 可以直接使用 HTML 的标签&lt;br&gt;
+甚至可以使用部分 CSS 自由装饰你的文本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于 Markdown 涵盖范围之外的标签，都可以直接在文件里面用 HTML 本身。如需使用 HTML，不需要额外标注这是 HTML 或是 Markdown，只需 HTML 标签添加到 Markdown 文本中即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你可以把 &lt;code&gt;.html&lt;/code&gt;  的文件后缀名改成 &lt;code&gt;.md&lt;/code&gt;  完全可以正常打开，并且装饰的 CSS 也会自动使用&lt;br&gt;
+不过请注意，Markdown 是支持&lt;strong&gt;大部分&lt;/strong&gt;的 HTML 标签，以及&lt;strong&gt;部分&lt;/strong&gt;的 CSS&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 HTML 块级标签内不能使用 Markdown 语法。例如  &lt;code&gt;&amp;lt;p&amp;gt;italic and **bold**&amp;lt;/p&amp;gt;&lt;/code&gt;  将不起作用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;markdown扩展语法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#markdown扩展语法&#34;&gt;#&lt;/a&gt; Markdown 扩展语法&lt;/h1&gt;
+&lt;h2 id=&#34;表格&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#表格&#34;&gt;#&lt;/a&gt; 表格&lt;/h2&gt;
+&lt;p&gt;要添加表，请使用三个或多个连字符（—）创建每列的标题，并使用管道（|）分隔每列&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以选择在表的任一端添加管道&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;| 标题 One    | 标题 Two    |
+| ----------- | ----------- |
+| Hello?      | Yes?        |
+| 你好     | 是的        |
+&amp;lt;!-- 单元格宽度可以变化 --&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;呈现的输出如下所示：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;标题 One&lt;/th&gt;
+&lt;th&gt;标题 Two&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Hello?&lt;/td&gt;
+&lt;td&gt;Yes?&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;你好&lt;/td&gt;
+&lt;td&gt;是的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;对齐&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对齐&#34;&gt;#&lt;/a&gt; 对齐&lt;/h3&gt;
+&lt;p&gt;您可以通过在标题行中的连字符的左侧，右侧或两侧添加冒号（:），将列中的文本对齐到左侧，右侧或中心&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;| 标题 One    | 标题 Two    | 标题 Three    |
+| :---        |    :----:   |          ---: |
+| Left        | Title       | Right         |
+| left        | Text        | right         |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;呈现的输出如下所示：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;标题 One&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;标题 Two&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;标题 Three&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Left&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Title&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;Right&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;left&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Text&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;right&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;格式化表格中的文字&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#格式化表格中的文字&#34;&gt;#&lt;/a&gt; 格式化表格中的文字&lt;/h3&gt;
+&lt;p&gt;可以在表格中设置文本格式。例如，您可以添加链接，代码（仅反引号（`），而不是&lt;strong&gt;代码块&lt;/strong&gt;）和强调&lt;br&gt;
+不能添加标题，块引用，列表，水平规则，图像或 HTML 标签&lt;/p&gt;
+&lt;h2 id=&#34;脚注&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#脚注&#34;&gt;#&lt;/a&gt; 脚注&lt;/h2&gt;
+&lt;p&gt;带有脚注的上标数字会出现在添加脚注参考的位置 读者可以&lt;strong&gt;单击链接以跳至页面底部的脚注内容&lt;/strong&gt;&lt;br&gt;
+创建脚注参考，方括号 &lt;code&gt;[^1]&lt;/code&gt;  内添加插入符号和标识符。标识符可以是数字或单词，但不能包含空格或制表符&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;脚注使您可以添加注释和参考，而不会使文档正文混乱&lt;br&gt;
+在括号内使用另一个插入符号和数字添加脚注，并用冒号和文本 &lt;code&gt;[^1]: 解释.&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;这是一个脚注[^2]，这是一个更长的脚注[^你好]
+&amp;lt;!-- 脚注将出现在文章末尾 --&amp;gt;
+[^2]:我是一个脚注的
+
+[^你好]:我是第二个脚注的脚注
+欸,`好吧好吧`
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+这是一个脚注&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34; id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;，这是一个更长的脚注&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn2&#34; id=&#34;fnref2&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;使用-emoji-表情&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用-emoji-表情&#34;&gt;#&lt;/a&gt; 使用 Emoji 表情&lt;/h2&gt;
+&lt;p&gt;一些 Markdown 应用程序允许您通过键入表情符号短代码来插入表情符号&lt;br&gt;
+这些以冒号开头和结尾，并包含表情符号的名称&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Markdown&#34;&gt;去露营了！ :tent: 很快回来。
+[点我查看更多表情](https://gist.github.com/rxaviers/7360908)
+真好笑！ :joy:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;效果如下：&lt;br&gt;
+去露营了！ ⛺ 很快回来。&lt;br&gt;
+&lt;a href=&#34;https://gist.github.com/rxaviers/7360908&#34;&gt;点我查看更多表情&lt;/a&gt;&lt;br&gt;
+真好笑！ 😂&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;表情符号会因应用程序而异&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr class=&#34;footnotes-sep&#34;&gt;
+&lt;section class=&#34;footnotes&#34;&gt;
+&lt;ol class=&#34;footnotes-list&#34;&gt;
+&lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;我是一个脚注的 &lt;a href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn2&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;我是第二个脚注的脚注&lt;br&gt;
+欸， &lt;code&gt;好吧好吧&lt;/code&gt; &lt;a href=&#34;#fnref2&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</content>
+        <category term="笔记" />
+        <updated>2023-06-21T11:08:52.000Z</updated>
+    </entry>
+</feed>

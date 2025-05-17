@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>ほしづきよ • Posts by &#34;vpn&#34; tag</title>
+        <link>https://ui123456ax.github.io</link>
+        <description>星月夜 ブログ</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 13 Aug 2024 20:08:26 +0800</pubDate>
+        <lastBuildDate>Tue, 13 Aug 2024 20:08:26 +0800</lastBuildDate>
+        <category>博客</category>
+        <category>笔记</category>
+        <category>Github</category>
+        <category>Python</category>
+        <category>报错</category>
+        <category>Shoka</category>
+        <category>Comic</category>
+        <category>配置</category>
+        <category>娱乐</category>
+        <category>Android</category>
+        <category>CloudFlare</category>
+        <category>VPN</category>
+        <category>github</category>
+        <category>cloudflare</category>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</guid>
+            <title>使用CloudFlare作为VPN</title>
+            <link>https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</link>
+            <category>CloudFlare</category>
+            <category>VPN</category>
+            <pubDate>Tue, 13 Aug 2024 20:08:26 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;方式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方式&#34;&gt;#&lt;/a&gt; 方式&lt;/h1&gt;
+&lt;p&gt;本文主要介绍以下两种方式&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;CloudFlare 子服务 Warp (&lt;a href=&#34;https://1.1.1.1/&#34;&gt;1.1.1.1&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;使用 CloudFlare Workes 搭建 VPN 通道&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CLoudFlare 牛 bi！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;1111&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#1111&#34;&gt;#&lt;/a&gt; 1.1.1.1&lt;/h1&gt;
+&lt;h2 id=&#34;下载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载&#34;&gt;#&lt;/a&gt; 下载&lt;/h2&gt;
+&lt;p&gt;点击&lt;a href=&#34;https://1.1.1.1/&#34;&gt; warp 官网&lt;/a&gt;，下载对应设备的版本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;支持 Linux、MacOS、Windows、Android、IOS&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文使用 Windows 的 Warp 功能，其他设备也都差不多&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;点击 设置–&amp;gt; 偏好设置–&amp;gt; 账户–&amp;gt; 使用其他密钥&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_02.png&#34; alt=&#34;02&#34;&gt;&lt;br&gt;
+ 这里可以使用我的密钥，或是自己生成一个 (下文)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;6ECl4z19-y0M862qC-A7490TKI
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;密钥生成&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#密钥生成&#34;&gt;#&lt;/a&gt; 密钥生成&lt;/h2&gt;
+&lt;p&gt;需要 Telegram 账号，如果没有请注册一个&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Telegram 需要魔法上网，这里建议直接使用上面我提供的密钥即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Robot: &lt;a href=&#34;https://t.me/generatewarpplusbot&#34;&gt;https://t.me/generatewarpplusbot&lt;/a&gt;&lt;br&gt;
+ 添加机器人，并按如图所操作&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请注意！这里可能需要让你关注些群聊才能使用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_03.png&#34; alt=&#34;03&#34;&gt;&lt;br&gt;
+ &lt;code&gt;7lnfW439-3yX5C4m6-CXd5943m&lt;/code&gt;  就是我们生成的密钥了，接下来复制到 Warp 即可使用&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_04.png&#34; alt=&#34;04&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;无法连接&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无法连接&#34;&gt;#&lt;/a&gt; 无法连接&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;s&gt;优选 IP&lt;/s&gt; (Ipv4 基本失效)&lt;/li&gt;
+&lt;li&gt;换 Ipv6&lt;/li&gt;
+&lt;li&gt;开启 MASQUE 加密协议 (部分地区不可用)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;s&gt;目前 (2024/08/13) Warp 在部分地区的 Ipv4 无法连接，最简单的解决方法就是切换为 Ipv6&lt;/s&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自己上网搜索一下如何开启 Ipv6，本文不作解释&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;masque-加密协议&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#masque-加密协议&#34;&gt;#&lt;/a&gt; MASQUE 加密协议&lt;/h3&gt;
+&lt;p&gt;此方法需要最新的 &lt;a href=&#34;https://1.1.1.1/&#34;&gt;Warp&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;cloudflare-zero-trust&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cloudflare-zero-trust&#34;&gt;#&lt;/a&gt; Cloudflare Zero Trust&lt;/h4&gt;
+&lt;p&gt;在设置中心，开启 MASQUE 加密&lt;/p&gt;
+&lt;h4 id=&#34;windows&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#windows&#34;&gt;#&lt;/a&gt; Windows&lt;/h4&gt;
+&lt;p&gt;在 &lt;code&gt;C:\ProgramData\Cloudflare\&lt;/code&gt;  内，新建 &lt;code&gt;mdm.yml&lt;/code&gt;  内容如下&lt;/p&gt;
+&lt;figure class=&#34;highlight yml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;dict&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;key&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;warp_tunnel_protocol&amp;lt;/key&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &amp;lt;string&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;masque&amp;lt;/string&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;lt;/dict&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;重启 Warp 即可开启 MASQUE&lt;/p&gt;
+&lt;h4 id=&#34;macos&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#macos&#34;&gt;#&lt;/a&gt; MacOS&lt;/h4&gt;
+&lt;p&gt;下载并安装 &lt;a href=&#34;https://wwqe.lanzouo.com/iLoHz2bo35de&#34;&gt;CloudflareWARP.mobileconfig&lt;/a&gt; 文件，请确保客户端版本为最新 2024.8.309.1 或 更高的版本&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;密码: ebjy&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;移动设备androidios&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#移动设备androidios&#34;&gt;#&lt;/a&gt; 移动设备 (Android,IOS)&lt;/h4&gt;
+&lt;p&gt;高级 -&amp;gt; 连接选项 -&amp;gt; TunnelProtocol (连接隧道) -&amp;gt; MASQUE&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果以上方法都不行，请继续往下看&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;cloudflare-workes&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#cloudflare-workes&#34;&gt;#&lt;/a&gt; CloudFlare Workes&lt;/h1&gt;
+&lt;p&gt;每天免费 10w 个请求，可以绑定自己的域名，可以访问外网，可以反代理外网的接口&lt;br&gt;
+这里选择的是 &lt;code&gt;yonggekkk&lt;/code&gt;  的脚本&lt;a href=&#34;https://github.com/yonggekkk/Cloudflare_vless_trojan&#34;&gt; Cloudflare_vless_trojan&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;原项目&lt;a href=&#34;https://github.com/zizifn/edgetunnel&#34;&gt; edgetunnel&lt;/a&gt;、&lt;s&gt;改版&lt;a href=&#34;https://github.com/3Kmfi6HP/EDtunnel&#34;&gt; EDtunnel&lt;/a&gt;&lt;/s&gt;、Trojan&lt;a href=&#34;https://github.com/ca110us/epeius&#34;&gt;epeius&lt;/a&gt;&lt;br&gt;
+ 选择&lt;a href=&#34;https://github.com/yonggekkk/Cloudflare_vless_trojan&#34;&gt; Cloudflare_vless_trojan&lt;/a&gt; 的理由是将项目的优点都整合到了一起，并且有很多相关的解释对于小白来讲很友好。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;前置条件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前置条件&#34;&gt;#&lt;/a&gt; 前置条件&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://dash.cloudflare.com/&#34;&gt;CloudFlare&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/2dust/v2rayN/releases?after=3.10&#34;&gt;V2ray&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;域名 (可选)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;使用脚本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用脚本&#34;&gt;#&lt;/a&gt; 使用脚本&lt;/h2&gt;
+&lt;p&gt;下文以无域名操作&lt;br&gt;
+下面将以最简单的方式使用此脚本 (无域名操作)，更多扩展操作可看原项目&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有无域名的区别 --&amp;gt; 有无 Tls&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;新建workers&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新建workers&#34;&gt;#&lt;/a&gt; 新建 Workers&lt;/h3&gt;
+&lt;p&gt;名字随意&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_05.png&#34; alt=&#34;05&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_06.png&#34; alt=&#34;06&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;添加脚本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加脚本&#34;&gt;#&lt;/a&gt; 添加脚本&lt;/h3&gt;
+&lt;p&gt;打开项目仓库中的&lt;a href=&#34;https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/Vless_workers_pages/_worker.js&#34;&gt; Vless_workers_pages&lt;/a&gt; 文件夹内找到 &lt;code&gt;_worker.js&lt;/code&gt;  将里面的内容 &lt;code&gt;CTRL+A&lt;/code&gt;  复制进刚才创建的 Workers 里&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_07.png&#34; alt=&#34;07&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_08.png&#34; alt=&#34;08&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h3&gt;
+&lt;h4 id=&#34;userid&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#userid&#34;&gt;#&lt;/a&gt; userID&lt;/h4&gt;
+&lt;p&gt;你应该确保有自己的 userID&lt;br&gt;
+ 可以选择网上的&lt;a href=&#34;https://www.uuidgenerator.net/&#34;&gt;在线生成&lt;/a&gt;，或是在 V2 里的添加服务器内自动生成&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_09.png&#34; alt=&#34;09&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;proxyip&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#proxyip&#34;&gt;#&lt;/a&gt; ProxyIP&lt;/h4&gt;
+&lt;p&gt;这是全局代理 IP，选择默认的即可&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不会设别乱设，可能会导致无法进去 CloudFlare 相关的网站&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;运行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运行&#34;&gt;#&lt;/a&gt; 运行&lt;/h3&gt;
+&lt;p&gt;然后点击右上角的部署保存&lt;br&gt;
+在 URL 中输入 &lt;code&gt;https://你的Workers名.你的用户名.workers.dev/你的UID&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如我的 &lt;code&gt;https://v2vpn.ui123456ax.workers.dev/a52c418e-a7d7-4d23-a348-1e055c1cb806&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_10.png&#34; alt=&#34;10&#34; title=&#34;默认关闭TLS&#34;&gt;&lt;br&gt;
+ 复制链接后，导入至 V2ray 即可正常使用。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;V2 节点这里就不分享给大家了，每个账户的请求数量是有限 10w 次的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_11.png&#34; alt=&#34;11&#34;&gt;&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_12.png&#34; alt=&#34;12&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;无法打开workers&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#无法打开workers&#34;&gt;#&lt;/a&gt; 无法打开 Workers&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如无此问题，跳过即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在上一步操作中无法打开输入的 &lt;code&gt;https://你的Workers名.你的用户名.workers.dev/你的UID&lt;/code&gt;  链接&lt;br&gt;
+通常是因为 &lt;code&gt;.workers.dev&lt;/code&gt;  被墙了，要么科学上网，要么手动开启 CF 节点&lt;/p&gt;
+&lt;h4 id=&#34;手动输入cf节点&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#手动输入cf节点&#34;&gt;#&lt;/a&gt; 手动输入 CF 节点&lt;/h4&gt;
+&lt;p&gt;在 V2rayN 中添加 &lt;code&gt;VLESS&lt;/code&gt;  服务器，并按如图所设置&lt;br&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_13.png&#34; alt=&#34;13&#34;&gt;&lt;br&gt;
+ 设置完毕即可正常打开网页。这里是属于配置节点，可以正常科学上网了&lt;/p&gt;
+&lt;h3 id=&#34;其他代理工具&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他代理工具&#34;&gt;#&lt;/a&gt; 其他代理工具&lt;/h3&gt;
+&lt;p&gt;在部署的 Workes 中可以看到，支持 Clash-meta、Sing-box 等链接导入&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;导入时需保持科学环境，否则可能导致导入失败&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_14.png&#34; alt=&#34;14&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;tls&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tls&#34;&gt;#&lt;/a&gt; TLS&lt;/h2&gt;
+&lt;p&gt;未添加域名使用 TLS 加密，可以在代理工具内设置里启用分片 (Fragment)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;没有的话，请更换你的代理工具 (v2rayN)，或更新你的代理工具&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;延迟 (ms) 默认显示是 &lt;code&gt;-1&lt;/code&gt;  但可以使用 (速度由 Address 决定)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;需要显示为非 &lt;code&gt;-1&lt;/code&gt;  则需要使用域名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果是 &lt;code&gt;其他项目里的脚本&lt;/code&gt; 默认是开启 TLS，可手动关闭节点 TLS&lt;/p&gt;
+&lt;h2 id=&#34;地址address&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#地址address&#34;&gt;#&lt;/a&gt; 地址 (Address)&lt;/h2&gt;
+&lt;p&gt;请注意你的服务器地址选项 这将会影响你是否可以上网 以及上网的速度 (下文优选 IP 有提)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;填入 IP 或 使用了 CloudFlare 加速的域名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;默认使用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;www.visa.com.hk
+www.visa.com.sg
+ip.sb
+...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;proxyip-2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#proxyip-2&#34;&gt;#&lt;/a&gt; ProxyIP&lt;/h2&gt;
+&lt;p&gt;设置 ProxyIP 的作用，就是保证能与 CloudFlare 的连通。说白了，不设置 ProxyIP 将无法连接与 CloudFlare 相关的网站 (包括使用了 CFCDN 的网站)，不影响上网速度。一般情况默认即可 (非空)，无需修改。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cdn-all.xn--b6gac.eu.org
+cdn.xn--b6gac.eu.org
+cdn-b100.xn--b6gac.eu.org
+edgetunnel.anycast.eu.org
+cdn.anycast.eu.org
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;优选ip域名&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#优选ip域名&#34;&gt;#&lt;/a&gt; 优选 IP (域名)&lt;/h2&gt;
+&lt;p&gt;不管你是使用哪个项目的代码搭建 CloudFlareV2ray 渠道，都应该要注意地址 (address)，这将影响全局上网的速度。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;CloudFlare 优选官方 IP --&amp;gt; &lt;a href=&#34;https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/CF%E4%BC%98%E9%80%89%E5%AE%98%E6%96%B9IP(%E7%94%B5%E8%84%91%E7%89%88).zip&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;速度一般 节点稳定 IP 地域大部分为美国&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;CloudFlare 优选反代 IP --&amp;gt; &lt;a href=&#34;https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/CF%E4%BC%98%E9%80%89%E5%8F%8D%E4%BB%A3IP(%E7%94%B5%E8%84%91%E7%89%88).zip&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;速度快 不稳定容易失效 IP 地域可根据节点选择&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;CloudFlare 优选域名 (官方、反代) --&amp;gt; &lt;a href=&#34;https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/CDN%E4%BC%98%E9%80%89%E5%9F%9F%E5%90%8DV23.8.18(%E7%94%B5%E8%84%91win64).exe&#34;&gt;下载&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;IP 会随意变动&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;androidios&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#androidios&#34;&gt;#&lt;/a&gt; Android&amp;amp;&amp;amp;IOS&lt;/h3&gt;
+&lt;p&gt;Android 使用程序 &lt;code&gt;termux&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装依赖&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pkg upgrade&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pkg &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# apt update&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# apt install curl&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;IOS 使用程序 &lt;code&gt;ish&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 安装依赖&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;apk &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; openssh &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 优选域名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-sSL&lt;/span&gt; https://gitlab.com/rwkgyg/CFwarp/raw/main/point/CFcdnym.sh &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; CFcdnym.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x CFcdnym.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; CFcdnym.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 优选 IP&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-sSL&lt;/span&gt; https://gitlab.com/rwkgyg/CFwarp/raw/main/point/cfip.sh &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; cfip.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x cfip.sh &lt;span class=&#34;token operator&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; cfip.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;抓取反代ip&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#抓取反代ip&#34;&gt;#&lt;/a&gt; 抓取反代 IP&lt;/h3&gt;
+&lt;p&gt;可利用网络空间检索抓取有 CF 加速的网站&lt;br&gt;
+ FOFA  &lt;code&gt;server==&amp;quot;cloudflare&amp;quot; &amp;amp;&amp;amp; port==&amp;quot;端口&amp;quot; &amp;amp;&amp;amp; country==&amp;quot;国家&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;CloudFlare 支持的 13 个端口号&lt;/p&gt;
+&lt;details&gt;&lt;summary&gt;HTTP端口(7个)&lt;/summary&gt;&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;80&lt;/li&gt;
+&lt;li&gt;8080&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8880&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;2052&lt;/li&gt;
+&lt;li&gt;2082&lt;/li&gt;
+&lt;li&gt;2086&lt;/li&gt;
+&lt;li&gt;2095&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;details&gt;&lt;summary&gt;HTTPS端口(6个)&lt;/summary&gt;&lt;div&gt;
+&lt;ul&gt;
+&lt;li&gt;443&lt;/li&gt;
+&lt;li&gt;2053&lt;/li&gt;
+&lt;li&gt;2083&lt;/li&gt;
+&lt;li&gt;2087&lt;/li&gt;
+&lt;li&gt;2096&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;8443&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;h3 id=&#34;区别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#区别&#34;&gt;#&lt;/a&gt; 区别&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;域名：优选域名里包含许多优选 IP，并使用其中的一条 IP 作为连接 CloudFlare 的通道&lt;/li&gt;
+&lt;li&gt;IP: 优选 IP 则是指定唯一的 IP，这将可以选择 VPN 所在的代理位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般情况选择优选域名即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;结语&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#结语&#34;&gt;#&lt;/a&gt; 结语&lt;/h1&gt;
+&lt;p&gt;无论是所以 Warp 服务还是自建 Workes，其根 IP 都是 CloudFlare，其速度也相差无几。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;速度的差异主要还是在与 CloudFlare 的连接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=ojGojtF8sW8&amp;amp;t=1471s&#34;&gt;https://www.youtube.com/watch?v=ojGojtF8sW8&amp;amp;t=1471s&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=NbruiJShUCE&#34;&gt;https://www.youtube.com/watch?v=NbruiJShUCE&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;amp;t=812s&#34;&gt;https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;amp;t=812s&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=NaLd-orwFUE&#34;&gt;https://www.youtube.com/watch?v=NaLd-orwFUE&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://www.youtube.com/watch?v=9V9CQxmfwoA&#34;&gt;https://www.youtube.com/watch?v=9V9CQxmfwoA&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/yonggekkk/warp-yg&#34;&gt;https://github.com/yonggekkk/warp-yg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/yonggekkk/Cloudflare_vless_trojan&#34;&gt;https://github.com/yonggekkk/Cloudflare_vless_trojan&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/zizifn/edgetunnel&#34;&gt;https://github.com/zizifn/edgetunnel&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/3Kmfi6HP/EDtunnel&#34;&gt;https://github.com/3Kmfi6HP/EDtunnel&lt;/a&gt; 已删库&lt;br&gt;
+&lt;a href=&#34;https://github.com/EDtunnel-rev/EDtunnel-rev&#34;&gt; https://github.com/EDtunnel-rev/EDtunnel-rev&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/ca110us/epeius&#34;&gt;https://github.com/ca110us/epeius&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/XIU2/CloudflareSpeedTest&#34;&gt;https://github.com/XIU2/CloudflareSpeedTest&lt;/a&gt;&lt;br&gt;
+&lt;a href=&#34;https://github.com/badafans/Cloudflare-IP-SpeedTest&#34;&gt;https://github.com/badafans/Cloudflare-IP-SpeedTest&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
