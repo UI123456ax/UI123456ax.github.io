@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ui123456ax.github.io</id>
+    <id>https://blog.neonnoir.link</id>
     <title>ネオンノワール • Posts by &#34;blog&#34; tag</title>
-    <link href="https://ui123456ax.github.io" />
+    <link href="https://blog.neonnoir.link" />
     <updated>2023-06-24T08:54:16.000Z</updated>
     <category term="Notes" />
     <category term="Blog" />
@@ -21,9 +21,9 @@
     <category term="Docker" />
     <category term="DNS" />
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</id>
+        <id>https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</id>
         <title>Hexo美化 添加Live2d（看板娘）</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/"/>
         <content type="html">&lt;h1 id=&#34;hexo-helper-live2d&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-helper-live2d&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://github.com/EYHN/hexo-helper-live2d&#34;&gt;Hexo-helper-live2d&lt;/a&gt; 插件安装与配置&lt;/h1&gt;
 &lt;p&gt;Hexo 的官方支持看板娘，已经封装好了插件～&lt;/p&gt;
 &lt;blockquote&gt;
@@ -43,9 +43,9 @@
         <updated>2023-06-24T08:54:16.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</id>
+        <id>https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</id>
         <title>关于Shoka图床修复</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;信心满满给 Hexo 布置 Shoka 主题时，发现新浪微博 (图床) 把背景图片屏蔽了（哭）&lt;br /&gt;
 折腾了好几天终于找到恢复的方法了，下面就跟我一起来看看吧&lt;/p&gt;
@@ -149,9 +149,9 @@
         <updated>2023-06-23T09:28:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/</id>
+        <id>https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/</id>
         <title>关于Hexo</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/"/>
         <content type="html">&lt;h1 id=&#34;博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客&#34;&gt;#&lt;/a&gt; 博客&lt;/h1&gt;
 &lt;p&gt;2023-06-21 19:08:52 本博客基于 Hexo 正式创建，并使用主题&lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt; Shoka&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2025-03-07 01:04:26 更改主题并使用&lt;a href=&#34;https://hexo.docs.shokax.top/&#34;&gt; ShokaX&lt;/a&gt;&lt;/p&gt;

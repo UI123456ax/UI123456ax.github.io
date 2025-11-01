@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>ネオンノワール • Posts by &#34;shoka&#34; tag</title>
-        <link>https://ui123456ax.github.io</link>
+        <link>https://blog.neonnoir.link</link>
         <description>NeonNoir ブログ</description>
         <language>zh-CN</language>
         <pubDate>Fri, 23 Jun 2023 17:28:51 +0800</pubDate>
@@ -24,9 +24,9 @@
         <category>Docker</category>
         <category>DNS</category>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</guid>
             <title>关于Shoka图床修复</title>
-            <link>https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</link>
+            <link>https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</link>
             <category>Blog</category>
             <category>Shoka</category>
             <pubDate>Fri, 23 Jun 2023 17:28:51 +0800</pubDate>

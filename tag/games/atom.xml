@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ui123456ax.github.io</id>
+    <id>https://blog.neonnoir.link</id>
     <title>ネオンノワール • Posts by &#34;games&#34; tag</title>
-    <link href="https://ui123456ax.github.io" />
+    <link href="https://blog.neonnoir.link" />
     <updated>2024-05-07T16:07:51.000Z</updated>
     <category term="Notes" />
     <category term="Blog" />
@@ -21,9 +21,9 @@
     <category term="Docker" />
     <category term="DNS" />
     <entry>
-        <id>https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/</id>
+        <id>https://blog.neonnoir.link/2024/05/08/0_100/08_erogames/</id>
         <title>TESX-EROGAMES</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/05/08/0_100/08_erogames/"/>
         <content type="html">&lt;p&gt;&lt;s&gt;和同学在校内游玩的小游戏&lt;/s&gt;&lt;/p&gt;
 &lt;h3 id=&#34;操作说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作说明&#34;&gt;#&lt;/a&gt; 操作说明&lt;/h3&gt;
 &lt;p&gt;RPG 可自由操作时两指齐按（右鍵）打开功能表存档，部分需定点存档&lt;br /&gt;

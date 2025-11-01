@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>ネオンノワール • Posts by &#34;vpn&#34; tag</title>
-        <link>https://ui123456ax.github.io</link>
+        <link>https://blog.neonnoir.link</link>
         <description>NeonNoir ブログ</description>
         <language>zh-CN</language>
         <pubDate>Tue, 13 Aug 2024 20:08:26 +0800</pubDate>
@@ -24,9 +24,9 @@
         <category>Docker</category>
         <category>DNS</category>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/08/13/0_100/15_CloudFlareVPN/</guid>
             <title>使用CloudFlare作为VPN</title>
-            <link>https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</link>
+            <link>https://blog.neonnoir.link/2024/08/13/0_100/15_CloudFlareVPN/</link>
             <category>CloudFlare</category>
             <category>VPN</category>
             <pubDate>Tue, 13 Aug 2024 20:08:26 +0800</pubDate>

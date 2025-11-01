@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>ネオンノワール • Posts by &#34;configuration&#34; tag</title>
-        <link>https://ui123456ax.github.io</link>
+        <link>https://blog.neonnoir.link</link>
         <description>NeonNoir ブログ</description>
         <language>zh-CN</language>
         <pubDate>Mon, 16 Sep 2024 09:52:32 +0800</pubDate>
@@ -24,9 +24,9 @@
         <category>Docker</category>
         <category>DNS</category>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</guid>
             <title>GitHub配置多账号git上传</title>
-            <link>https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</link>
+            <link>https://blog.neonnoir.link/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</link>
             <category>Github</category>
             <category>Configuration</category>
             <pubDate>Mon, 16 Sep 2024 09:52:32 +0800</pubDate>
@@ -102,9 +102,9 @@ Host github.com-AccountB
 &lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote remove origin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; origin git@github.com-AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</guid>
             <title>Android抓包工具无法正常上网</title>
-            <link>https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</link>
+            <link>https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</link>
             <category>Configuration</category>
             <category>Android</category>
             <pubDate>Tue, 30 Jul 2024 09:28:48 +0800</pubDate>
@@ -204,9 +204,9 @@ Xposed (任意即可):&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/</guid>
             <title>BurpSuite使用指南</title>
-            <link>https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</link>
+            <link>https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/</link>
             <category>Notes</category>
             <category>Configuration</category>
             <pubDate>Wed, 10 Jul 2024 14:58:50 +0800</pubDate>
@@ -289,9 +289,9 @@ BurpSuite 扩展页面上的  &lt;code&gt;BAppStore&lt;/code&gt; 。虽有丰富
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</guid>
             <title>修复RPGMV在IOS上无法运行ogg文件</title>
-            <link>https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</link>
+            <link>https://blog.neonnoir.link/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</link>
             <category>Configuration</category>
             <pubDate>Fri, 10 May 2024 13:48:33 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Q: 为什么无法在播放声音？&lt;br /&gt;
@@ -316,9 +316,9 @@ A: IOS 政策不允许&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</guid>
             <title>Hexo美化 添加Live2d（看板娘）</title>
-            <link>https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</link>
+            <link>https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</link>
             <category>Blog</category>
             <category>Configuration</category>
             <pubDate>Sat, 24 Jun 2023 16:54:16 +0800</pubDate>

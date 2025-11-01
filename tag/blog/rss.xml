@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>ネオンノワール • Posts by &#34;blog&#34; tag</title>
-        <link>https://ui123456ax.github.io</link>
+        <link>https://blog.neonnoir.link</link>
         <description>NeonNoir ブログ</description>
         <language>zh-CN</language>
         <pubDate>Sat, 24 Jun 2023 16:54:16 +0800</pubDate>
@@ -24,9 +24,9 @@
         <category>Docker</category>
         <category>DNS</category>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</guid>
             <title>Hexo美化 添加Live2d（看板娘）</title>
-            <link>https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</link>
+            <link>https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</link>
             <category>Blog</category>
             <category>Configuration</category>
             <pubDate>Sat, 24 Jun 2023 16:54:16 +0800</pubDate>
@@ -46,9 +46,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</guid>
             <title>关于Shoka图床修复</title>
-            <link>https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</link>
+            <link>https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</link>
             <category>Blog</category>
             <category>Shoka</category>
             <pubDate>Fri, 23 Jun 2023 17:28:51 +0800</pubDate>
@@ -152,9 +152,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/</guid>
             <title>关于Hexo</title>
-            <link>https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/</link>
+            <link>https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/</link>
             <category>Notes</category>
             <category>Blog</category>
             <pubDate>Wed, 21 Jun 2023 22:03:51 +0800</pubDate>

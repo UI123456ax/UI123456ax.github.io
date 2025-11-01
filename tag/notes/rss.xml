@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>ネオンノワール • Posts by &#34;notes&#34; tag</title>
-        <link>https://ui123456ax.github.io</link>
+        <link>https://blog.neonnoir.link</link>
         <description>NeonNoir ブログ</description>
         <language>zh-CN</language>
         <pubDate>Tue, 22 Jul 2025 17:33:59 +0800</pubDate>
@@ -24,9 +24,9 @@
         <category>Docker</category>
         <category>DNS</category>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</guid>
             <title>Docker</title>
-            <link>https://ui123456ax.github.io/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</link>
+            <link>https://blog.neonnoir.link/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</link>
             <category>Notes</category>
             <category>Docker</category>
             <pubDate>Tue, 22 Jul 2025 17:33:59 +0800</pubDate>
@@ -127,9 +127,9 @@ ENTRYPOINT [&amp;quot;python3&amp;quot;,&amp;quot;main.py&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</guid>
             <title>ADB-命令</title>
-            <link>https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</link>
+            <link>https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</link>
             <category>Notes</category>
             <category>Android</category>
             <pubDate>Fri, 02 Aug 2024 16:36:09 +0800</pubDate>
@@ -175,9 +175,9 @@ ENTRYPOINT [&amp;quot;python3&amp;quot;,&amp;quot;main.py&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/</guid>
             <title>BurpSuite使用指南</title>
-            <link>https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</link>
+            <link>https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/</link>
             <category>Notes</category>
             <category>Configuration</category>
             <pubDate>Wed, 10 Jul 2024 14:58:50 +0800</pubDate>
@@ -260,9 +260,9 @@ BurpSuite 扩展页面上的  &lt;code&gt;BAppStore&lt;/code&gt; 。虽有丰富
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/</guid>
             <title>关于Hexo</title>
-            <link>https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/</link>
+            <link>https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/</link>
             <category>Notes</category>
             <category>Blog</category>
             <pubDate>Wed, 21 Jun 2023 22:03:51 +0800</pubDate>
@@ -324,9 +324,9 @@ Twikoo&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/21/0_100/00_MarkDown/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2023/06/21/0_100/00_MarkDown/</guid>
             <title>MarkDown语法</title>
-            <link>https://ui123456ax.github.io/2023/06/21/0_100/00_MarkDown/</link>
+            <link>https://blog.neonnoir.link/2023/06/21/0_100/00_MarkDown/</link>
             <category>Notes</category>
             <pubDate>Wed, 21 Jun 2023 19:08:52 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;更多可阅读&lt;a href=&#34;https://markdown.com.cn/basic-syntax/&#34;&gt; Markdown 官方文档&lt;/a&gt;&lt;/p&gt;

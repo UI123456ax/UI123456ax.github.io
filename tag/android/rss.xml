@@ -2,7 +2,7 @@
 <rss version="2.0">
     <channel>
         <title>ネオンノワール • Posts by &#34;android&#34; tag</title>
-        <link>https://ui123456ax.github.io</link>
+        <link>https://blog.neonnoir.link</link>
         <description>NeonNoir ブログ</description>
         <language>zh-CN</language>
         <pubDate>Fri, 02 Aug 2024 16:36:09 +0800</pubDate>
@@ -24,9 +24,9 @@
         <category>Docker</category>
         <category>DNS</category>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</guid>
             <title>ADB-命令</title>
-            <link>https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</link>
+            <link>https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</link>
             <category>Notes</category>
             <category>Android</category>
             <pubDate>Fri, 02 Aug 2024 16:36:09 +0800</pubDate>
@@ -72,9 +72,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</guid>
+            <guid isPermalink="true">https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</guid>
             <title>Android抓包工具无法正常上网</title>
-            <link>https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</link>
+            <link>https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</link>
             <category>Configuration</category>
             <category>Android</category>
             <pubDate>Tue, 30 Jul 2024 09:28:48 +0800</pubDate>

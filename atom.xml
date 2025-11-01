@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ui123456ax.github.io</id>
+    <id>https://blog.neonnoir.link</id>
     <title>ネオンノワール</title>
-    <link href="https://ui123456ax.github.io" />
+    <link href="https://blog.neonnoir.link" />
     <updated>2025-11-01T01:56:10.000Z</updated>
     <category term="Notes" />
     <category term="Blog" />
@@ -21,9 +21,9 @@
     <category term="Docker" />
     <category term="DNS" />
     <entry>
-        <id>https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</id>
+        <id>https://blog.neonnoir.link/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</id>
         <title>域名解析及其应用</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
         <content type="html">&lt;h1 id=&#34;核心记录类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心记录类型&#34;&gt;#&lt;/a&gt; 核心记录类型&lt;/h1&gt;
 &lt;p&gt;DNS 管理界面：“主机记录”（Host/Name）、“记录类型”（Type）、“记录值”（Value/Points to）、“TTL”&lt;/p&gt;
 &lt;table&gt;
@@ -262,9 +262,9 @@
         <updated>2025-11-01T01:56:10.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</id>
+        <id>https://blog.neonnoir.link/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</id>
         <title>Docker</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;p&gt;DockerHub: &lt;a href=&#34;https://hub.docker.com/&#34;&gt;https://hub.docker.com/&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
 &lt;p&gt;安装 Docker&lt;/p&gt;
@@ -365,9 +365,9 @@ ENTRYPOINT [&amp;quot;python3&amp;quot;,&amp;quot;main.py&amp;quot;]
         <updated>2025-07-22T09:33:59.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/12/14/0_100/18_CloudDns%E5%8F%8C%E5%90%91%E8%A7%A3%E6%9E%90/</id>
+        <id>https://blog.neonnoir.link/2024/12/14/0_100/18_CloudDns%E5%8F%8C%E5%90%91%E8%A7%A3%E6%9E%90/</id>
         <title>CloudDns双向解析</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/12/14/0_100/18_CloudDns%E5%8F%8C%E5%90%91%E8%A7%A3%E6%9E%90/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/12/14/0_100/18_CloudDns%E5%8F%8C%E5%90%91%E8%A7%A3%E6%9E%90/"/>
         <content type="html">&lt;h1 id=&#34;说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#说明&#34;&gt;#&lt;/a&gt; 说明&lt;/h1&gt;
 &lt;p&gt;本篇文章介绍如何将 ClouDns 双向解析至 CloudFlare 托管&lt;/p&gt;
 &lt;h1 id=&#34;域名托管&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域名托管&#34;&gt;#&lt;/a&gt; 域名托管&lt;/h1&gt;
@@ -507,9 +507,9 @@ ENTRYPOINT [&amp;quot;python3&amp;quot;,&amp;quot;main.py&amp;quot;]
         <updated>2024-12-14T06:31:02.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/</id>
+        <id>https://blog.neonnoir.link/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/</id>
         <title>使用CloudFlare给GithubPage加速</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/"/>
         <content type="html">&lt;h1 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;已注册的域名&lt;/li&gt;
@@ -674,9 +674,9 @@ ENTRYPOINT [&amp;quot;python3&amp;quot;,&amp;quot;main.py&amp;quot;]
         <updated>2024-09-16T03:13:32.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</id>
+        <id>https://blog.neonnoir.link/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</id>
         <title>GitHub配置多账号git上传</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;记录一次关于 Github 多账号 git 的配置&lt;br /&gt;
 将仓库内容上传  &lt;code&gt;AccountA&lt;/code&gt;  的同时上传到我的另一个账号  &lt;code&gt;AccountB&lt;/code&gt;&lt;/p&gt;
@@ -752,9 +752,9 @@ Host github.com-AccountB
         <updated>2024-09-16T01:52:32.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</id>
+        <id>https://blog.neonnoir.link/2024/08/13/0_100/15_CloudFlareVPN/</id>
         <title>使用CloudFlare作为VPN</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/08/13/0_100/15_CloudFlareVPN/"/>
         <content type="html">&lt;h1 id=&#34;方式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#方式&#34;&gt;#&lt;/a&gt; 方式&lt;/h1&gt;
 &lt;p&gt;本文主要介绍以下两种方式&lt;/p&gt;
 &lt;ol&gt;
@@ -995,9 +995,9 @@ cdn.anycast.eu.org
         <updated>2024-08-13T12:08:26.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</id>
+        <id>https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</id>
         <title>ADB-命令</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/"/>
         <content type="html">&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
 &lt;p&gt;AndroidDebugBridge 下载地址：&lt;/p&gt;
 &lt;ul&gt;
@@ -1043,9 +1043,9 @@ cdn.anycast.eu.org
         <updated>2024-08-02T08:36:09.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</id>
+        <id>https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</id>
         <title>Android抓包工具无法正常上网</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/"/>
         <content type="html">&lt;h1 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h1&gt;
 &lt;p&gt;连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。通常是 SSL 返回时证书的问题:&lt;br /&gt;
 Android 系统将 CA 证书又分为两种， &lt;code&gt;用户CA证书&lt;/code&gt; 和  &lt;code&gt;系统CA证书&lt;/code&gt; 。&lt;br /&gt;
@@ -1145,9 +1145,9 @@ Xposed (任意即可):&lt;/p&gt;
         <updated>2024-07-30T01:28:48.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</id>
+        <id>https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/</id>
         <title>BurpSuite使用指南</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/"/>
         <content type="html">&lt;p&gt;更新中～&lt;br /&gt;
  下载请自行上网搜索&lt;/p&gt;
 &lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
@@ -1230,9 +1230,9 @@ BurpSuite 扩展页面上的  &lt;code&gt;BAppStore&lt;/code&gt; 。虽有丰富
         <updated>2024-07-10T06:58:50.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</id>
+        <id>https://blog.neonnoir.link/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</id>
         <title>修复RPGMV在IOS上无法运行ogg文件</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/"/>
         <content type="html">&lt;p&gt;Q: 为什么无法在播放声音？&lt;br /&gt;
 A: 主要问题是 IOS 中播放音频一般情况下都是使用 AVPlayer，而 ogg 文件 AVPlayer 无法播放&lt;br /&gt;
  Q: 换一个支持的浏览器播放器内核不就可以了吗？&lt;br /&gt;
@@ -1257,9 +1257,9 @@ A: IOS 政策不允许&lt;/p&gt;
         <updated>2024-05-10T05:48:33.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/</id>
+        <id>https://blog.neonnoir.link/2024/05/08/0_100/08_erogames/</id>
         <title>TESX-EROGAMES</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/05/08/0_100/08_erogames/"/>
         <content type="html">&lt;p&gt;&lt;s&gt;和同学在校内游玩的小游戏&lt;/s&gt;&lt;/p&gt;
 &lt;h3 id=&#34;操作说明&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#操作说明&#34;&gt;#&lt;/a&gt; 操作说明&lt;/h3&gt;
 &lt;p&gt;RPG 可自由操作时两指齐按（右鍵）打开功能表存档，部分需定点存档&lt;br /&gt;
@@ -1285,9 +1285,9 @@ A: IOS 政策不允许&lt;/p&gt;
         <updated>2024-05-07T16:07:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/03/16/0_100/07_ComicU03/</id>
+        <id>https://blog.neonnoir.link/2024/03/16/0_100/07_ComicU03/</id>
         <title>ERO Comic</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/03/16/0_100/07_ComicU03/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/03/16/0_100/07_ComicU03/"/>
         <content type="html">&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Caricature/porn_ero/U03/comic/1.webp&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 &lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Caricature/porn_ero/U03/comic/2.webp&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
 &lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Caricature/porn_ero/U03/comic/3.webp&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
@@ -1389,9 +1389,9 @@ A: IOS 政策不允许&lt;/p&gt;
         <updated>2024-03-16T09:28:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
+        <id>https://blog.neonnoir.link/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</id>
         <title>关于Github Actions使用Python自动化时报错的解决方法</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;打算用 Python 写一个微信刷步放在 Github-Actions 每日自动刷步的 &lt;a href=&#34;https://github.com/UI123456ax/run_zepp&#34;&gt;微信刷步项目&lt;/a&gt;&lt;br /&gt;
 遇到了一些问题，本来都打算要放弃了呃 啊 (ノ｀Д) ノ，下面看看有没有和我一样问题&lt;/p&gt;
@@ -1421,9 +1421,9 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1&lt;/p&gt;
         <updated>2023-08-12T15:05:45.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</id>
+        <id>https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</id>
         <title>Hexo美化 添加Live2d（看板娘）</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/"/>
         <content type="html">&lt;h1 id=&#34;hexo-helper-live2d&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-helper-live2d&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://github.com/EYHN/hexo-helper-live2d&#34;&gt;Hexo-helper-live2d&lt;/a&gt; 插件安装与配置&lt;/h1&gt;
 &lt;p&gt;Hexo 的官方支持看板娘，已经封装好了插件～&lt;/p&gt;
 &lt;blockquote&gt;
@@ -1443,9 +1443,9 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1&lt;/p&gt;
         <updated>2023-06-24T08:54:16.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</id>
+        <id>https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</id>
         <title>关于Shoka图床修复</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;信心满满给 Hexo 布置 Shoka 主题时，发现新浪微博 (图床) 把背景图片屏蔽了（哭）&lt;br /&gt;
 折腾了好几天终于找到恢复的方法了，下面就跟我一起来看看吧&lt;/p&gt;
@@ -1549,9 +1549,9 @@ Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1&lt;/p&gt;
         <updated>2023-06-23T09:28:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/</id>
+        <id>https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/</id>
         <title>关于Hexo</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/21/0_100/01_Hexo/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/21/0_100/01_Hexo/"/>
         <content type="html">&lt;h1 id=&#34;博客&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#博客&#34;&gt;#&lt;/a&gt; 博客&lt;/h1&gt;
 &lt;p&gt;2023-06-21 19:08:52 本博客基于 Hexo 正式创建，并使用主题&lt;a href=&#34;https://shoka.lostyu.me/computer-science/note/theme-shoka-doc/&#34;&gt; Shoka&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;2025-03-07 01:04:26 更改主题并使用&lt;a href=&#34;https://hexo.docs.shokax.top/&#34;&gt; ShokaX&lt;/a&gt;&lt;/p&gt;
@@ -1613,9 +1613,9 @@ Twikoo&lt;/p&gt;
         <updated>2023-06-21T14:03:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/21/0_100/00_MarkDown/</id>
+        <id>https://blog.neonnoir.link/2023/06/21/0_100/00_MarkDown/</id>
         <title>MarkDown语法</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/21/0_100/00_MarkDown/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/21/0_100/00_MarkDown/"/>
         <content type="html">&lt;p&gt;更多可阅读&lt;a href=&#34;https://markdown.com.cn/basic-syntax/&#34;&gt; Markdown 官方文档&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;均可使用 html 标签替代&lt;/p&gt;

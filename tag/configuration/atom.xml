@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ui123456ax.github.io</id>
+    <id>https://blog.neonnoir.link</id>
     <title>ネオンノワール • Posts by &#34;configuration&#34; tag</title>
-    <link href="https://ui123456ax.github.io" />
+    <link href="https://blog.neonnoir.link" />
     <updated>2024-09-16T01:52:32.000Z</updated>
     <category term="Notes" />
     <category term="Blog" />
@@ -21,9 +21,9 @@
     <category term="Docker" />
     <category term="DNS" />
     <entry>
-        <id>https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</id>
+        <id>https://blog.neonnoir.link/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</id>
         <title>GitHub配置多账号git上传</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/"/>
         <content type="html">&lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
 &lt;p&gt;记录一次关于 Github 多账号 git 的配置&lt;br /&gt;
 将仓库内容上传  &lt;code&gt;AccountA&lt;/code&gt;  的同时上传到我的另一个账号  &lt;code&gt;AccountB&lt;/code&gt;&lt;/p&gt;
@@ -99,9 +99,9 @@ Host github.com-AccountB
         <updated>2024-09-16T01:52:32.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</id>
+        <id>https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</id>
         <title>Android抓包工具无法正常上网</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/"/>
         <content type="html">&lt;h1 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h1&gt;
 &lt;p&gt;连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。通常是 SSL 返回时证书的问题:&lt;br /&gt;
 Android 系统将 CA 证书又分为两种， &lt;code&gt;用户CA证书&lt;/code&gt; 和  &lt;code&gt;系统CA证书&lt;/code&gt; 。&lt;br /&gt;
@@ -201,9 +201,9 @@ Xposed (任意即可):&lt;/p&gt;
         <updated>2024-07-30T01:28:48.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</id>
+        <id>https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/</id>
         <title>BurpSuite使用指南</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/07/10/0_100/11_BurpSuite/"/>
         <content type="html">&lt;p&gt;更新中～&lt;br /&gt;
  下载请自行上网搜索&lt;/p&gt;
 &lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
@@ -286,9 +286,9 @@ BurpSuite 扩展页面上的  &lt;code&gt;BAppStore&lt;/code&gt; 。虽有丰富
         <updated>2024-07-10T06:58:50.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</id>
+        <id>https://blog.neonnoir.link/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</id>
         <title>修复RPGMV在IOS上无法运行ogg文件</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/"/>
         <content type="html">&lt;p&gt;Q: 为什么无法在播放声音？&lt;br /&gt;
 A: 主要问题是 IOS 中播放音频一般情况下都是使用 AVPlayer，而 ogg 文件 AVPlayer 无法播放&lt;br /&gt;
  Q: 换一个支持的浏览器播放器内核不就可以了吗？&lt;br /&gt;
@@ -313,9 +313,9 @@ A: IOS 政策不允许&lt;/p&gt;
         <updated>2024-05-10T05:48:33.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</id>
+        <id>https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</id>
         <title>Hexo美化 添加Live2d（看板娘）</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/"/>
         <content type="html">&lt;h1 id=&#34;hexo-helper-live2d&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-helper-live2d&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://github.com/EYHN/hexo-helper-live2d&#34;&gt;Hexo-helper-live2d&lt;/a&gt; 插件安装与配置&lt;/h1&gt;
 &lt;p&gt;Hexo 的官方支持看板娘，已经封装好了插件～&lt;/p&gt;
 &lt;blockquote&gt;

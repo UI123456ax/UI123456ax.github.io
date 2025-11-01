@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ui123456ax.github.io</id>
+    <id>https://blog.neonnoir.link</id>
     <title>ネオンノワール • Posts by &#34;android&#34; tag</title>
-    <link href="https://ui123456ax.github.io" />
+    <link href="https://blog.neonnoir.link" />
     <updated>2024-08-02T08:36:09.000Z</updated>
     <category term="Notes" />
     <category term="Blog" />
@@ -21,9 +21,9 @@
     <category term="Docker" />
     <category term="DNS" />
     <entry>
-        <id>https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</id>
+        <id>https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</id>
         <title>ADB-命令</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/"/>
         <content type="html">&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
 &lt;p&gt;AndroidDebugBridge 下载地址：&lt;/p&gt;
 &lt;ul&gt;
@@ -69,9 +69,9 @@
         <updated>2024-08-02T08:36:09.000Z</updated>
     </entry>
     <entry>
-        <id>https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</id>
+        <id>https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</id>
         <title>Android抓包工具无法正常上网</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/"/>
+        <link rel="alternate" href="https://blog.neonnoir.link/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/"/>
         <content type="html">&lt;h1 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h1&gt;
 &lt;p&gt;连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。通常是 SSL 返回时证书的问题:&lt;br /&gt;
 Android 系统将 CA 证书又分为两种， &lt;code&gt;用户CA证书&lt;/code&gt; 和  &lt;code&gt;系统CA证书&lt;/code&gt; 。&lt;br /&gt;
