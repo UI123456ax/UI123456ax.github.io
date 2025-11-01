@@ -18,7 +18,8 @@
     <category term="VPN" />
     <category term="Domain" />
     <category term="Cloudflare" />
-    <category term="DNS," />
+    <category term="Docker" />
+    <category term="DNS" />
     <entry>
         <id>https://ui123456ax.github.io/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/</id>
         <title>使用CloudFlare给GithubPage加速</title>

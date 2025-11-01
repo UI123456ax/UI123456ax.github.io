@@ -21,7 +21,8 @@
         <category>VPN</category>
         <category>Domain</category>
         <category>Cloudflare</category>
-        <category>DNS,</category>
+        <category>Docker</category>
+        <category>DNS</category>
         <item>
             <guid isPermalink="true">https://ui123456ax.github.io/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</guid>
             <title>关于Shoka图床修复</title>

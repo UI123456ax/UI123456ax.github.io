@@ -21,7 +21,8 @@
         <category>VPN</category>
         <category>Domain</category>
         <category>Cloudflare</category>
-        <category>DNS,</category>
+        <category>Docker</category>
+        <category>DNS</category>
         <item>
             <guid isPermalink="true">https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</guid>
             <title>使用CloudFlare作为VPN</title>

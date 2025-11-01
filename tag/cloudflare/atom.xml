@@ -18,7 +18,8 @@
     <category term="VPN" />
     <category term="Domain" />
     <category term="Cloudflare" />
-    <category term="DNS," />
+    <category term="Docker" />
+    <category term="DNS" />
     <entry>
         <id>https://ui123456ax.github.io/2024/12/14/0_100/18_CloudDns%E5%8F%8C%E5%90%91%E8%A7%A3%E6%9E%90/</id>
         <title>CloudDns双向解析</title>

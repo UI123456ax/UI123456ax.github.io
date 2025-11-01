@@ -21,7 +21,8 @@
         <category>VPN</category>
         <category>Domain</category>
         <category>Cloudflare</category>
-        <category>DNS,</category>
+        <category>Docker</category>
+        <category>DNS</category>
         <item>
             <guid isPermalink="true">https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</guid>
             <title>GitHub配置多账号git上传</title>

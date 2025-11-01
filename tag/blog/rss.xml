@@ -21,7 +21,8 @@
         <category>VPN</category>
         <category>Domain</category>
         <category>Cloudflare</category>
-        <category>DNS,</category>
+        <category>Docker</category>
+        <category>DNS</category>
         <item>
             <guid isPermalink="true">https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</guid>
             <title>Hexo美化 添加Live2d（看板娘）</title>

@@ -21,13 +21,14 @@
         <category>VPN</category>
         <category>Domain</category>
         <category>Cloudflare</category>
-        <category>DNS,</category>
+        <category>Docker</category>
+        <category>DNS</category>
         <item>
-            <guid isPermalink="true">https://ui123456ax.github.io/2025/11/01/0_100/20_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
+            <guid isPermalink="true">https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
             <title>域名解析及其应用</title>
-            <link>https://ui123456ax.github.io/2025/11/01/0_100/20_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
+            <link>https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
             <category>Domain</category>
-            <category>DNS,</category>
+            <category>DNS</category>
             <pubDate>Sat, 01 Nov 2025 09:56:10 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;核心记录类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心记录类型&#34;&gt;#&lt;/a&gt; 核心记录类型&lt;/h1&gt;
 &lt;p&gt;DNS 管理界面：“主机记录”（Host/Name）、“记录类型”（Type）、“记录值”（Value/Points to）、“TTL”&lt;/p&gt;

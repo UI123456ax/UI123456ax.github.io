@@ -18,11 +18,12 @@
     <category term="VPN" />
     <category term="Domain" />
     <category term="Cloudflare" />
-    <category term="DNS," />
+    <category term="Docker" />
+    <category term="DNS" />
     <entry>
-        <id>https://ui123456ax.github.io/2025/11/01/0_100/20_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</id>
+        <id>https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</id>
         <title>域名解析及其应用</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2025/11/01/0_100/20_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
+        <link rel="alternate" href="https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
         <content type="html">&lt;h1 id=&#34;核心记录类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心记录类型&#34;&gt;#&lt;/a&gt; 核心记录类型&lt;/h1&gt;
 &lt;p&gt;DNS 管理界面：“主机记录”（Host/Name）、“记录类型”（Type）、“记录值”（Value/Points to）、“TTL”&lt;/p&gt;
 &lt;table&gt;
@@ -257,8 +258,111 @@
 &lt;/ul&gt;
 </content>
         <category term="Domain" />
-        <category term="DNS," />
+        <category term="DNS" />
         <updated>2025-11-01T01:56:10.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://ui123456ax.github.io/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</id>
+        <title>Docker</title>
+        <link rel="alternate" href="https://ui123456ax.github.io/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/"/>
+        <content type="html">&lt;p&gt;DockerHub: &lt;a href=&#34;https://hub.docker.com/&#34;&gt;https://hub.docker.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;p&gt;安装 Docker&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-fsSL&lt;/span&gt; https://get.docker.com &lt;span class=&#34;token parameter variable&#34;&gt;-o&lt;/span&gt; install-docker.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;sh&lt;/span&gt; install-docker.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 或者&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-fsSL&lt;/span&gt; https://get.docker.com&lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;bash&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-s&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--mirror&lt;/span&gt; Aliyun&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;启动 Docker&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; systemctl start &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; systemctl &lt;span class=&#34;token builtin class-name&#34;&gt;enable&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#镜像&#34;&gt;#&lt;/a&gt; 镜像&lt;/h1&gt;
+&lt;h2 id=&#34;拉取镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拉取镜像&#34;&gt;#&lt;/a&gt; 拉取镜像&lt;/h2&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 完整格式&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull docker.io/library/nginx:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 若是官网渠道下的镜像则可省略&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull library/nginx:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull nginx:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# latest 为版本号 不填则默认最新版本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull nginx&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker.io/library/&lt;/code&gt;  为 docker 官方的公共仓库 library 可省略&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;管理镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#管理镜像&#34;&gt;#&lt;/a&gt; 管理镜像&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;docker images                          : 列出本地存储的所有镜像&lt;/li&gt;
+&lt;li&gt;docker rmi (IMAGE ID)                  : 删除镜像&lt;/li&gt;
+&lt;li&gt;docker ps                              : 列出当前正在运行的容器&lt;/li&gt;
+&lt;li&gt;docker rm (CONTAINER ID 或 NAMES)      : 删除 (运行) 容器，可选参数 &lt;code&gt;-f&lt;/code&gt;  强制删除容器&lt;/li&gt;
+&lt;li&gt;docker restart (CONTAINER ID 或 NAMES) : 重启容器&lt;/li&gt;
+&lt;li&gt;docker stop (CONTAINER ID 或 NAMES)    : 停止已启动的容器&lt;/li&gt;
+&lt;li&gt;docker start (CONTAINER ID 或 NAMES)   : 启动已停止的容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于已停止的容器而言，需要通过  &lt;code&gt;docker ps -a&lt;/code&gt;  查看所有容器 (包括停止与开启)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;镜像网络&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#镜像网络&#34;&gt;#&lt;/a&gt; 镜像网络&lt;/h2&gt;
+&lt;p&gt;用于容器之间的通信，容器间可使用 NAMES 代替 IP 地址&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;docker network ls                               : 列出所有网络&lt;/li&gt;
+&lt;li&gt;docker network create (network)                 : 创建一个新的网络 (Bridge 网络)&lt;/li&gt;
+&lt;li&gt;docker network rm (network)                     : 删除指定的网络&lt;/li&gt;
+&lt;li&gt;docker network connect (network) (container)    : 连接容器到网络&lt;/li&gt;
+&lt;li&gt;docker network disconnect (network) (container) : 断开容器与网络的连接&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#容器&#34;&gt;#&lt;/a&gt; 容器&lt;/h1&gt;
+&lt;h2 id=&#34;运行容器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运行容器&#34;&gt;#&lt;/a&gt; 运行容器&lt;/h2&gt;
+&lt;p&gt;docker run nginx : 启动容器并运行命令&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;若不存在镜像，则 run 命令会先拉取镜像再启动新的容器&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;常用参数:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-d                            : 后台运行容器并返回容器 ID&lt;/li&gt;
+&lt;li&gt;-p (host_port:container_port) : 端口映射 宿主机端口：容器内端口；将本地端口映射到容器端口&lt;/li&gt;
+&lt;li&gt;-v (host_dir:container_dir)   : 挂载卷 宿主机目录：容器内目录；将主机目录挂载到容器目录&lt;/li&gt;
+&lt;li&gt;-e (ENVIRONMENT=value)        : 设置环境变量&lt;/li&gt;
+&lt;li&gt;-it                           : 交互式运行容器，即进入容器内部命令行&lt;/li&gt;
+&lt;li&gt;--name (docker_name)          : 设置容器名称&lt;/li&gt;
+&lt;li&gt;--rm                          : 容器停止后自动删除容器&lt;/li&gt;
+&lt;li&gt;--network (网络模式 或 连接网络)     : 指定容器的网络模式 ；默认 Bridge 模式&lt;/li&gt;
+&lt;li&gt;--restart [always、unless-stopped] : 容器的重启策略&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;always : 容器停止就立刻重启 ；unless-stopped : 除手动停止的容器外，容器停止就立刻重启&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;容器内管理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#容器内管理&#34;&gt;#&lt;/a&gt; 容器内管理&lt;/h2&gt;
+&lt;p&gt;docker exec [OPTIONS] (CONTAINER ID 或 NAMES) (COMMAND) : 于运行中的容器内执行命令&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 容器内执行 LinuxShell&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; my_container &lt;span class=&#34;token function&#34;&gt;ps&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-ef&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 参数 `-it` 可在容器里启动交互式的 Shell (指定 /bin/bash)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;exec&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-it&lt;/span&gt; my_container /bin/sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;制作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#制作&#34;&gt;#&lt;/a&gt; 制作&lt;/h1&gt;
+&lt;h2 id=&#34;配置文件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置文件&#34;&gt;#&lt;/a&gt; 配置文件&lt;/h2&gt;
+&lt;p&gt;新建  &lt;code&gt;Dockerfile&lt;/code&gt;  文件，这是一个用来构建镜像的文本文件&lt;br /&gt;
+常用指令：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FROM (nginx:latest)                    : 指定基础镜像，以基础镜像为模板构建 (例如 Python)&lt;/li&gt;
+&lt;li&gt;WORKDIR (/Directory)                   : 设置指令工作目录&lt;/li&gt;
+&lt;li&gt;COPY (当前目录 工作目录)                 : 复制文件或目录到镜像&lt;/li&gt;
+&lt;li&gt;RUN (ShellCommand)                     : &lt;strong&gt;构建镜像过程中&lt;/strong&gt;执行命令，执行终端 Shell 命令&lt;/li&gt;
+&lt;li&gt;ENV (key1=value1 key2=value2)          : 设置环境变量&lt;/li&gt;
+&lt;li&gt;EXPOSE (8080)                          : 声明容器运行时监听的端口；实际端口以创建容器 &lt;code&gt;-p&lt;/code&gt;  参数为主&lt;/li&gt;
+&lt;li&gt;CMD ([&amp;quot;可执行文件或命令&amp;quot;,&amp;quot;...&amp;quot;])        : &lt;strong&gt;容器创建时&lt;/strong&gt;的默认命令；命令可以被其他命令覆盖&lt;/li&gt;
+&lt;li&gt;ENTRYPOINT ([&amp;quot;可执行文件或命令&amp;quot;,&amp;quot;...&amp;quot;]) ： &lt;strong&gt;容器创建时&lt;/strong&gt;的主要命令；命令不会被覆盖，且一定会执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Dockerfile&#34;&gt;FROM python:3.13-slim
+# 设置工作目录
+WORKDIR /app
+# 复制 当前目录 至 当前工作目录 /app下
+COPY . .
+
+RUN pip install -r requirements.txt
+
+ENTRYPOINT [&amp;quot;python3&amp;quot;,&amp;quot;main.py&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;推送镜像&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#推送镜像&#34;&gt;#&lt;/a&gt; 推送镜像&lt;/h2&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 登录 DockerHub&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; login&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 参数 `-t` 指定镜像名称；若不推送，则 username 可省略；`.` 表示当前目录下&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; build &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;username/docker_name:latest&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 推送镜像&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; push &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;username/docker_name:latest&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;docker-compose&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#docker-compose&#34;&gt;#&lt;/a&gt; Docker Compose&lt;/h1&gt;
+&lt;h2 id=&#34;格式&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#格式&#34;&gt;#&lt;/a&gt; 格式&lt;/h2&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; network create docker_network&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; docker_name_1 &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;-e&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;ENVIRONMENT_1&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;value_1 &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;-e&lt;/span&gt; &lt;span class=&#34;token assign-left variable&#34;&gt;ENVIRONMENT_2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;value_2 &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /my/data:/data &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;image_1:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; docker_name_2 &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8099&lt;/span&gt;:8099 &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;image_2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其对应的 Compose 文件为:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker-compose.yml&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 自动创建子网络&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;services&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;docker_name_1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; image_1&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;lates&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;environment&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token key atrule&#34;&gt;ENVIRONMENT_1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; value_1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token key atrule&#34;&gt;ENVIRONMENT_2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; value_2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;volumes&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; /my/data&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;/data&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token key atrule&#34;&gt;docker_name_2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;image&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; image_2&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;ports&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; 8099&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;8099&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;# 先启动 `docker_name_1`, 再启动 `docker_name_2`&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token key atrule&#34;&gt;depends_on&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; docker_name_1&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;小技巧：可用 AI 进行解析转换&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;运行&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#运行&#34;&gt;#&lt;/a&gt; 运行&lt;/h2&gt;
+&lt;p&gt;启动项目&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 参数 `-d` 表示后台运行&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; compose up &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;关闭项目&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 停止并删除容器&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; compose down&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 停止容器 但不删除&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; compose stop&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 启动停止的容器&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; compose start&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;参数  &lt;code&gt;-f File.yml&lt;/code&gt;  可指定 Compose 配置文件；默认识别 docker-compose.yml 文件&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+        <category term="Notes" />
+        <category term="Docker" />
+        <updated>2025-07-22T09:33:59.000Z</updated>
     </entry>
     <entry>
         <id>https://ui123456ax.github.io/2024/12/14/0_100/18_CloudDns%E5%8F%8C%E5%90%91%E8%A7%A3%E6%9E%90/</id>

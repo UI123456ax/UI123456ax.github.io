@@ -1,29 +1,36 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://ui123456ax.github.io</id>
-    <title>ネオンノワール • Posts by &#34;dns,&#34; tag</title>
-    <link href="https://ui123456ax.github.io" />
-    <updated>2025-11-01T01:56:10.000Z</updated>
-    <category term="Notes" />
-    <category term="Blog" />
-    <category term="Shoka" />
-    <category term="Github" />
-    <category term="Python" />
-    <category term="Debug" />
-    <category term="Configuration" />
-    <category term="Comic" />
-    <category term="Games" />
-    <category term="Android" />
-    <category term="CloudFlare" />
-    <category term="VPN" />
-    <category term="Domain" />
-    <category term="Cloudflare" />
-    <category term="DNS," />
-    <entry>
-        <id>https://ui123456ax.github.io/2025/11/01/0_100/20_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</id>
-        <title>域名解析及其应用</title>
-        <link rel="alternate" href="https://ui123456ax.github.io/2025/11/01/0_100/20_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/"/>
-        <content type="html">&lt;h1 id=&#34;核心记录类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心记录类型&#34;&gt;#&lt;/a&gt; 核心记录类型&lt;/h1&gt;
+<rss version="2.0">
+    <channel>
+        <title>ネオンノワール • Posts by &#34;dns&#34; tag</title>
+        <link>https://ui123456ax.github.io</link>
+        <description>NeonNoir ブログ</description>
+        <language>zh-CN</language>
+        <pubDate>Sat, 01 Nov 2025 09:56:10 +0800</pubDate>
+        <lastBuildDate>Sat, 01 Nov 2025 09:56:10 +0800</lastBuildDate>
+        <category>Notes</category>
+        <category>Blog</category>
+        <category>Shoka</category>
+        <category>Github</category>
+        <category>Python</category>
+        <category>Debug</category>
+        <category>Configuration</category>
+        <category>Comic</category>
+        <category>Games</category>
+        <category>Android</category>
+        <category>CloudFlare</category>
+        <category>VPN</category>
+        <category>Domain</category>
+        <category>Cloudflare</category>
+        <category>Docker</category>
+        <category>DNS</category>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
+            <title>域名解析及其应用</title>
+            <link>https://ui123456ax.github.io/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</link>
+            <category>Domain</category>
+            <category>DNS</category>
+            <pubDate>Sat, 01 Nov 2025 09:56:10 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;核心记录类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#核心记录类型&#34;&gt;#&lt;/a&gt; 核心记录类型&lt;/h1&gt;
 &lt;p&gt;DNS 管理界面：“主机记录”（Host/Name）、“记录类型”（Type）、“记录值”（Value/Points to）、“TTL”&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -255,9 +262,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;效果&lt;/strong&gt;：其他 CA（证书颁发机构）在检查时会看到此记录，并拒绝为你的域名颁发证书&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-        <category term="Domain" />
-        <category term="DNS," />
-        <updated>2025-11-01T01:56:10.000Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>

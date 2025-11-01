@@ -21,7 +21,8 @@
         <category>VPN</category>
         <category>Domain</category>
         <category>Cloudflare</category>
-        <category>DNS,</category>
+        <category>Docker</category>
+        <category>DNS</category>
         <item>
             <guid isPermalink="true">https://ui123456ax.github.io/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/</guid>
             <title>ADB-命令</title>
