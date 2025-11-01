@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>ネオンノワール • Posts by &#34;configuration&#34; tag</title>
+        <link>https://ui123456ax.github.io</link>
+        <description>NeonNoir ブログ</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 16 Sep 2024 09:52:32 +0800</pubDate>
+        <lastBuildDate>Mon, 16 Sep 2024 09:52:32 +0800</lastBuildDate>
+        <category>Notes</category>
+        <category>Blog</category>
+        <category>Shoka</category>
+        <category>Github</category>
+        <category>Python</category>
+        <category>Debug</category>
+        <category>Configuration</category>
+        <category>Comic</category>
+        <category>Games</category>
+        <category>Android</category>
+        <category>CloudFlare</category>
+        <category>VPN</category>
+        <category>Domain</category>
+        <category>Cloudflare</category>
+        <category>DNS,</category>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</guid>
+            <title>GitHub配置多账号git上传</title>
+            <link>https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</link>
+            <category>Github</category>
+            <category>Configuration</category>
+            <pubDate>Mon, 16 Sep 2024 09:52:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;记录一次关于 Github 多账号 git 的配置&lt;br /&gt;
+将仓库内容上传  &lt;code&gt;AccountA&lt;/code&gt;  的同时上传到我的另一个账号  &lt;code&gt;AccountB&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流程&#34;&gt;#&lt;/a&gt; 流程&lt;/h1&gt;
+&lt;h2 id=&#34;生成密钥&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生成密钥&#34;&gt;#&lt;/a&gt; 生成密钥&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;生成新的 SSH 密钥对（假设新密钥对的名称为  &lt;code&gt;id_rsa_b&lt;/code&gt; ）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh-keygen &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; ed25519 &lt;span class=&#34;token parameter variable&#34;&gt;-C&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;your_email@example.com&#34;&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; ~/.ssh/id_rsa_b&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;将新生成的公钥添加到 GitHub 账号 B (AccountB) 的 SSH 密钥列表中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;打开密钥文件 (C:/Users/your_name/.ssh)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; ~/.ssh/id_rsa_b.pub&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;将里面的内容全部复制&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;登录到 GitHub 账号 B，进入  &lt;code&gt;“Settings” -&amp;gt; “SSH and GPG keys” -&amp;gt; “New SSH key”&lt;/code&gt; ，将公钥粘贴进去并保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置本地git以使用新的ssh密钥对&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置本地git以使用新的ssh密钥对&#34;&gt;#&lt;/a&gt; 配置本地 Git 以使用新的 SSH 密钥对&lt;/h2&gt;
+&lt;p&gt;在本地创建一个配置文件（例如 config），在其中添加多个账号的 SSH 配置信息。每个账号的配置信息应该以 Host 开头，后面跟着对应的域名和密钥路径&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建  &lt;code&gt;config&lt;/code&gt;  配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;touch&lt;/span&gt; ~/.ssh/config&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;无需后缀&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;code&gt;config&lt;/code&gt;  文件内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;# Account A
+Host github.com-AccountA
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_a
+
+# Account B
+Host github.com-AccountB
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Account-B&lt;/code&gt;  为你要切换时使用的账号名称&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;尝试添加git仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#尝试添加git仓库&#34;&gt;#&lt;/a&gt; 尝试添加 git 仓库&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config user.name &lt;span class=&#34;token string&#34;&gt;&#39;AccountB&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config user.email &lt;span class=&#34;token string&#34;&gt;&#39;AccountB@mail.com&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Switch to account A&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote set-url origin git@github.com-AccountA:usernameA/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Switch to account B&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote set-url origin git@github.com-AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;AccountB&lt;/code&gt;  替换为你实际要切换到的账号名&lt;br /&gt;
+ &lt;code&gt;usernameB&lt;/code&gt;  替换为该账号下的用户名&lt;br /&gt;
+ &lt;code&gt;repo&lt;/code&gt;  替换为你要切换到的仓库名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最后验证远程仓库是否已成功添加&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 本地仓库情况&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 全局登录情况&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ssh&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-T&lt;/span&gt; git@github.com-AccountB.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;显示所有已添加的远程仓库及其对应的 URL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;git-push&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git-push&#34;&gt;#&lt;/a&gt; git push&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; init&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; commit &lt;span class=&#34;token parameter variable&#34;&gt;-am&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;first commit&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; origin git@AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; push &lt;span class=&#34;token parameter variable&#34;&gt;-u&lt;/span&gt; origin master&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;遇到的问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#遇到的问题&#34;&gt;#&lt;/a&gt; 遇到的问题&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;error: remote origin already exists&lt;/code&gt; &lt;br /&gt;
+ 这个错误表示远程仓库 &amp;quot;origin&amp;quot; 已经存在。可能原因有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有成功配置 SSH 到 GitHub 账号上&lt;/li&gt;
+&lt;li&gt;已经添加过该仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;重新配置。&lt;strong&gt;请确保每一步骤准确，文件配置恰当&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;删除并重新添加远程仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote remove origin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; origin git@github.com-AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</guid>
+            <title>Android抓包工具无法正常上网</title>
+            <link>https://ui123456ax.github.io/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/</link>
+            <category>Configuration</category>
+            <category>Android</category>
+            <pubDate>Tue, 30 Jul 2024 09:28:48 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#问题&#34;&gt;#&lt;/a&gt; 问题&lt;/h1&gt;
+&lt;p&gt;连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。通常是 SSL 返回时证书的问题:&lt;br /&gt;
+Android 系统将 CA 证书又分为两种， &lt;code&gt;用户CA证书&lt;/code&gt; 和  &lt;code&gt;系统CA证书&lt;/code&gt; 。&lt;br /&gt;
+顾明思议，用户 CA 证书是由用户自行安装的，系统 CA 证书是由系统内置的，很明显后者更加真实有效。&lt;br /&gt;
+而我们要做的无非就是&lt;strong&gt;将证书导入至系统 CA 证书&lt;/strong&gt;当中，或是&lt;strong&gt;绕过系统 CA 证书的检测&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统 CA 证书存储路径:  &lt;code&gt;/system/etc/security/cacerts/&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;解决&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决&#34;&gt;#&lt;/a&gt; 解决&lt;/h1&gt;
+&lt;p&gt;所需工具&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OpneSSL&lt;/li&gt;
+&lt;li&gt;AndroidDebugBridge&lt;/li&gt;
+&lt;li&gt;Xposed&lt;/li&gt;
+&lt;li&gt;JustTrustMe 模块&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;导入-import&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#导入-import&#34;&gt;#&lt;/a&gt; 导入 Import&lt;/h2&gt;
+&lt;h3 id=&#34;下载工具&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载工具&#34;&gt;#&lt;/a&gt; 下载工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;OpenSSL 下载地址: &lt;a href=&#34;https://slproweb.com/products/Win32OpenSSL.html&#34;&gt;https://slproweb.com/products/Win32OpenSSL.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文使用版本  &lt;code&gt;Win64 OpenSSL v3.3.1&lt;/code&gt;  下载最新版亦可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;AndroidDebugBridge 下载地址: &lt;a href=&#34;https://adbdownload.com/&#34;&gt;https://adbdownload.com/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文使用版本  &lt;code&gt;R35.0.0&lt;/code&gt;  下载最新版亦可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如有需要可自行配置系统环境变量  &lt;code&gt;Path&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;转换证书&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#转换证书&#34;&gt;#&lt;/a&gt; 转换证书&lt;/h3&gt;
+&lt;p&gt;使用  &lt;code&gt;openssl&lt;/code&gt;  将证书转为  &lt;code&gt;xx.0&lt;/code&gt;  证书文件&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;获取证书文件的哈希值&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# cer 证书文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openssl x509 &lt;span class=&#34;token parameter variable&#34;&gt;-inform&lt;/span&gt; DER &lt;span class=&#34;token parameter variable&#34;&gt;-subject_hash_old&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-in&lt;/span&gt; xxxx.cer&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# pem 证书文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openssl x509 &lt;span class=&#34;token parameter variable&#34;&gt;-inform&lt;/span&gt; PEM &lt;span class=&#34;token parameter variable&#34;&gt;-subject_hash_old&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-in&lt;/span&gt; xxxx.pem&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/13_/13_01.png&#34; alt=&#34;00&#34; /&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;生成  &lt;code&gt;.0&lt;/code&gt;  证书文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# cer 证书文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openssl x509 &lt;span class=&#34;token parameter variable&#34;&gt;-inform&lt;/span&gt; DER &lt;span class=&#34;token parameter variable&#34;&gt;-text&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-in&lt;/span&gt; xxxx.cer &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; 哈希值.0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# pem 证书文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;openssl x509 &lt;span class=&#34;token parameter variable&#34;&gt;-inform&lt;/span&gt; PEM &lt;span class=&#34;token parameter variable&#34;&gt;-text&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-in&lt;/span&gt; xxxx.pem &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; 哈希值.0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;导入证书&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#导入证书&#34;&gt;#&lt;/a&gt; 导入证书&lt;/h3&gt;
+&lt;p&gt;两种方法，任意即可&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;复制文件&lt;br /&gt;
+ Root 设备后，使用 MT 管理器 或 其他文件管理器 将下载的证书  &lt;code&gt;xx.0&lt;/code&gt;  复制至系统  &lt;code&gt;/system/etc/security/cacerts/&lt;/code&gt;  目录&lt;/li&gt;
+&lt;li&gt;ADB 导入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb root&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb shell avbctl disable-verification&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb remount&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# adb push 本地文件路径 Android 文件路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;adb push xx.0 /system/etc/security/cacerts/xx.0&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注意！一般 Root 之后便会开启  &lt;code&gt;system&lt;/code&gt;  读写，但也有例外:&lt;br /&gt;
+ 如果是模拟器很可能是没有开启  &lt;code&gt;system&lt;/code&gt;  写入，按下图开启即可 &lt;s&gt;被坑过 QwQ&lt;/s&gt;&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/13_/13_01.png&#34; alt=&#34;01&#34; title=&#34;雷电模拟器9&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;绕过-bypass&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#绕过-bypass&#34;&gt;#&lt;/a&gt; 绕过 Bypass&lt;/h2&gt;
+&lt;h3 id=&#34;下载工具-2&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#下载工具-2&#34;&gt;#&lt;/a&gt; 下载工具&lt;/h3&gt;
+&lt;p&gt;Magisk (任意即可):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;原版 (Magisk)：&lt;a href=&#34;https://github.com/topjohnwu/Magisk/releases&#34;&gt;https://github.com/topjohnwu/Magisk/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;狐狸 (Kitsune Magisk)：&lt;a href=&#34;https://huskydg.github.io/magisk-files/&#34;&gt;https://huskydg.github.io/magisk-files/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Kitsune Magisk&lt;/code&gt; &lt;a href=&#34;https://blog.csdn.net/Ruaki/article/details/135580772&#34;&gt; 下载教程&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;JustTrustMe 模块下载地址: &lt;a href=&#34;https://github.com/Fuzion24/JustTrustMe/releases/&#34;&gt;https://github.com/Fuzion24/JustTrustMe/releases/&lt;/a&gt;&lt;br /&gt;
+Xposed (任意即可):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VirtualXposed 下载地址: &lt;a href=&#34;https://virtualxposed.com/download/&#34;&gt;https://virtualxposed.com/download/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LSPatch 下载地址: &lt;a href=&#34;https://github.com/LSPosed/LSPatch/releases&#34;&gt;https://github.com/LSPosed/LSPatch/releases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;LSPosed 下载地址：&lt;a href=&#34;https://github.com/LSPosed/LSPosed/releases/tag/v1.9.2&#34;&gt;https://github.com/LSPosed/LSPosed/releases/tag/v1.9.2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;本文以  &lt;code&gt;LSPosed + KitsuneMagisk&lt;/code&gt;  介绍&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;原理&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原理&#34;&gt;#&lt;/a&gt; 原理&lt;/h3&gt;
+&lt;p&gt;利用 Xposed + JustTrustMe 模块，绕过 SSL 证书检测&lt;/p&gt;
+&lt;h3 id=&#34;lsposed安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#lsposed安装&#34;&gt;#&lt;/a&gt; LSPosed 安装&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在  &lt;code&gt;Magisk&lt;/code&gt;  设置中将  &lt;code&gt;Zygisk&lt;/code&gt;  设项打开，将设备重启即可&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/13_/13_02.png&#34; alt=&#34;02&#34; title=&#34;Kitsune Magisk&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;进入模块，选择从本地安装，选择  &lt;code&gt;LSPosed-v1.8.4-6609-zygisk-release.zip&lt;/code&gt;  文件进行安装&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;LSPosed-v1.8.4-6609-zygisk-release.zip&lt;/code&gt;  请从官网下载，记住是&lt;strong&gt; zygisk&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;安装  &lt;code&gt;LSPosed.apk&lt;/code&gt; ，打开 LSPosed 可以看到处于激活的状态&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;LSPosed.apk&lt;/code&gt;  这个我也没从 Github 上找到，不过在另一个网页上找到 &lt;a href=&#34;https://www.downkuai.com/android/175025.html&#34;&gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/13_/13_03.png&#34; alt=&#34;03&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;使用justtrustme模块&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用justtrustme模块&#34;&gt;#&lt;/a&gt; 使用 JustTrustMe 模块&lt;/h3&gt;
+&lt;p&gt;完成 LSPosed 配置后，安装  &lt;code&gt;TrustMeAlready.apk&lt;/code&gt; 。在 LSPosed 模块上点击  &lt;code&gt;JustTrustMe&lt;/code&gt; ，选择需要抓包的 App (小黑盒)，重新设备启动即可。&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/13_/13_04.png&#34; alt=&#34;04&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;此时便可愉快地抓包啦&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</guid>
+            <title>BurpSuite使用指南</title>
+            <link>https://ui123456ax.github.io/2024/07/10/0_100/11_BurpSuite/</link>
+            <category>Notes</category>
+            <category>Configuration</category>
+            <pubDate>Wed, 10 Jul 2024 14:58:50 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;更新中～&lt;br /&gt;
+ 下载请自行上网搜索&lt;/p&gt;
+&lt;h1 id=&#34;配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置&#34;&gt;#&lt;/a&gt; 配置&lt;/h1&gt;
+&lt;p&gt;打开系统的设置页面，并在代理中手动开启并设置代理服务器&lt;br /&gt;
+一般代理 ip 服务器为  &lt;code&gt;127.0.0.1&lt;/code&gt; ，端口号为  &lt;code&gt;8080&lt;/code&gt;  || 根据实际设置而定&lt;/p&gt;
+&lt;h2 id=&#34;edge浏览器&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#edge浏览器&#34;&gt;#&lt;/a&gt; Edge 浏览器&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;点击右上角的设置，并找到 Tools 中的 Proxy 项目&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_01.png&#34; alt=&#34;01&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;并在代理监听器中选择任意项导出 CA 证书，如下图&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_02.png&#34; alt=&#34;02&#34; /&gt;&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_03.png&#34; alt=&#34;03&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;找到 Edge 浏览器，并打开设置，将证书导入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因本人用 Edge，其他浏览器请自行搜索&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_04.png&#34; alt=&#34;04&#34; /&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;并在 Edge 的快捷方式中添加如下&lt;br /&gt;
+ &lt;code&gt;--test-type --ignore-certificate-errors&lt;/code&gt; &lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_05.png&#34; alt=&#34;05&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;抓包数据中文乱码&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓包数据中文乱码&#34;&gt;#&lt;/a&gt; 抓包数据中文乱码&lt;/h2&gt;
+&lt;p&gt;在设置中搜索  &lt;code&gt;User interface&lt;/code&gt;  下滑更改 字体显示为  &lt;code&gt;宋体13pt&lt;/code&gt;  字符集显示为  &lt;code&gt;UTF-8&lt;/code&gt; &lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_06.png&#34; alt=&#34;06&#34; /&gt;&lt;br /&gt;
+ 别忘了重启程序 w&lt;/p&gt;
+&lt;h2 id=&#34;抓包app&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#抓包app&#34;&gt;#&lt;/a&gt; 抓包 App&lt;/h2&gt;
+&lt;h3 id=&#34;模拟器手机&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#模拟器手机&#34;&gt;#&lt;/a&gt; 模拟器 (手机)&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在 windows 运行 cmd 中输入  &lt;code&gt;ipconfig&lt;/code&gt;  查看本地 ipv4 地址，在 Burp 设置里添加以本地 ip 的代理监听器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的本地 IP  &lt;code&gt;192.168.0.113&lt;/code&gt; ，端口号随意填  &lt;code&gt;8080&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_07.png&#34; alt=&#34;07&#34; /&gt;&lt;br /&gt;
+2. 打开模拟器 (手机)，输入本地 ip  &lt;code&gt;192.168.0.113&lt;/code&gt; ，以及端口号  &lt;code&gt;8080&lt;/code&gt; &lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_08.png&#34; alt=&#34;08&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意 此时还未能抓包，需要安装证书&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在模拟器的浏览器内输入  &lt;code&gt;http://burp/&lt;/code&gt; ，下载 CA 证书  &lt;code&gt;cacert.der&lt;/code&gt; ，并在文件管理器中将其改为  &lt;code&gt;cacert.cer&lt;/code&gt;  然后在设置内搜索  &lt;code&gt;从SD卡安装&lt;/code&gt; 安装证书&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_09.png&#34; alt=&#34;09&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用雷电 9 等模拟器安装证书时无法安装，请看下方解决方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;在 bp 中导出当前监听器的证书  &lt;code&gt;s.cer&lt;/code&gt; ，然后并把该文件拖拽至模拟器程序上，此时默认安装即可&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/11_/11_10.png&#34; alt=&#34;10&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;补充&lt;/strong&gt;：连上抓包工具之后无法连接网络，网站提示证书安全问题、App 无法正常使用等。请看 --&amp;gt; &lt;a href=&#34;https://neonnoir.us.kg/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/&#34;&gt;Android 抓包工具无法正常上网&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;本地抓包apk&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#本地抓包apk&#34;&gt;#&lt;/a&gt; 本地抓包 Apk&lt;/h3&gt;
+&lt;p&gt;主要流程：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;配置 Android 子系统 --&amp;gt; 本地安装 Apk 程序 --&amp;gt; 打开抓包工具 --&amp;gt; 即可抓取数据&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于 win 安装 Apk 程序可以看下面的文章配置，写的很详细，非常不错&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://blog.csdn.net/m0_56076343/article/details/122334759&#34;&gt;Win11&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.bilibili.com/read/cv28566256/&#34;&gt;Win10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装完 apk 后，正常抓包即可 &lt;s&gt;这里就不再复述了&lt;/s&gt;&lt;/p&gt;
+&lt;h1 id=&#34;使用&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用&#34;&gt;#&lt;/a&gt; 使用&lt;/h1&gt;
+&lt;p&gt;&lt;s&gt;暂时搁置，以后再写&lt;/s&gt;&lt;/p&gt;
+&lt;h1 id=&#34;扩展&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#扩展&#34;&gt;#&lt;/a&gt; 扩展&lt;/h1&gt;
+&lt;p&gt;扩展的获取方法&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;BApp Store&lt;br /&gt;
+BurpSuite 扩展页面上的  &lt;code&gt;BAppStore&lt;/code&gt; 。虽有丰富的扩展，但同时没点英文程度还是有点困难的&lt;/li&gt;
+&lt;li&gt;浏览器 / Github 上搜索&lt;/li&gt;
+&lt;li&gt;&lt;s&gt;编写程序&lt;/s&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;turbo-intruder&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#turbo-intruder&#34;&gt;#&lt;/a&gt; Turbo Intruder&lt;/h2&gt;
+&lt;p&gt;&lt;s&gt;暂时搁置，以后再写&lt;/s&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</guid>
+            <title>修复RPGMV在IOS上无法运行ogg文件</title>
+            <link>https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/</link>
+            <category>Configuration</category>
+            <pubDate>Fri, 10 May 2024 13:48:33 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;Q: 为什么无法在播放声音？&lt;br /&gt;
+A: 主要问题是 IOS 中播放音频一般情况下都是使用 AVPlayer，而 ogg 文件 AVPlayer 无法播放&lt;br /&gt;
+ Q: 换一个支持的浏览器播放器内核不就可以了吗？&lt;br /&gt;
+A: IOS 政策不允许&lt;/p&gt;
+&lt;h1 id=&#34;安装-audiostream补丁&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装-audiostream补丁&#34;&gt;#&lt;/a&gt; 安装  &lt;code&gt;AudioStream&lt;/code&gt;  补丁&lt;/h1&gt;
+&lt;p&gt;链接：&lt;a href=&#34;https://wwo.lanzouo.com/iC1OW1yaahzi&#34;&gt;https://wwo.lanzouo.com/iC1OW1yaahzi&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;将以下文件导入到  &lt;code&gt;&amp;lt;root&amp;gt;/www/js/plugins&lt;/code&gt;  文件夹下&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-file&#34;&gt;`AudioStreaming.js`,
+`stbvorbis_stream.js`,
+`stbvorbis_stream_asm.js`.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;文件修改&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#文件修改&#34;&gt;#&lt;/a&gt; 文件修改&lt;/h1&gt;
+&lt;p&gt;在  &lt;code&gt;&amp;lt;root&amp;gt;/www/js/plugins.js&lt;/code&gt; , 添加以下代码于文件中:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;AudioStreaming&amp;quot;,&amp;quot;status&amp;quot;:true,&amp;quot;description&amp;quot;:&amp;quot;音声読み込みを高速化し、oggファイルのみを使用します。&amp;quot;,&amp;quot;parameters&amp;quot;:&amp;#123;&amp;quot;mode&amp;quot;:&amp;quot;10&amp;quot;,&amp;quot;deleteM4a&amp;quot;:&amp;quot;false&amp;quot;&amp;#125;&amp;#125;,
+&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;stbvorbis_stream&amp;quot;,&amp;quot;status&amp;quot;:false,&amp;quot;description&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;parameters&amp;quot;:&amp;#123;&amp;#125;&amp;#125;,
+&amp;#123;&amp;quot;name&amp;quot;:&amp;quot;stbvorbis_stream_asm&amp;quot;,&amp;quot;status&amp;quot;:false,&amp;quot;description&amp;quot;:&amp;quot;&amp;quot;,&amp;quot;parameters&amp;quot;:&amp;#123;&amp;#125;&amp;#125;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;其实到这里就已经大功告成了，最后只需要启动便可&lt;br /&gt;
+补丁来源于：&lt;a href=&#34;http://onsplayer.cn/info/2371&#34;&gt;http://onsplayer.cn/info/2371&lt;/a&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</guid>
+            <title>Hexo美化 添加Live2d（看板娘）</title>
+            <link>https://ui123456ax.github.io/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/</link>
+            <category>Blog</category>
+            <category>Configuration</category>
+            <pubDate>Sat, 24 Jun 2023 16:54:16 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;hexo-helper-live2d&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#hexo-helper-live2d&#34;&gt;#&lt;/a&gt; &lt;a href=&#34;https://github.com/EYHN/hexo-helper-live2d&#34;&gt;Hexo-helper-live2d&lt;/a&gt; 插件安装与配置&lt;/h1&gt;
+&lt;p&gt;Hexo 的官方支持看板娘，已经封装好了插件～&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不用折腾啦，欸真好啊&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;安装插件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#安装插件&#34;&gt;#&lt;/a&gt; 安装插件&lt;/h2&gt;
+&lt;p&gt;在站点根目录下打开终端，输入以下命令&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt; hexo-helper-live2d&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h2 id=&#34;选择并安装模型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#选择并安装模型&#34;&gt;#&lt;/a&gt; 选择并安装模型&lt;/h2&gt;
+&lt;p&gt;以 live2d-widget-model-shizuku 模型为例&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;npm&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--save&lt;/span&gt; live2d-widget-model-shizuku&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;点击&lt;a href=&#34;https://blog.csdn.net/wang_123_zy/article/details/87181892&#34;&gt;预览更多模型&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;配置live2d&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置live2d&#34;&gt;#&lt;/a&gt; 配置 Live2d&lt;/h2&gt;
+&lt;p&gt;站点配置文件  &lt;code&gt;_config.yml&lt;/code&gt; ，新添加如下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Live2D&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;## https://github.com/EYHN/hexo-helper-live2d&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;live2d:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  enable: &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# enable: false&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  scriptFrom: &lt;span class=&#34;token builtin class-name&#34;&gt;local&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 默认&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  pluginRootPath: live2dw/ &lt;span class=&#34;token comment&#34;&gt;# 插件在站点上的根目录 (相对路径)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  pluginJsPath: lib/ &lt;span class=&#34;token comment&#34;&gt;# 脚本文件相对与插件根目录路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  pluginModelPath: assets/ &lt;span class=&#34;token comment&#34;&gt;# 模型文件相对与插件根目录路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# scriptFrom: jsdelivr # jsdelivr CDN&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# scriptFrom: unpkg # unpkg CDN&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token comment&#34;&gt;# scriptFrom: https://cdn.jsdelivr.net/npm/live2d-widget@3.x/lib/L2Dwidget.min.js # 你的自定义 url&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  tagMode: &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 标签模式，是否仅替换 live2d tag 标签而非插入到所有页面中&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  debug: &lt;span class=&#34;token boolean&#34;&gt;false&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 调试，是否在控制台输出日志&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  model:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    use: live2d-widget-model-shizuku &lt;span class=&#34;token comment&#34;&gt;# 使用的 Live2d 模型名称&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# use: wanko # 博客根目录 /live2d_models/ 下的目录名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# use: ./wives/wanko # 相对于博客根目录的路径&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;# use: https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  display:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    position: right &lt;span class=&#34;token comment&#34;&gt;#显示位置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    width: &lt;span class=&#34;token number&#34;&gt;150&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    height: &lt;span class=&#34;token number&#34;&gt;300&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  mobile:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    show: &lt;span class=&#34;token boolean&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 手机中是否展示&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;最后输入  &lt;code&gt;hexo clean &amp;amp;&amp;amp; hexo g &amp;amp;&amp;amp; hexo s&lt;/code&gt;  就可以本地预览看到你的 Live2d 啦&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

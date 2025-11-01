@@ -1,0 +1,18 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "ネオンノワール • All posts by \"games\" tag",
+    "description": "NeonNoir ブログ",
+    "home_page_url": "https://ui123456ax.github.io",
+    "items": [
+        {
+            "id": "https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/",
+            "url": "https://ui123456ax.github.io/2024/05/08/0_100/08_erogames/",
+            "title": "TESX-EROGAMES",
+            "date_published": "2024-05-07T16:07:51.000Z",
+            "content_html": "<p><s>和同学在校内游玩的小游戏</s></p>\n<h3 id=\"操作说明\"><a class=\"anchor\" href=\"#操作说明\">#</a> 操作说明</h3>\n<p>RPG 可自由操作时两指齐按（右鍵）打开功能表存档，部分需定点存档<br />\n IOS 音频已修正，但仍有部分游戏可能并无声音 <a href=\"https://ui123456ax.github.io/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/\">修复 RPGMV 在 IOS 上无法运行 ogg 文件</a></p>\n<p>无科学环境可能造成卡顿、画面加载不全等影响</p>\n<blockquote>\n<p>游戏于  <code>github page</code> , 如有需要可从<a href=\"https://github.com/u-yoai/\"> git 仓库</a>自行 Clone 本地</p>\n</blockquote>\n<h3 id=\"游戏列表\"><a class=\"anchor\" href=\"#游戏列表\">#</a> 游戏列表：</h3>\n<ul>\n<li><a href=\"https://erogames.us.kg/xrkxq/www/\">夏日狂想曲</a></li>\n<li><a href=\"https://erogames.us.kg/drkxq/www\">冬日狂想曲</a></li>\n<li><a href=\"https://erogames.us.kg/chdc/\">彼女と痴漢と満員電車</a></li>\n<li><s><a href=\"https://erogames.us.kg/csjy\">触手监狱</a></s> 可能无法加载 Data/_Translation.json 文件</li>\n<li><a href=\"https://erogames.us.kg/xzxrdbw/www\">寻找夏日的宝物</a> 生肉</li>\n<li><a href=\"https://erogames.us.kg/wlts/www\">无力天使</a> 生肉</li>\n<li><a href=\"https://erogames.us.kg/mfsnclx/\">魔法少女苍蓝星</a></li>\n<li><a href=\"https://erogames.us.kg/PrayGame/\">PrayGame</a></li>\n</ul>\n<p>・・・・待定</p>\n",
+            "tags": [
+                "Games"
+            ]
+        }
+    ]
+}

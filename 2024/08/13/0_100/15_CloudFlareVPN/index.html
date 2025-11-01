@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=2"/><meta name="theme-color" content="#222"/><meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1"/><meta name="renderer" content="webkit"/><link rel="icon" type="image/ico" sizes="32x32" href="/assets/favicon.ico"/><link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"/><link rel="alternate" href="/rss.xml" title="ネオンノワール" type="application/rss+xml"><link rel="alternate" href="/atom.xml" title="ネオンノワール" type="application/atom+xml"><link rel="alternate" type="application/json" title="ネオンノワール" href="https://ui123456ax.github.io/feed.json"/><link rel="preconnect" href="https://s4.zstatic.net"/><link rel="preconnect" href="https://at.alicdn.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic%7CFredericka%20the%20Great:400,400italic,700,700italic%7CNoto%20Serif%20JP:400,400italic,700,700italic%7CNoto%20Serif%20SC:400,400italic,700,700italic%7CInconsolata:400,400italic,700,700italic&display=swap&subset=latin,latin-ext" media="none" onload="this.media&#x3D;&#39;all&#39;"><link rel="stylesheet" href="/css/app.css?v=0.4.23"><link rel="modulepreload" href="/js/chunk-D4ZSMMI3.js"></link><link rel="modulepreload" href="/js/chunk-QSVNYSID.js"></link><link rel="modulepreload" href="/js/chunk-WRJEYKPR.js"></link><link rel="modulepreload" href="/js/copy-tex-6ZHYJ3GF.js"></link><link rel="modulepreload" href="/js/index.esm-GMKVFDQV.js"></link><link rel="modulepreload" href="/js/post-BBMGSSZS.js"></link><link rel="modulepreload" href="/js/quicklink-6H2VGB4X.js"></link><link rel="modulepreload" href="/js/siteInit.js"></link><link rel="preload" href="https://h-picture.neonnoir.link?865232" as="image" fetchpriority="high"><link rel="preload" href="https://h-picture.neonnoir.link?282190" as="image" fetchpriority="high"><link rel="preload" href="https://h-picture.neonnoir.link?643430" as="image" fetchpriority="high"><link rel="preload" href="https://h-picture.neonnoir.link?822399" as="image" fetchpriority="high"><link rel="preload" href="https://h-picture.neonnoir.link?100758" as="image" fetchpriority="high"><link rel="preload" href="https://h-picture.neonnoir.link?452116" as="image" fetchpriority="high"><meta name="keywords" content="CloudFlare,"/><meta name="description" content="NeonNoir ブログ"/><link rel="canonical" href="https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/"><title>使用CloudFlare作为VPN</title><meta name="generator" content="Hexo 7.3.0"></head><body itemscope itemtype="http://schema.org/WebPage"><div id="loading"><div class="cat"><div class="body"></div><div class="head"><div class="face"></div></div><div class="foot"><div class="tummy-end"></div><div class="bottom"></div><div class="legs left"></div><div class="legs right"></div></div><div class="paw"><div class="hands left"></div><div class="hands right"></div></div></div></div><div id="container"><header id="header" itemscope itemtype="http://schema.org/WPHeader"><div class="inner"><div id="brand"><div class="pjax"><h1 itemprop="name headline">使用CloudFlare作为VPN</h1><div class="meta"><span class="item" title="创建时间：2024-08-13 20:08:26"><span class="icon"><i class="ic i-calendar"></i></span><span class="text">发表于</span><time itemprop="dateCreated datePublished" datetime="2024-08-13T20:08:26+08:00">2024-08-13</time></span><span class="item" title="本文字数"><span class="icon"><i class="ic i-pen"></i></span><span class="text">本文字数</span><span>6.4k</span><span class="text">字</span></span><span class="item" title="阅读时长"><span class="icon"><i class="ic i-clock"></i></span><span class="text">阅读时长</span><span>6 分钟</span></span></div></div></div><nav id="nav"><div class="inner"><div class="toggle"><div class="lines" aria-label="切换导航栏"><span class="line"></span><span class="line"></span><span class="line"></span></div></div><ul class="menu"><li class="item title"><a href="/" rel="start">NeonNoir Note</a></li></ul><ul class="right" id="rightNav"><li class="item theme"><i class="ic i-sun"></i></li><li class="item search"><i class="ic i-search"></i></li></ul></div></nav></div><div class="pjax" id="imgs"><ul><li class="item" style="background-image: url(&quot;https://h-picture.neonnoir.link?865232&quot;);"></li><li class="item" style="background-image: url(&quot;https://h-picture.neonnoir.link?282190&quot;);"></li><li class="item" style="background-image: url(&quot;https://h-picture.neonnoir.link?643430&quot;);"></li><li class="item" style="background-image: url(&quot;https://h-picture.neonnoir.link?822399&quot;);"></li><li class="item" style="background-image: url(&quot;https://h-picture.neonnoir.link?100758&quot;);"></li><li class="item" style="background-image: url(&quot;https://h-picture.neonnoir.link?452116&quot;);"></li></ul></div></header><div id="waves"><svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path></defs><g class="parallax"><use xlink:href="#gentle-wave" x="48" y="0"></use><use xlink:href="#gentle-wave" x="48" y="3"></use><use xlink:href="#gentle-wave" x="48" y="5"></use><use xlink:href="#gentle-wave" x="48" y="7"></use></g></svg></div><main><div class="inner"><div class="pjax" id="main"><div class="article wrap"><div class="breadcrumb" itemListElement itemscope itemtype="https://schema.org/BreadcrumbList"><i class="ic i-home"></i><span><a href="/">首页</a></span></div><article class="post block" itemscope="itemscope" itemtype="http://schema.org/Article" lang="zh-CN"><link itemprop="mainEntityOfPage" href="https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/"/><span hidden="hidden" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><meta itemprop="image" content="/assets/avatar.jpg"/><meta itemprop="name" content="UI123456ax"/><meta itemprop="description" content="始于两千年, NeonNoir ブログ"/></span><span hidden="hidden" itemprop="publisher" itemscope="itemscope" itemtype="http://schema.org/Organization"><meta itemprop="name" content="ネオンノワール"/></span><div class="body md" itemprop="articleBody"><h1 id="方式"><a class="anchor" href="#方式">#</a> 方式</h1>
+<p>本文主要介绍以下两种方式</p>
+<ol>
+<li>CloudFlare 子服务 Warp (<a target="_blank" rel="noopener" href="https://1.1.1.1/">1.1.1.1</a>)</li>
+<li>使用 CloudFlare Workes 搭建 VPN 通道</li>
+</ol>
+<blockquote>
+<p>CLoudFlare 牛 bi！</p>
+</blockquote>
+<h1 id="1111"><a class="anchor" href="#1111">#</a> 1.1.1.1</h1>
+<h2 id="下载"><a class="anchor" href="#下载">#</a> 下载</h2>
+<p>点击<a target="_blank" rel="noopener" href="https://1.1.1.1/"> warp 官网</a>，下载对应设备的版本</p>
+<blockquote>
+<p>支持 Linux、MacOS、Windows、Android、IOS</p>
+</blockquote>
+<h2 id="使用"><a class="anchor" href="#使用">#</a> 使用</h2>
+<blockquote>
+<p>本文使用 Windows 的 Warp 功能，其他设备也都差不多</p>
+</blockquote>
+<p>点击 设置 --&gt; 偏好设置 --&gt; 账户 --&gt; 使用其他密钥<br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_02.png" alt="02" /><br />
+ 这里可以使用我的密钥，或是自己生成一个 (下文)</p>
+<pre><code>6ECl4z19-y0M862qC-A7490TKI
+</code></pre>
+<h2 id="密钥生成"><a class="anchor" href="#密钥生成">#</a> 密钥生成</h2>
+<p>需要 Telegram 账号，如果没有请注册一个</p>
+<blockquote>
+<p>Telegram 需要魔法上网，这里建议直接使用上面我提供的密钥即可</p>
+</blockquote>
+<p>Robot: <a target="_blank" rel="noopener" href="https://t.me/generatewarpplusbot">https://t.me/generatewarpplusbot</a><br />
+ 添加机器人，并按如图所操作</p>
+<blockquote>
+<p>请注意！这里可能需要让你关注些群聊才能使用</p>
+</blockquote>
+<p><img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_03.png" alt="03" /><br />
+ <code>7lnfW439-3yX5C4m6-CXd5943m</code>  就是我们生成的密钥了，接下来复制到 Warp 即可使用<br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_04.png" alt="04" /></p>
+<h2 id="无法连接"><a class="anchor" href="#无法连接">#</a> 无法连接</h2>
+<ol>
+<li><s>优选 IP</s> (Ipv4 基本失效)</li>
+<li>换 Ipv6</li>
+<li>开启 MASQUE 加密协议 (部分地区不可用)</li>
+</ol>
+<p><s>目前 (2024/08/13) Warp 在部分地区的 Ipv4 无法连接，最简单的解决方法就是切换为 Ipv6</s></p>
+<blockquote>
+<p>自己上网搜索一下如何开启 Ipv6，本文不作解释</p>
+</blockquote>
+<h3 id="masque-加密协议"><a class="anchor" href="#masque-加密协议">#</a> MASQUE 加密协议</h3>
+<p>此方法需要最新的 <a target="_blank" rel="noopener" href="https://1.1.1.1/">Warp</a></p>
+<h4 id="cloudflare-zero-trust"><a class="anchor" href="#cloudflare-zero-trust">#</a> Cloudflare Zero Trust</h4>
+<p>在设置中心，开启 MASQUE 加密</p>
+<h4 id="windows"><a class="anchor" href="#windows">#</a> Windows</h4>
+<p>在 <code>C:\ProgramData\Cloudflare\</code>  内，新建 <code>mdm.yml</code>  内容如下</p>
+<figure class="highlight yml"><figcaption data-lang="YAML"></figcaption><table><tr><td data-num="1"></td><td><pre>&lt;dict<span class="token punctuation">></span></pre></td></tr><tr><td data-num="2"></td><td><pre>    &lt;key<span class="token punctuation">></span>warp_tunnel_protocol&lt;/key<span class="token punctuation">></span></pre></td></tr><tr><td data-num="3"></td><td><pre>    &lt;string<span class="token punctuation">></span>masque&lt;/string<span class="token punctuation">></span></pre></td></tr><tr><td data-num="4"></td><td><pre>&lt;/dict<span class="token punctuation">></span></pre></td></tr></table></figure><p>重启 Warp 即可开启 MASQUE</p>
+<h4 id="macos"><a class="anchor" href="#macos">#</a> MacOS</h4>
+<p>下载并安装 <a target="_blank" rel="noopener" href="https://wwqe.lanzouo.com/iLoHz2bo35de">CloudflareWARP.mobileconfig</a> 文件，请确保客户端版本为最新 2024.8.309.1 或 更高的版本</p>
+<blockquote>
+<p>密码: ebjy</p>
+</blockquote>
+<h4 id="移动设备androidios"><a class="anchor" href="#移动设备androidios">#</a> 移动设备 (Android,IOS)</h4>
+<p>高级 -&gt; 连接选项 -&gt; TunnelProtocol (连接隧道) -&gt; MASQUE</p>
+<blockquote>
+<p>如果以上方法都不行，请继续往下看</p>
+</blockquote>
+<h1 id="cloudflare-workes"><a class="anchor" href="#cloudflare-workes">#</a> CloudFlare Workes</h1>
+<p>每天免费 10w 个请求，可以绑定自己的域名，可以访问外网，可以反代理外网的接口<br />
+这里选择的是 <code>yonggekkk</code>  的脚本<a target="_blank" rel="noopener" href="https://github.com/yonggekkk/Cloudflare_vless_trojan"> Cloudflare_vless_trojan</a></p>
+<blockquote>
+<p>原项目<a target="_blank" rel="noopener" href="https://github.com/zizifn/edgetunnel"> edgetunnel</a>、<s>改版<a target="_blank" rel="noopener" href="https://github.com/3Kmfi6HP/EDtunnel"> EDtunnel</a></s>、Trojan<a target="_blank" rel="noopener" href="https://github.com/ca110us/epeius">epeius</a><br />
+ 选择<a target="_blank" rel="noopener" href="https://github.com/yonggekkk/Cloudflare_vless_trojan"> Cloudflare_vless_trojan</a> 的理由是将项目的优点都整合到了一起，并且有很多相关的解释对于小白来讲很友好。</p>
+</blockquote>
+<h2 id="前置条件"><a class="anchor" href="#前置条件">#</a> 前置条件</h2>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://dash.cloudflare.com/">CloudFlare</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases?after=3.10">V2ray</a></li>
+<li>域名 (可选)</li>
+</ol>
+<h2 id="使用脚本"><a class="anchor" href="#使用脚本">#</a> 使用脚本</h2>
+<p>下文以无域名操作<br />
+下面将以最简单的方式使用此脚本 (无域名操作)，更多扩展操作可看原项目</p>
+<blockquote>
+<p>有无域名的区别 --&gt; 有无 Tls</p>
+</blockquote>
+<h3 id="新建workers"><a class="anchor" href="#新建workers">#</a> 新建 Workers</h3>
+<p>名字随意<br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_05.png" alt="05" /><br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_06.png" alt="06" /></p>
+<h3 id="添加脚本"><a class="anchor" href="#添加脚本">#</a> 添加脚本</h3>
+<p>打开项目仓库中的<a target="_blank" rel="noopener" href="https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/Vless_workers_pages/_worker.js"> Vless_workers_pages</a> 文件夹内找到 <code>_worker.js</code>  将里面的内容 <code>CTRL+A</code>  复制进刚才创建的 Workers 里<br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_07.png" alt="07" /><br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_08.png" alt="08" /></p>
+<h3 id="配置"><a class="anchor" href="#配置">#</a> 配置</h3>
+<h4 id="userid"><a class="anchor" href="#userid">#</a> userID</h4>
+<p>你应该确保有自己的 userID<br />
+ 可以选择网上的<a target="_blank" rel="noopener" href="https://www.uuidgenerator.net/">在线生成</a>，或是在 V2 里的添加服务器内自动生成<br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_09.png" alt="09" /></p>
+<h4 id="proxyip"><a class="anchor" href="#proxyip">#</a> ProxyIP</h4>
+<p>这是全局代理 IP，选择默认的即可</p>
+<blockquote>
+<p>不会设别乱设，可能会导致无法进去 CloudFlare 相关的网站</p>
+</blockquote>
+<h3 id="运行"><a class="anchor" href="#运行">#</a> 运行</h3>
+<p>然后点击右上角的部署保存<br />
+在 URL 中输入 <code>https://你的Workers名.你的用户名.workers.dev/你的UID</code></p>
+<blockquote>
+<p>如我的 <code>https://v2vpn.ui123456ax.workers.dev/a52c418e-a7d7-4d23-a348-1e055c1cb806</code></p>
+</blockquote>
+<p><img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_10.png" alt="10" title="默认关闭TLS" /><br />
+ 复制链接后，导入至 V2ray 即可正常使用。</p>
+<blockquote>
+<p>V2 节点这里就不分享给大家了，每个账户的请求数量是有限 10w 次的</p>
+</blockquote>
+<p><img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_11.png" alt="11" /><br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_12.png" alt="12" /></p>
+<h3 id="无法打开workers"><a class="anchor" href="#无法打开workers">#</a> 无法打开 Workers</h3>
+<blockquote>
+<p>如无此问题，跳过即可</p>
+</blockquote>
+<p>在上一步操作中无法打开输入的 <code>https://你的Workers名.你的用户名.workers.dev/你的UID</code>  链接<br />
+通常是因为 <code>.workers.dev</code>  被墙了，要么科学上网，要么手动开启 CF 节点</p>
+<h4 id="手动输入cf节点"><a class="anchor" href="#手动输入cf节点">#</a> 手动输入 CF 节点</h4>
+<p>在 V2rayN 中添加 <code>VLESS</code>  服务器，并按如图所设置<br />
+<img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_13.png" alt="13" /><br />
+ 设置完毕即可正常打开网页。这里是属于配置节点，可以正常科学上网了</p>
+<h3 id="其他代理工具"><a class="anchor" href="#其他代理工具">#</a> 其他代理工具</h3>
+<p>在部署的 Workes 中可以看到，支持 Clash-meta、Sing-box 等链接导入</p>
+<blockquote>
+<p>导入时需保持科学环境，否则可能导致导入失败</p>
+</blockquote>
+<p><img loading="lazy" data-src="https://gcore.jsdelivr.net/gh/ui123456ax/PicGo/Blog_images/15_/15_14.png" alt="14" /></p>
+<h2 id="tls"><a class="anchor" href="#tls">#</a> TLS</h2>
+<p>未添加域名使用 TLS 加密，可以在代理工具内设置里启用分片 (Fragment)</p>
+<blockquote>
+<p>没有的话，请更换你的代理工具 (v2rayN)，或更新你的代理工具</p>
+</blockquote>
+<p>延迟 (ms) 默认显示是 <code>-1</code>  但可以使用 (速度由 Address 决定)</p>
+<blockquote>
+<p>需要显示为非 <code>-1</code>  则需要使用域名</p>
+</blockquote>
+<p>如果是 <code>其他项目里的脚本</code> 默认是开启 TLS，可手动关闭节点 TLS</p>
+<h2 id="地址address"><a class="anchor" href="#地址address">#</a> 地址 (Address)</h2>
+<p>请注意你的服务器地址选项 这将会影响你是否可以上网 以及上网的速度 (下文优选 IP 有提)</p>
+<blockquote>
+<p>填入 IP 或 使用了 CloudFlare 加速的域名</p>
+</blockquote>
+<p>默认使用</p>
+<pre><code>www.visa.com.hk
+www.visa.com.sg
+ip.sb
+...
+</code></pre>
+<h2 id="proxyip-2"><a class="anchor" href="#proxyip-2">#</a> ProxyIP</h2>
+<p>设置 ProxyIP 的作用，就是保证能与 CloudFlare 的连通。说白了，不设置 ProxyIP 将无法连接与 CloudFlare 相关的网站 (包括使用了 CFCDN 的网站)，不影响上网速度。一般情况默认即可 (非空)，无需修改。</p>
+<pre><code>cdn-all.xn--b6gac.eu.org
+cdn.xn--b6gac.eu.org
+cdn-b100.xn--b6gac.eu.org
+edgetunnel.anycast.eu.org
+cdn.anycast.eu.org
+</code></pre>
+<h2 id="优选ip域名"><a class="anchor" href="#优选ip域名">#</a> 优选 IP (域名)</h2>
+<p>不管你是使用哪个项目的代码搭建 CloudFlareV2ray 渠道，都应该要注意地址 (address)，这将影响全局上网的速度。</p>
+<ol>
+<li>CloudFlare 优选官方 IP --&gt; <a target="_blank" rel="noopener" href="https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/CF%E4%BC%98%E9%80%89%E5%AE%98%E6%96%B9IP(%E7%94%B5%E8%84%91%E7%89%88).zip">下载</a></li>
+</ol>
+<blockquote>
+<p>速度一般 节点稳定 IP 地域大部分为美国</p>
+</blockquote>
+<ol start="2">
+<li>CloudFlare 优选反代 IP --&gt; <a target="_blank" rel="noopener" href="https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/CF%E4%BC%98%E9%80%89%E5%8F%8D%E4%BB%A3IP(%E7%94%B5%E8%84%91%E7%89%88).zip">下载</a></li>
+</ol>
+<blockquote>
+<p>速度快 不稳定容易失效 IP 地域可根据节点选择</p>
+</blockquote>
+<ol start="3">
+<li>CloudFlare 优选域名 (官方、反代) --&gt; <a target="_blank" rel="noopener" href="https://github.com/yonggekkk/Cloudflare_vless_trojan/blob/main/CDN%E4%BC%98%E9%80%89%E5%9F%9F%E5%90%8DV23.8.18(%E7%94%B5%E8%84%91win64).exe">下载</a></li>
+</ol>
+<blockquote>
+<p>IP 会随意变动</p>
+</blockquote>
+<h3 id="androidios"><a class="anchor" href="#androidios">#</a> Android&amp;&amp;IOS</h3>
+<p>Android 使用程序 <code>termux</code></p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 安装依赖</span></pre></td></tr><tr><td data-num="2"></td><td><pre>pkg upgrade</pre></td></tr><tr><td data-num="3"></td><td><pre>pkg <span class="token function">install</span> <span class="token function">curl</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># apt update</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token comment"># apt install curl</span></pre></td></tr></table></figure><p>IOS 使用程序 <code>ish</code></p>
+<figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 安装依赖</span></pre></td></tr><tr><td data-num="2"></td><td><pre>apk <span class="token function">add</span> openssh <span class="token function">curl</span> <span class="token function">bash</span></pre></td></tr></table></figure><figure class="highlight bash"><figcaption data-lang="bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 优选域名</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">curl</span> <span class="token parameter variable">-sSL</span> https://gitlab.com/rwkgyg/CFwarp/raw/main/point/CFcdnym.sh <span class="token parameter variable">-o</span> CFcdnym.sh <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x CFcdnym.sh <span class="token operator">&amp;&amp;</span> <span class="token function">bash</span> CFcdnym.sh</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 优选 IP</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token function">curl</span> <span class="token parameter variable">-sSL</span> https://gitlab.com/rwkgyg/CFwarp/raw/main/point/cfip.sh <span class="token parameter variable">-o</span> cfip.sh <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x cfip.sh <span class="token operator">&amp;&amp;</span> <span class="token function">bash</span> cfip.sh</pre></td></tr></table></figure><h3 id="抓取反代ip"><a class="anchor" href="#抓取反代ip">#</a> 抓取反代 IP</h3>
+<p>可利用网络空间检索抓取有 CF 加速的网站<br />
+ FOFA  <code>server==&quot;cloudflare&quot; &amp;&amp; port==&quot;端口&quot; &amp;&amp; country==&quot;国家&quot;</code></p>
+<p>CloudFlare 支持的 13 个端口号</p>
+<details><summary>HTTP端口(7个)</summary><div>
+<ul>
+<li>80</li>
+<li>8080</li>
+<li><strong>8880</strong></li>
+<li>2052</li>
+<li>2082</li>
+<li>2086</li>
+<li>2095</li>
+</ul>
+</div></details>
+<details><summary>HTTPS端口(6个)</summary><div>
+<ul>
+<li>443</li>
+<li>2053</li>
+<li>2083</li>
+<li>2087</li>
+<li>2096</li>
+<li><strong>8443</strong></li>
+</ul>
+</div></details>
+<h3 id="区别"><a class="anchor" href="#区别">#</a> 区别</h3>
+<ul>
+<li>域名：优选域名里包含许多优选 IP，并使用其中的一条 IP 作为连接 CloudFlare 的通道</li>
+<li>IP: 优选 IP 则是指定唯一的 IP，这将可以选择 VPN 所在的代理位置</li>
+</ul>
+<blockquote>
+<p>一般情况选择优选域名即可</p>
+</blockquote>
+<h1 id="结语"><a class="anchor" href="#结语">#</a> 结语</h1>
+<p>无论是所以 Warp 服务还是自建 Workes，其根 IP 都是 CloudFlare，其速度也相差无几。</p>
+<blockquote>
+<p>速度的差异主要还是在与 CloudFlare 的连接</p>
+</blockquote>
+<hr />
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=ojGojtF8sW8&amp;t=1471s">https://www.youtube.com/watch?v=ojGojtF8sW8&amp;t=1471s</a><br />
+<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NbruiJShUCE">https://www.youtube.com/watch?v=NbruiJShUCE</a><br />
+<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;t=812s">https://www.youtube.com/watch?v=FE_gJrk2sSc&amp;t=812s</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=NaLd-orwFUE">https://www.youtube.com/watch?v=NaLd-orwFUE</a><br />
+<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=9V9CQxmfwoA">https://www.youtube.com/watch?v=9V9CQxmfwoA</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yonggekkk/warp-yg">https://github.com/yonggekkk/warp-yg</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yonggekkk/Cloudflare_vless_trojan">https://github.com/yonggekkk/Cloudflare_vless_trojan</a><br />
+<a target="_blank" rel="noopener" href="https://github.com/zizifn/edgetunnel">https://github.com/zizifn/edgetunnel</a><br />
+<a target="_blank" rel="noopener" href="https://github.com/3Kmfi6HP/EDtunnel">https://github.com/3Kmfi6HP/EDtunnel</a> 已删库<br />
+<a target="_blank" rel="noopener" href="https://github.com/EDtunnel-rev/EDtunnel-rev"> https://github.com/EDtunnel-rev/EDtunnel-rev</a><br />
+<a target="_blank" rel="noopener" href="https://github.com/ca110us/epeius">https://github.com/ca110us/epeius</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/XIU2/CloudflareSpeedTest">https://github.com/XIU2/CloudflareSpeedTest</a><br />
+<a target="_blank" rel="noopener" href="https://github.com/badafans/Cloudflare-IP-SpeedTest">https://github.com/badafans/Cloudflare-IP-SpeedTest</a></p>
+<div class="tags"><a href="/tags/CloudFlare/" rel="tag"><i class="ic i-tag"></i>CloudFlare</a><a href="/tags/VPN/" rel="tag"><i class="ic i-tag"></i>VPN</a></div></div><footer><div class="meta"><span class="item"><span class="icon"><i class="ic i-calendar-check"></i></span><span class="text">更新于 </span><time title="修改时间：2024-10-05 10:38:15" itemprop="dateModified" datetime="2024-10-05T10:38:15+08:00">2024-10-05</time></span></div><div id="copyright"><ul><li class="author"><strong>本文作者：</strong>UI123456ax<i class="ic i-at"><em>@</em></i>ネオンノワール</li><li class="link"><strong>本文链接：</strong><a href="https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/" title="使用CloudFlare作为VPN">https://ui123456ax.github.io/2024/08/13/0_100/15_CloudFlareVPN/</a></li><li class="license"><strong>版权声明：</strong>本站所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li></ul></div></footer></article></div><div class="post-nav"><div class="item left"><a href="/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/" rel="prev" itemprop="url" data-background-image="https:&#x2F;&#x2F;h-picture.neonnoir.link?3869" title="ADB-命令"><span class="type">上一篇</span><h3>ADB-命令</h3></a></div><div class="item right"><a href="/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/" rel="next" itemprop="url" data-background-image="https:&#x2F;&#x2F;h-picture.neonnoir.link?712374" title="GitHub配置多账号git上传"><span class="type">下一篇</span><h3>GitHub配置多账号git上传</h3></a></div></div><div class="wrap" id="comments"></div></div><div id="sidebar"><div class="inner"><div class="panels"><div class="inner"><div class="contents panel pjax" data-title="文章目录"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text"> 方式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#1111"><span class="toc-number">2.</span> <span class="toc-text"> 1.1.1.1</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD"><span class="toc-number">2.1.</span> <span class="toc-text"> 下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">2.2.</span> <span class="toc-text"> 使用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%86%E9%92%A5%E7%94%9F%E6%88%90"><span class="toc-number">2.3.</span> <span class="toc-text"> 密钥生成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%A0%E6%B3%95%E8%BF%9E%E6%8E%A5"><span class="toc-number">2.4.</span> <span class="toc-text"> 无法连接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#masque-%E5%8A%A0%E5%AF%86%E5%8D%8F%E8%AE%AE"><span class="toc-number">2.4.1.</span> <span class="toc-text"> MASQUE 加密协议</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cloudflare-zero-trust"><span class="toc-number">2.4.1.1.</span> <span class="toc-text"> Cloudflare Zero Trust</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#windows"><span class="toc-number">2.4.1.2.</span> <span class="toc-text"> Windows</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#macos"><span class="toc-number">2.4.1.3.</span> <span class="toc-text"> MacOS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A7%BB%E5%8A%A8%E8%AE%BE%E5%A4%87androidios"><span class="toc-number">2.4.1.4.</span> <span class="toc-text"> 移动设备 (Android,IOS)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#cloudflare-workes"><span class="toc-number">3.</span> <span class="toc-text"> CloudFlare Workes</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E7%BD%AE%E6%9D%A1%E4%BB%B6"><span class="toc-number">3.1.</span> <span class="toc-text"> 前置条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E8%84%9A%E6%9C%AC"><span class="toc-number">3.2.</span> <span class="toc-text"> 使用脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B0%E5%BB%BAworkers"><span class="toc-number">3.2.1.</span> <span class="toc-text"> 新建 Workers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%84%9A%E6%9C%AC"><span class="toc-number">3.2.2.</span> <span class="toc-text"> 添加脚本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">3.2.3.</span> <span class="toc-text"> 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#userid"><span class="toc-number">3.2.3.1.</span> <span class="toc-text"> userID</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#proxyip"><span class="toc-number">3.2.3.2.</span> <span class="toc-text"> ProxyIP</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%90%E8%A1%8C"><span class="toc-number">3.2.4.</span> <span class="toc-text"> 运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80workers"><span class="toc-number">3.2.5.</span> <span class="toc-text"> 无法打开 Workers</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E8%BE%93%E5%85%A5cf%E8%8A%82%E7%82%B9"><span class="toc-number">3.2.5.1.</span> <span class="toc-text"> 手动输入 CF 节点</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E4%BB%A3%E7%90%86%E5%B7%A5%E5%85%B7"><span class="toc-number">3.2.6.</span> <span class="toc-text"> 其他代理工具</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#tls"><span class="toc-number">3.3.</span> <span class="toc-text"> TLS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%B0%E5%9D%80address"><span class="toc-number">3.4.</span> <span class="toc-text"> 地址 (Address)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#proxyip-2"><span class="toc-number">3.5.</span> <span class="toc-text"> ProxyIP</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E9%80%89ip%E5%9F%9F%E5%90%8D"><span class="toc-number">3.6.</span> <span class="toc-text"> 优选 IP (域名)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#androidios"><span class="toc-number">3.6.1.</span> <span class="toc-text"> Android&amp;&amp;IOS</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%93%E5%8F%96%E5%8F%8D%E4%BB%A3ip"><span class="toc-number">3.6.2.</span> <span class="toc-text"> 抓取反代 IP</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BA%E5%88%AB"><span class="toc-number">3.6.3.</span> <span class="toc-text"> 区别</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-number">4.</span> <span class="toc-text"> 结语</span></a></li></ol></div><div class="related panel pjax" data-title="系列文章"></div><div class="overview panel" data-title="站点概览"><div class="author" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person"><img class="image" loading="lazy" decoding="async" itemprop="image" alt="UI123456ax" src="/assets/avatar.jpg"/><p class="name" itemprop="name">UI123456ax</p><div class="description" itemprop="description">NeonNoir ブログ</div></div><nav class="state"><div class="item posts"><a href="/archives/"><span class="count">16</span><span class="name">文章</span></a></div><div class="item tags"><a href="/tags/"><span class="count">15</span><span class="name">标签</span></a></div></nav><div class="social"><a target="_blank" rel="noopener" href="https://github.com/UI123456ax" class="item github" title="https:&#x2F;&#x2F;github.com&#x2F;UI123456ax"><i class="ic i-github"></i></a><a href="mailto:ui123456ax@icloud.com" class="item email" title="mailto:ui123456ax@icloud.com"><i class="ic i-envelope"></i></a></div><div class="menu"><li class="item"><a href="/" rel="section"><i class="ic i-home"></i>首页</a></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-user"></i>关于</a><ul class="submenu"><li class="item"><a href="/about/" rel="section"><i class="ic i-user"></i>关于本站</a></li><li class="item"><a href="/admiration/" rel="section"><i class="ic i-coffee"></i>赞赏博主</a></li></ul></li><li class="item dropdown"><a href="#" onclick="return false;"><i class="ic i-feather"></i>文章</a><ul class="submenu"><li class="item"><a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a></li><li class="item"><a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a></li><li class="item"><a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a></li></ul></li></div></div></div></div><ul id="quick"><li class="prev pjax"><a href="/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a></li><li class="up"><i class="ic i-arrow-up"></i></li><li class="down"><i class="ic i-arrow-down"></i></li><li class="next pjax"><a href="/2024/08/02/0_100/14_ADB-%E5%91%BD%E4%BB%A4/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a></li><li class="percent"></li></ul></div></div><div class="dimmer"></div></div></main><footer id="footer"><div class="inner"><div class="widgets"><div class="rpost pjax"><h2>随机文章</h2><ul><li class="item"><div class="breadcrumb"></div><span><a href="/2024/07/10/0_100/11_BurpSuite/">BurpSuite使用指南</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2025/11/01/0_100/20_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/">域名解析及其应用</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2023/06/21/0_100/01_Hexo/">关于Hexo</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2024/08/13/0_100/15_CloudFlareVPN/">使用CloudFlare作为VPN</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2024/03/16/0_100/07_ComicU03/">ERO Comic</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2024/05/10/0_100/09_RPGMV%E5%9C%A8IOS%E4%B8%8A%E6%97%A0%E6%B3%95%E8%BF%90%E8%A1%8Cogg%E6%96%87%E4%BB%B6/">修复RPGMV在IOS上无法运行ogg文件</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2024/07/30/0_100/13_Android%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%B8%8A%E7%BD%91/">Android抓包工具无法正常上网</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/">使用CloudFlare给GithubPage加速</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/">关于Shoka图床修复</a></span></li><li class="item"><div class="breadcrumb"></div><span><a href="/2023/06/24/0_100/03_Hexo%E6%B7%BB%E5%8A%A0Live2d%EF%BC%88%E7%9C%8B%E6%9D%BF%E5%A8%98%EF%BC%89/">Hexo美化 添加Live2d（看板娘）</a></span></li></ul></div><div class="rpost pjax"><h2>最新评论</h2></div></div><div class="status"><div class="copyright">&copy; 2022 -<span itemprop="copyrightYear">2025</span><span class="with-love"><i class="ic i-sakura rotate"></i></span><span class="author" itemprop="copyrightHolder">UI123456ax @ NeonNoir Note</span></div><div class="count"><span class="post-meta-item-icon"><i class="ic i-chart-area"></i></span><span title="站点总字数">53k 字</span><span class="post-meta-divider"> | </span><span class="post-meta-item-icon"><i class="ic i-coffee"></i></span><span title="站点阅读时长">48 分钟</span></div><div class="powered-by">基于 <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & Theme.<a target="_blank" rel="noopener" href="https://github.com/theme-shoka-x/hexo-theme-shokaX/">ShokaX</a></div></div></div></footer></div><script data-config type="text/javascript">var LOCAL = {
+    ispost: true,
+    path: `2024/08/13/0_100/15_CloudFlareVPN/`,
+    favicon: {
+        show: `（●´3｀●）やれやれだぜ`,
+        hide: `(´Д｀)大変だ！`
+    },
+    search: {
+        placeholder: "文章搜索",
+        empty: "关于 「 ${query} 」，什么也没搜到",
+        stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    nocopy: "false",
+    copyright: `复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。`,
+    copy_tex: false,
+    katex: false,
+    mermaid: false,
+    audio: undefined,
+    fancybox: true,
+    nocopy: false,
+    outime: true,
+    template: `<div class="note warning"><p><span class="label warning">文章时效性提示</span><br>这是一篇发布于 {{publish}} 天前，最后一次更新在 {{updated}} 天前的文章，部分信息可能已经发生改变，请注意甄别。</p></div>`,
+    quiz: {
+        choice: `单选题`,
+        multiple: `多选题`,
+        true_false: `判断题`,
+        essay: `问答题`,
+        gap_fill: `填空题`,
+        mistake: `错题备注`
+    },
+    ignores: [
+        (uri) => uri.includes('#'),
+        (uri) => new RegExp(LOCAL.path + '$').test(uri),
+            []
+    ]
+};
+</script><script src="https://s4.zstatic.net/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha384-k6YtvFUEIuEFBdrLKJ3YAUbBki333tj1CSUisai5Cswsg9wcLNaPzsTHDswp4Az8" crossorigin="anonymous" fetchpriority="high"></script><script src="https://s4.zstatic.net/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha384-ZvpUoO&#x2F;+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn&#x2F;6Z&#x2F;hRTt8+pR6L4N2" crossorigin="anonymous" fetchpriority="high"></script><script src="https://s4.zstatic.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha384-Zm+UU4tdcfAm29vg+MTbfu&#x2F;&#x2F;q5B&#x2F;lInMbMCr4T8c9rQFyOv6PlfQYpB5wItcXWe7" crossorigin="anonymous" fetchpriority="high"></script><script src="https://s4.zstatic.net/ajax/libs/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js" integrity="sha384-TOxsBplaL96&#x2F;QDWPIUg+ye3v89qSE3s22XNtJMmCeZEep3cVDmXy1zEfZvVv+y2m" crossorigin="anonymous" fetchpriority="high"></script><script src="/js/siteInit.js?v=0.4.23" type="module" fetchpriority="high" defer></script></body></html>

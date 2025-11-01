@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>ネオンノワール • Posts by &#34;github&#34; tag</title>
+        <link>https://ui123456ax.github.io</link>
+        <description>NeonNoir ブログ</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 16 Sep 2024 11:13:32 +0800</pubDate>
+        <lastBuildDate>Mon, 16 Sep 2024 11:13:32 +0800</lastBuildDate>
+        <category>Notes</category>
+        <category>Blog</category>
+        <category>Shoka</category>
+        <category>Github</category>
+        <category>Python</category>
+        <category>Debug</category>
+        <category>Configuration</category>
+        <category>Comic</category>
+        <category>Games</category>
+        <category>Android</category>
+        <category>CloudFlare</category>
+        <category>VPN</category>
+        <category>Domain</category>
+        <category>Cloudflare</category>
+        <category>DNS,</category>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/</guid>
+            <title>使用CloudFlare给GithubPage加速</title>
+            <link>https://ui123456ax.github.io/2024/09/16/0_100/17_%E4%BD%BF%E7%94%A8CloudFlare%E7%BB%99GithubPage%E5%8A%A0%E9%80%9F/</link>
+            <category>Github</category>
+            <category>Domain</category>
+            <category>Cloudflare</category>
+            <pubDate>Mon, 16 Sep 2024 11:13:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;已注册的域名&lt;/li&gt;
+&lt;li&gt;CloudFlare 账号（&lt;a href=&#34;https://dash.cloudflare.com/sign-up&#34;&gt;注册地址&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;GitHub 账号及  &lt;code&gt;username.github.io&lt;/code&gt;  仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;github-解析域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#github-解析域名&#34;&gt;#&lt;/a&gt; GitHub 解析域名&lt;/h1&gt;
+&lt;p&gt;登录 GitHub，进入个人设置页面：&lt;a href=&#34;https://github.com/settings/pages&#34;&gt;GitHub Pages 设置&lt;/a&gt;&lt;br /&gt;
+点击  &lt;code&gt;Add a domain&lt;/code&gt;  添加你的域名，并在 DNS 解析处填写对应 TXT 验证值以验证 Github 绑定&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/17_/17_00.png&#34; alt=&#34;00&#34; /&gt;&lt;/p&gt;
+&lt;h1 id=&#34;cloudflare-dns-解析配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#cloudflare-dns-解析配置&#34;&gt;#&lt;/a&gt; CloudFlare DNS 解析配置&lt;/h1&gt;
+&lt;h2 id=&#34;基本配置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#基本配置&#34;&gt;#&lt;/a&gt; 基本配置&lt;/h2&gt;
+&lt;p&gt;添加以下 DNS 记录&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;内容 / 值&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;th&gt;代理状态&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;185.199.108.153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;www&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt; .github.io&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;已代理&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将  &lt;code&gt;&amp;lt;username&amp;gt;&lt;/code&gt;  替换为您的 GitHub 用户名&lt;/li&gt;
+&lt;li&gt;确保 A 记录代理状态为 &amp;quot;关闭&amp;quot;（橙色云图标）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/17_/17_01.png&#34; alt=&#34;01&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;完整ip地址列表备用方案&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#完整ip地址列表备用方案&#34;&gt;#&lt;/a&gt; 完整 IP 地址列表（备用方案）&lt;/h2&gt;
+&lt;p&gt;如果基本配置不生效，建议添加 GitHub Pages 的所有 IP 地址：&lt;/p&gt;
+&lt;h3 id=&#34;ipv4地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ipv4地址&#34;&gt;#&lt;/a&gt; IPv4 地址&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;内容 / 值&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;th&gt;代理状态&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;185.199.108.153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;185.199.109.153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;185.199.110.153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;A&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;185.199.111.153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;ipv6地址&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#ipv6地址&#34;&gt;#&lt;/a&gt; IPv6 地址&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;类型&lt;/th&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;内容 / 值&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;th&gt;代理状态&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;AAAA&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;2606:50c0:8000::153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AAAA&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;2606:50c0:8001::153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AAAA&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;2606:50c0:8002::153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;AAAA&lt;/td&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;2606:50c0:8003::153&lt;/td&gt;
+&lt;td&gt;自动&lt;/td&gt;
+&lt;td&gt;关闭&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&#34;github-仓库设置&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#github-仓库设置&#34;&gt;#&lt;/a&gt; GitHub 仓库设置&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;进入  &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;  仓库&lt;/li&gt;
+&lt;li&gt;在 &amp;quot;Settings&amp;quot; → &amp;quot;Pages&amp;quot; 添加域名（如：&lt;a href=&#34;http://example.com&#34;&gt;example.com&lt;/a&gt;）&lt;/li&gt;
+&lt;li&gt;勾选 &amp;quot;Enforce HTTPS&amp;quot; 选项&lt;/li&gt;
+&lt;li&gt;点击 &amp;quot;Save&amp;quot; 保存设置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/17_/17_02.png&#34; alt=&#34;02&#34; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DNS 更改通常需要 &lt;strong&gt;10-30 分钟&lt;/strong&gt; 生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;优点&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#优点&#34;&gt;#&lt;/a&gt; 优点&lt;/h1&gt;
+&lt;p&gt;能加速域名下的所有内容，可以用来在 GitHub 上弄&lt;strong&gt;存储图床&lt;/strong&gt;、博客文章等公开性内容&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;理论上任意 CDN 加速都可以&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;个人博客加速&lt;/li&gt;
+&lt;li&gt;项目文档托管&lt;/li&gt;
+&lt;li&gt;静态网站部署&lt;/li&gt;
+&lt;li&gt;图床资源加速&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;若添加的是  &lt;code&gt;&amp;lt;username&amp;gt;.github.io&lt;/code&gt;  仓库，则其余仓库为  &lt;code&gt;yourdomain.com/&amp;lt;仓库名&amp;gt;&lt;/code&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</guid>
+            <title>GitHub配置多账号git上传</title>
+            <link>https://ui123456ax.github.io/2024/09/16/0_100/16_GitHub%E8%AE%BE%E7%BD%AE%E5%8F%8C%E8%B4%A6%E5%8F%B7%E4%B8%8A%E4%BC%A0/</link>
+            <category>Github</category>
+            <category>Configuration</category>
+            <pubDate>Mon, 16 Sep 2024 09:52:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;记录一次关于 Github 多账号 git 的配置&lt;br /&gt;
+将仓库内容上传  &lt;code&gt;AccountA&lt;/code&gt;  的同时上传到我的另一个账号  &lt;code&gt;AccountB&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#流程&#34;&gt;#&lt;/a&gt; 流程&lt;/h1&gt;
+&lt;h2 id=&#34;生成密钥&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#生成密钥&#34;&gt;#&lt;/a&gt; 生成密钥&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;生成新的 SSH 密钥对（假设新密钥对的名称为  &lt;code&gt;id_rsa_b&lt;/code&gt; ）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh-keygen &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; ed25519 &lt;span class=&#34;token parameter variable&#34;&gt;-C&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;your_email@example.com&#34;&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; ~/.ssh/id_rsa_b&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;将新生成的公钥添加到 GitHub 账号 B (AccountB) 的 SSH 密钥列表中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;打开密钥文件 (C:/Users/your_name/.ssh)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; ~/.ssh/id_rsa_b.pub&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;将里面的内容全部复制&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;登录到 GitHub 账号 B，进入  &lt;code&gt;“Settings” -&amp;gt; “SSH and GPG keys” -&amp;gt; “New SSH key”&lt;/code&gt; ，将公钥粘贴进去并保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;配置本地git以使用新的ssh密钥对&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#配置本地git以使用新的ssh密钥对&#34;&gt;#&lt;/a&gt; 配置本地 Git 以使用新的 SSH 密钥对&lt;/h2&gt;
+&lt;p&gt;在本地创建一个配置文件（例如 config），在其中添加多个账号的 SSH 配置信息。每个账号的配置信息应该以 Host 开头，后面跟着对应的域名和密钥路径&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;创建  &lt;code&gt;config&lt;/code&gt;  配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;touch&lt;/span&gt; ~/.ssh/config&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;无需后缀&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;&lt;code&gt;config&lt;/code&gt;  文件内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;# Account A
+Host github.com-AccountA
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_a
+
+# Account B
+Host github.com-AccountB
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_rsa_b
+&lt;/code&gt;&lt;/pre&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Account-B&lt;/code&gt;  为你要切换时使用的账号名称&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;尝试添加git仓库&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#尝试添加git仓库&#34;&gt;#&lt;/a&gt; 尝试添加 git 仓库&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config user.name &lt;span class=&#34;token string&#34;&gt;&#39;AccountB&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; config user.email &lt;span class=&#34;token string&#34;&gt;&#39;AccountB@mail.com&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Switch to account A&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote set-url origin git@github.com-AccountA:usernameA/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# Switch to account B&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote set-url origin git@github.com-AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;AccountB&lt;/code&gt;  替换为你实际要切换到的账号名&lt;br /&gt;
+ &lt;code&gt;usernameB&lt;/code&gt;  替换为该账号下的用户名&lt;br /&gt;
+ &lt;code&gt;repo&lt;/code&gt;  替换为你要切换到的仓库名&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最后验证远程仓库是否已成功添加&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 本地仓库情况&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 全局登录情况&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ssh&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-T&lt;/span&gt; git@github.com-AccountB.com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;显示所有已添加的远程仓库及其对应的 URL&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;git-push&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#git-push&#34;&gt;#&lt;/a&gt; git push&lt;/h2&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; init&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;.&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; commit &lt;span class=&#34;token parameter variable&#34;&gt;-am&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;first commit&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; origin git@AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; push &lt;span class=&#34;token parameter variable&#34;&gt;-u&lt;/span&gt; origin master&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h1 id=&#34;遇到的问题&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#遇到的问题&#34;&gt;#&lt;/a&gt; 遇到的问题&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;error: remote origin already exists&lt;/code&gt; &lt;br /&gt;
+ 这个错误表示远程仓库 &amp;quot;origin&amp;quot; 已经存在。可能原因有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有成功配置 SSH 到 GitHub 账号上&lt;/li&gt;
+&lt;li&gt;已经添加过该仓库&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;重新配置。&lt;strong&gt;请确保每一步骤准确，文件配置恰当&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;删除并重新添加远程仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote remove origin&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;git&lt;/span&gt; remote &lt;span class=&#34;token function&#34;&gt;add&lt;/span&gt; origin git@github.com-AccountB:usernameB/repo.git&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://ui123456ax.github.io/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</guid>
+            <title>关于Github Actions使用Python自动化时报错的解决方法</title>
+            <link>https://ui123456ax.github.io/2023/08/12/0_100/05_%E5%85%B3%E4%BA%8EGithub-Actions%E4%BD%BF%E7%94%A8Python%E8%87%AA%E5%8A%A8%E5%8C%96%E6%97%B6%E6%8A%A5%E9%94%99%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/</link>
+            <category>Github</category>
+            <category>Python</category>
+            <category>Debug</category>
+            <pubDate>Sat, 12 Aug 2023 23:05:45 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;打算用 Python 写一个微信刷步放在 Github-Actions 每日自动刷步的 &lt;a href=&#34;https://github.com/UI123456ax/run_zepp&#34;&gt;微信刷步项目&lt;/a&gt;&lt;br /&gt;
+遇到了一些问题，本来都打算要放弃了呃 啊 (ノ｀Д) ノ，下面看看有没有和我一样问题&lt;/p&gt;
+&lt;h1 id=&#34;报错类型&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#报错类型&#34;&gt;#&lt;/a&gt; 报错类型&lt;/h1&gt;
+&lt;p&gt;报错  &lt;code&gt;Error: Version 3.9.1 with arch x64 not found&lt;/code&gt; ，如图：&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/05_/05_01.png&#34; alt=&#34;tR54.png&#34; /&gt;&lt;br /&gt;
+ 搜索一番，最后在贴吧找到&lt;strong&gt;解决方法&lt;/strong&gt;： &lt;code&gt;https://tieba.baidu.com/p/8172024054&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#原因&#34;&gt;#&lt;/a&gt; 原因&lt;/h2&gt;
+&lt;p&gt;可能就是因为大部分人的 Runner 统一是 ubuntu-latest 导致的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Github 的 ubuntu-latest 标签会随机分发到 Ubuntu 22.04 LTS&lt;br /&gt;
+Ubuntu 22.04 LTS ，这个最新版的缓存并没有 Python3.9.1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;简单的说就是 Python v3.9.1 在 GitHub 不支持 Ubuntu 22.04 LTS&lt;br /&gt;
+ 所以才会报错  &lt;code&gt;Error: Version 3.9.1 with arch x64 not found&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;解决方法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#解决方法&#34;&gt;#&lt;/a&gt; 解决方法&lt;/h2&gt;
+&lt;p&gt;有两个解决方法&lt;br /&gt;
+ 1. 把 runner 换成支持 3.9.1 的 Ubuntu20.04 :&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;runs-on: ubuntu-20.04 LST&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;2. 将 .yml 里的  &lt;code&gt;python-version: &#39;版本&#39;&lt;/code&gt;  换成  &lt;code&gt;3.9.12&lt;/code&gt;  :&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;figcaption data-lang=&#34;bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;with:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;          python-version: &lt;span class=&#34;token string&#34;&gt;&#39;3.9.12&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;比起第一种解决方法，我比较推荐第二种方法&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
