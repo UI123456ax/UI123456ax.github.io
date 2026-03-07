@@ -14,8 +14,6 @@
         <category>Python</category>
         <category>Debug</category>
         <category>Configuration</category>
-        <category>Comic</category>
-        <category>Games</category>
         <category>Android</category>
         <category>CloudFlare</category>
         <category>VPN</category>
@@ -23,6 +21,9 @@
         <category>Cloudflare</category>
         <category>Docker</category>
         <category>DNS</category>
+        <category>MCP</category>
+        <category>Copilot</category>
+        <category>AI</category>
         <item>
             <guid isPermalink="true">https://blog.neonnoir.link/2025/11/01/0_100/21_%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8/</guid>
             <title>域名解析及其应用</title>

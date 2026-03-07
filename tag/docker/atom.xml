@@ -11,8 +11,6 @@
     <category term="Python" />
     <category term="Debug" />
     <category term="Configuration" />
-    <category term="Comic" />
-    <category term="Games" />
     <category term="Android" />
     <category term="CloudFlare" />
     <category term="VPN" />
@@ -20,6 +18,9 @@
     <category term="Cloudflare" />
     <category term="Docker" />
     <category term="DNS" />
+    <category term="MCP" />
+    <category term="Copilot" />
+    <category term="AI" />
     <entry>
         <id>https://blog.neonnoir.link/2025/07/22/0_100/20_Docker%E5%9F%BA%E7%A1%80/</id>
         <title>Docker</title>

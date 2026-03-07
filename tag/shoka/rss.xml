@@ -5,8 +5,8 @@
         <link>https://blog.neonnoir.link</link>
         <description>NeonNoir ブログ</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 23 Jun 2023 17:28:51 +0800</pubDate>
-        <lastBuildDate>Fri, 23 Jun 2023 17:28:51 +0800</lastBuildDate>
+        <pubDate>Sat, 07 Mar 2026 12:07:53 +0800</pubDate>
+        <lastBuildDate>Sat, 07 Mar 2026 12:07:53 +0800</lastBuildDate>
         <category>Notes</category>
         <category>Blog</category>
         <category>Shoka</category>
@@ -14,8 +14,6 @@
         <category>Python</category>
         <category>Debug</category>
         <category>Configuration</category>
-        <category>Comic</category>
-        <category>Games</category>
         <category>Android</category>
         <category>CloudFlare</category>
         <category>VPN</category>
@@ -23,6 +21,44 @@
         <category>Cloudflare</category>
         <category>Docker</category>
         <category>DNS</category>
+        <category>MCP</category>
+        <category>Copilot</category>
+        <category>AI</category>
+        <item>
+            <guid isPermalink="true">https://blog.neonnoir.link/2026/03/07/0_100/23_Waline/</guid>
+            <title>部署评论系统</title>
+            <link>https://blog.neonnoir.link/2026/03/07/0_100/23_Waline/</link>
+            <category>Blog</category>
+            <category>Shoka</category>
+            <category>Configuration</category>
+            <pubDate>Sat, 07 Mar 2026 12:07:53 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;前言&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h1&gt;
+&lt;p&gt;今早闲着没事随便逛逛忽然发现我的博客居然还没评论系统以及阅读数量统计，Emmm 这个评论系统的计划已经被我搁置了长达两年的时间（&lt;s&gt;懒 XD&lt;/s&gt; 。&lt;br /&gt;
+反正闲着也是没事干，所以就部署了  &lt;code&gt;ShokaX&lt;/code&gt;  内置的  &lt;code&gt;Waline&lt;/code&gt;  ，数据库用的是  &lt;code&gt;Neon&lt;/code&gt; 。&lt;br /&gt;
+具体操作步骤看官网就行，本文就不复述了（&lt;s&gt;还是懒呐 XXX&lt;/s&gt;）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;https://waline.js.org/guide/deploy/vercel.html#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93&#34;&gt;点我查看具体步骤&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&#34;部署流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署流程&#34;&gt;#&lt;/a&gt; 部署流程&lt;/h1&gt;
+&lt;p&gt;不过还是写下流程吧，step3 似乎没在 Waline 部署 Vercel 上看到&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;部署服务端 &lt;a href=&#34;https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwalinejs%2Fwaline%2Ftree%2Fmain%2Fexample&#34;&gt;点我一键 Vercel 部署&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;在 Vercel 首页的  &lt;code&gt;Storage&lt;/code&gt;  中创建数据库  &lt;code&gt;Neon&lt;/code&gt;  ，并在 &lt;a href=&#34;https://console.neon.tech/&#34;&gt;Neon 系统&lt;/a&gt; 的  &lt;code&gt;SQLEditor&lt;/code&gt;  复制粘贴 &lt;a href=&#34;https://github.com/walinejs/waline/blob/main/assets/waline.pgsql&#34;&gt;waline.pgsql&lt;/a&gt; 的代码，然后点击 RUN 运行即可&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;连接项目&lt;/strong&gt;：。这步很重要，不然部署之后的页面会显示  &lt;code&gt;500：This Serverless Function has crashed&lt;/code&gt;  错误&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/23_/23_01.png&#34; alt=&#34;01&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;坑到我了 生气 nnnn&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;重新部署下 Waline 就能显示了（害 叹气&lt;br /&gt;
+&lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/23_/23_02.png&#34; alt=&#34;02&#34; /&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;结束&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#结束&#34;&gt;#&lt;/a&gt; 结束&lt;/h1&gt;
+&lt;p&gt;最后在配置文件 ( &lt;code&gt;_config.yml&lt;/code&gt; ) 上加上如下配置就大功告成了啦&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key atrule&#34;&gt;waline&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;enable&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 是否启用&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;serverURL&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# waline 服务端地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;lang&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;zh-CN&#34;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 评论界面语言&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;locale&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 本地化替换，详见 waline 文档&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;emoji&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 表情包，默认为 waline 官方配置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; https&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//unpkg.com/@waline/emojis@1.0.1/weibo&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; https&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//unpkg.com/@waline/emojis@1.0.1/alus&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; https&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//unpkg.com/@waline/emojis@1.0.1/bilibili&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; https&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//unpkg.com/@waline/emojis@1.0.1/qq&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; https&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//unpkg.com/@waline/emojis@1.0.1/tieba&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; https&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;//unpkg.com/@waline/emojis@1.0.1/tw&lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;emoji&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;meta&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 评论可以填写的项目&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; nick&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; mail&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; link&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;requiredMeta&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 评论必须填写的项目&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; nick&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt; mail&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;wordLimit&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 评论字数上限 (不建议为 0)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;pageSize&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;10&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 每页显示评论条数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;span class=&#34;token key atrule&#34;&gt;pageview&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token boolean important&#34;&gt;true&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;# 页面浏览量显示&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;完结撒花&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://blog.neonnoir.link/2023/06/23/0_100/02_Shoka%E5%9B%BE%E5%BA%8A%E4%BF%AE%E5%A4%8D/</guid>
             <title>关于Shoka图床修复</title>
