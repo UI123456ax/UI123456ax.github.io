@@ -39,12 +39,13 @@
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://waline.js.org/guide/deploy/vercel.html#%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93&#34;&gt;点我查看具体步骤&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;补充说明&lt;/strong&gt;：需要注意的是，评论系统与统计无法在静态网页实现 (如 GithubPage)，可以将博客部署到 Vercel 等提供动态网页的托管平台上。本文使用的是 &lt;code&gt;Hexo + Github + Vercel&lt;/code&gt;  的方法，具体的来说是通过 Hexo 的推送功能将静态数据传入 Github 仓库内，再利用 Vercel 关联 Github 仓库动态部署博客。&lt;/p&gt;
 &lt;h1 id=&#34;部署流程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#部署流程&#34;&gt;#&lt;/a&gt; 部署流程&lt;/h1&gt;
 &lt;p&gt;不过还是写下流程吧，step3 似乎没在 Waline 部署 Vercel 上看到&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;部署服务端 &lt;a href=&#34;https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwalinejs%2Fwaline%2Ftree%2Fmain%2Fexample&#34;&gt;点我一键 Vercel 部署&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;在 Vercel 首页的  &lt;code&gt;Storage&lt;/code&gt;  中创建数据库  &lt;code&gt;Neon&lt;/code&gt;  ，并在 &lt;a href=&#34;https://console.neon.tech/&#34;&gt;Neon 系统&lt;/a&gt; 的  &lt;code&gt;SQLEditor&lt;/code&gt;  复制粘贴 &lt;a href=&#34;https://github.com/walinejs/waline/blob/main/assets/waline.pgsql&#34;&gt;waline.pgsql&lt;/a&gt; 的代码，然后点击 RUN 运行即可&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;连接项目&lt;/strong&gt;：。这步很重要，不然部署之后的页面会显示  &lt;code&gt;500：This Serverless Function has crashed&lt;/code&gt;  错误&lt;br /&gt;
+&lt;li&gt;&lt;strong&gt;连接项目&lt;/strong&gt;：这步很重要，不然部署之后的页面会显示  &lt;code&gt;500：This Serverless Function has crashed&lt;/code&gt;  错误&lt;br /&gt;
 &lt;img loading=&#34;lazy&#34; data-src=&#34;https://gcore.jsdelivr.net/gh/ui123456ax/images/Blog_images/23_/23_01.png&#34; alt=&#34;01&#34; /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;blockquote&gt;
